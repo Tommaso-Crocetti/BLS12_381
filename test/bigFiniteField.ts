@@ -1,6 +1,5 @@
 import { ethers } from "hardhat"; // Importa ethers da Hardhat
 import { expect } from "chai"; // Per i test con Chai
-import { BytesLike } from "ethers";
 import { BigFiniteField, BigFiniteField__factory, BigNumbers, BigNumbers__factory } from "../typechain-types"; // Assicurati che il percorso sia corretto
 import { ZpStruct, ZpStructOutput } from "../typechain-types/field/BigFiniteField";
 import { BigNumberStruct, BigNumberStructOutput } from "../typechain-types/BigNumber.sol/BigNumbers";
@@ -29,8 +28,8 @@ describe("BigFiniteField Contract", function () {
     }) as BigFiniteField__factory;
     const value = 7;
     bigFiniteField = await bigFiniteFieldFactory.deploy(ethers.toBeHex(value.toString()));
-    let valueA: BigNumberStructOutput = await bigNumbers.init(3, false);
-    let valueB: BigNumberStructOutput = await bigNumbers.init(5, false);
+    const valueA: BigNumberStructOutput = await bigNumbers.init(3, false);
+    const valueB: BigNumberStructOutput = await bigNumbers.init(5, false);
     elementA = await bigFiniteField.createElement(toBigNumber(valueA));
     elementB = await bigFiniteField.createElement(toBigNumber(valueB));
   });

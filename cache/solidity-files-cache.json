@@ -76,8 +76,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\quadraticExtension.sol": {
-      "lastModificationDate": 1728557102724,
-      "contentHash": "ae119dff34ccd33e2d9ad2a9656341f4",
+      "lastModificationDate": 1728571311732,
+      "contentHash": "0849b254a823c29dc0e5d43f759250e4",
       "sourceName": "contracts/field/quadraticExtension.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -104,7 +104,7 @@
         }
       },
       "imports": [
-        "./finiteField.sol"
+        "./bigFiniteField.sol"
       ],
       "versionPragmas": [
         "^0.8.0"

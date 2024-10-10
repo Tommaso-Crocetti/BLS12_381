@@ -1,12 +1,17 @@
 import { ethers } from "hardhat"; // Importa ethers da Hardhat
 import { expect } from "chai"; // Per i test con Chai
-import { FiniteField, FiniteField__factory } from "../typechain-types"; 
+import { BigFiniteField, BigFiniteField__factory, BigNumbers, BigNumbers__factory } from "../typechain-types"; // Assicurati che il percorso sia corretto
 import { QuadraticExtension, QuadraticExtension__factory } from "../typechain-types/"
-import { ZpStruct, ZpStructOutput } from "../typechain-types/field/finiteField.sol/FiniteField";
+import { BigNumberStruct, BigNumberStructOutput } from "../typechain-types/BigNumber.sol/BigNumbers";
+import { ZpStruct, ZpStructOutput } from "../typechain-types/field/BigFiniteField";
 import { Zp_2Struct, Zp_2StructOutput } from "../typechain-types/field/quadraticExtension.sol/QuadraticExtension";
 
+function toBigNumber(input: BigNumberStructOutput): BigNumberStruct {
+    return {val: input.val, neg: input.neg, bitlen: input.bitlen };
+}
+
 function toZpStruct(output: ZpStructOutput): ZpStruct {
-    return { value: output.value }; // Restituisce un oggetto con la proprietà value
+    return { value: toBigNumber(output.value) }; // Restituisce un oggetto con la proprietà value
 }
 
 function toZp_2Struct(output: Zp_2StructOutput): Zp_2Struct {
@@ -14,65 +19,85 @@ function toZp_2Struct(output: Zp_2StructOutput): Zp_2Struct {
 }
 
 describe("Quadratic Extension Contract", function () {
-    let finiteField: FiniteField;
+    let bigFiniteField: BigFiniteField;
+    let bigNumbers: BigNumbers;
     let quadraticExtension: QuadraticExtension;
     let x: Zp_2StructOutput;
     let y: Zp_2StructOutput;
 
     beforeEach(async function () {
-        const FiniteFieldFactory: FiniteField__factory = await ethers.getContractFactory("FiniteField") as FiniteField__factory;
-        finiteField = await FiniteFieldFactory.deploy(7);
+        const bigNumbersFactory: BigNumbers__factory = await ethers.getContractFactory("BigNumbers") as BigNumbers__factory;
+        bigNumbers = await bigNumbersFactory.deploy();
+        const bigFiniteFieldFactory: BigFiniteField__factory = await ethers.getContractFactory("BigFiniteField", {
+            libraries: {
+                BigNumbers: await bigNumbers.getAddress()
+            }
+        }) as BigFiniteField__factory;
+        const value = 7;
+        bigFiniteField = await bigFiniteFieldFactory.deploy(ethers.toBeHex(value.toString()));
         const quadraticExtensionFactory: QuadraticExtension__factory = await ethers.getContractFactory("QuadraticExtension") as QuadraticExtension__factory;
-        quadraticExtension = await quadraticExtensionFactory.deploy(finiteField);
-        const a: ZpStructOutput = await finiteField.createElement(3);
-        const b: ZpStructOutput = await finiteField.createElement(5);
+        quadraticExtension = await quadraticExtensionFactory.deploy(bigFiniteField);
+        const valueA: BigNumberStructOutput = await bigNumbers.init(3, false);
+        const valueB: BigNumberStructOutput = await bigNumbers.init(5, false);
+        const a: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueA));
+        const b: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueB));
         x = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
-        const c: ZpStructOutput = await finiteField.createElement(4);
-        const d: ZpStructOutput = await finiteField.createElement(2);
+        const valueC: BigNumberStructOutput = await bigNumbers.init(4, false);
+        const valueD: BigNumberStructOutput = await bigNumbers.init(2, false);
+        const c: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueC));
+        const d: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueD));
         y = await quadraticExtension.createElement(toZpStruct(c), toZpStruct(d));
     });
 
     it("should create field elements correctly", async function () {
-        const elementA: ZpStruct = await finiteField.createElement(3);
-        const elementB: ZpStruct = await finiteField.createElement(5);
-        expect(elementA.value).to.equal(3);
-        expect(elementB.value).to.equal(5);
+        expect(x.a.value.val).to.equal("0x0000000000000000000000000000000000000000000000000000000000000003");
+        expect(y.b.value.val).to.equal("0x0000000000000000000000000000000000000000000000000000000000000002");
     });
 
     it("should add elements correctly", async function () {
         const sum: Zp_2StructOutput = await quadraticExtension.sum(toZp_2Struct(x), toZp_2Struct(y));
-        expect(sum.a.value).to.equal(0);
-        expect(sum.b.value).to.equal(0);
+        const resultA = await bigNumbers.init(0, false);
+        const resultB = await bigNumbers.init(0, false);
+        expect(sum.a.value.val).to.equal(resultA.val);
+        expect(sum.b.value.val).to.equal(resultB.val);
     });
 
     it("should substract elements correctly", async function () {
         const diff: Zp_2StructOutput = await quadraticExtension.sub(toZp_2Struct(x), toZp_2Struct(y));
-        expect(diff.a.value).to.equal(6);
-        expect(diff.b.value).to.equal(3);
+        const resultA = await bigNumbers.init(6, false);
+        const resultB = await bigNumbers.init(3, false);
+        expect(diff.a.value.val).to.equal(resultA.val);
+        expect(diff.b.value.val).to.equal(resultB.val);
     });
 
     it("should multiply elements correctly", async function () {
         const mul: Zp_2StructOutput = await quadraticExtension.mul(toZp_2Struct(x), toZp_2Struct(y));
-        expect(mul.a.value).to.equal(2);
-        expect(mul.b.value).to.equal(5);
+        const resultA = await bigNumbers.init(2, false);
+        const resultB = await bigNumbers.init(5, false);
+        expect(mul.a.value.val).to.equal(resultA.val);
+        expect(mul.b.value.val).to.equal(resultB.val);
     });
 
     it("should calculate the inverse correctly", async function () {
-        const c: ZpStructOutput = await finiteField.createElement(4);
-        const d: ZpStructOutput = await finiteField.createElement(2);
-        const y: Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(c), toZpStruct(d));
         const inv: Zp_2StructOutput = await quadraticExtension.inverse(toZp_2Struct(y));
-        expect(inv.a.value).to.equal(3);
-        expect(inv.b.value).to.equal(2);
+        const resultA = await bigNumbers.init(3, false);
+        const resultB = await bigNumbers.init(2, false);
+        expect(inv.a.value.val).to.equal(resultA.val);
+        expect(inv.b.value.val).to.equal(resultB.val);
     });
 
     it("should divide elements correctly", async function () {
         const div: Zp_2StructOutput = await quadraticExtension.div(toZp_2Struct(x), toZp_2Struct(y));
-        expect(div.a.value).to.equal(6);
-        expect(div.b.value).to.equal(0);
+        const resultA = await bigNumbers.init(6, false);
+        const resultB = await bigNumbers.init(0, false);
+        expect(div.a.value.val).to.equal(resultA.val);
+        expect(div.b.value.val).to.equal(resultB.val);
     });
 
     it("should revert on division by zero", async function () {
-        await expect(quadraticExtension.div(toZp_2Struct(x), toZp_2Struct(await quadraticExtension.createElement(toZpStruct(await finiteField.createElement(0)), toZpStruct(await finiteField.createElement(0)))))).to.be.revertedWith("Divisione per zero non permessa.");
+        const a: ZpStructOutput = await bigFiniteField.zero();
+        const b: ZpStructOutput = await bigFiniteField.zero();
+        y = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
+        await expect(quadraticExtension.div(toZp_2Struct(x), toZp_2Struct(y))).to.be.revertedWith("Inverso per zero non definito.");
     });
 });

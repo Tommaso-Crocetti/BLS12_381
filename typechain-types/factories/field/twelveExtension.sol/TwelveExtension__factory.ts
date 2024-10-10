@@ -40,9 +40,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -52,9 +69,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -71,9 +105,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -83,9 +134,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -102,9 +170,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -114,9 +199,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -140,9 +242,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -152,9 +271,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -171,9 +307,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -183,9 +336,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -202,9 +372,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -214,9 +401,26 @@ const _abi = [
               {
                 components: [
                   {
-                    internalType: "uint256",
+                    components: [
+                      {
+                        internalType: "bytes",
+                        name: "val",
+                        type: "bytes",
+                      },
+                      {
+                        internalType: "bool",
+                        name: "neg",
+                        type: "bool",
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "bitlen",
+                        type: "uint256",
+                      },
+                    ],
+                    internalType: "struct BigNumber",
                     name: "value",
-                    type: "uint256",
+                    type: "tuple",
                   },
                 ],
                 internalType: "struct Zp",
@@ -245,9 +449,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -257,9 +478,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -276,9 +514,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -288,9 +543,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -307,9 +579,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -319,9 +608,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -345,9 +651,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -357,9 +680,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -376,9 +716,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -388,9 +745,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -407,9 +781,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -419,9 +810,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -458,9 +866,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -470,9 +895,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -489,9 +931,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -501,9 +960,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -520,9 +996,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -532,9 +1025,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -558,9 +1068,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -570,9 +1097,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -589,9 +1133,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -601,9 +1162,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -620,9 +1198,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -632,9 +1227,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -668,9 +1280,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -680,9 +1309,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -699,9 +1345,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -711,9 +1374,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -730,9 +1410,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -742,9 +1439,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -768,9 +1482,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -780,9 +1511,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -799,9 +1547,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -811,9 +1576,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -830,9 +1612,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -842,9 +1641,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -881,9 +1697,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -893,9 +1726,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -912,9 +1762,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -924,9 +1791,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -943,9 +1827,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -955,9 +1856,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -981,9 +1899,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -993,9 +1928,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1012,9 +1964,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1024,9 +1993,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1043,9 +2029,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1055,9 +2058,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1088,9 +2108,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1100,9 +2137,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1119,9 +2173,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1131,9 +2202,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1150,9 +2238,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1162,9 +2267,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1188,9 +2310,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1200,9 +2339,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1219,9 +2375,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1231,9 +2404,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1250,9 +2440,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1262,9 +2469,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1298,9 +2522,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1310,9 +2551,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1329,9 +2587,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1341,9 +2616,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1360,9 +2652,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1372,9 +2681,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1398,9 +2724,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1410,9 +2753,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1429,9 +2789,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1441,9 +2818,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1460,9 +2854,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1472,9 +2883,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1511,9 +2939,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1523,9 +2968,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1542,9 +3004,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1554,9 +3033,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1573,9 +3069,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1585,9 +3098,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1611,9 +3141,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1623,9 +3170,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1642,9 +3206,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1654,9 +3235,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1673,9 +3271,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1685,9 +3300,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1718,9 +3350,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1730,9 +3379,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1749,9 +3415,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1761,9 +3444,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1780,9 +3480,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1792,9 +3509,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1818,9 +3552,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1830,9 +3581,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1849,9 +3617,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1861,9 +3646,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1880,9 +3682,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1892,9 +3711,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1928,9 +3764,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1940,9 +3793,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1959,9 +3829,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1971,9 +3858,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -1990,9 +3894,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2002,9 +3923,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2028,9 +3966,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2040,9 +3995,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2059,9 +4031,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2071,9 +4060,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2090,9 +4096,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2102,9 +4125,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2141,9 +4181,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2153,9 +4210,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2172,9 +4246,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2184,9 +4275,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2203,9 +4311,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2215,9 +4340,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2241,9 +4383,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2253,9 +4412,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2272,9 +4448,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2284,9 +4477,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2303,9 +4513,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2315,9 +4542,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2348,9 +4592,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2360,9 +4621,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2379,9 +4657,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2391,9 +4686,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2410,9 +4722,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2422,9 +4751,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2448,9 +4794,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2460,9 +4823,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2479,9 +4859,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2491,9 +4888,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2510,9 +4924,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2522,9 +4953,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2558,9 +5006,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2570,9 +5035,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2589,9 +5071,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2601,9 +5100,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2620,9 +5136,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2632,9 +5165,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2658,9 +5208,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2670,9 +5237,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2689,9 +5273,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2701,9 +5302,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2720,9 +5338,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2732,9 +5367,26 @@ const _abi = [
                   {
                     components: [
                       {
-                        internalType: "uint256",
+                        components: [
+                          {
+                            internalType: "bytes",
+                            name: "val",
+                            type: "bytes",
+                          },
+                          {
+                            internalType: "bool",
+                            name: "neg",
+                            type: "bool",
+                          },
+                          {
+                            internalType: "uint256",
+                            name: "bitlen",
+                            type: "uint256",
+                          },
+                        ],
+                        internalType: "struct BigNumber",
                         name: "value",
-                        type: "uint256",
+                        type: "tuple",
                       },
                     ],
                     internalType: "struct Zp",
@@ -2763,7 +5415,7 @@ const _abi = [
 ] as const;
 
 const _bytecode =
-  "0x608060405234801561001057600080fd5b5060405161152b38038061152b833981810160405281019061003291906100ed565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061011a565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006100a88261007d565b9050919050565b60006100ba8261009d565b9050919050565b6100ca816100af565b81146100d557600080fd5b50565b6000815190506100e7816100c1565b92915050565b60006020828403121561010357610102610078565b5b6000610111848285016100d8565b91505092915050565b611402806101296000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063169469991461005c5780637212f8e41461008c57806391a1dc78146100bc5780639bf7f9d9146100ec578063a6fbfdb41461011c575b600080fd5b6100766004803603810190610071919061107a565b61014c565b6040516100839190611188565b60405180910390f35b6100a660048036038101906100a191906111a4565b6105dd565b6040516100b39190611188565b60405180910390f35b6100d660048036038101906100d191906111e5565b610602565b6040516100e39190611188565b60405180910390f35b6101066004803603810190610101919061107a565b610b11565b6040516101139190611188565b60405180910390f35b6101366004803603810190610131919061107a565b610c71565b6040516101439190611188565b60405180910390f35b610154610dd1565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c73f46bf60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16632e02cb02876020015187602001516040518363ffffffff1660e01b81526004016101f6929190611255565b60c060405180830381865afa158015610213573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102379190611384565b6040518263ffffffff1660e01b815260040161025391906113b1565b60c060405180830381865afa158015610270573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102949190611384565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16632e02cb02866000015186600001516040518363ffffffff1660e01b81526004016102fc929190611255565b60c060405180830381865afa158015610319573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061033d9190611384565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16632e02cb02876020015187600001516040518363ffffffff1660e01b81526004016103a5929190611255565b60c060405180830381865afa1580156103c2573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103e69190611384565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16632e02cb02886000015188602001516040518363ffffffff1660e01b815260040161044e929190611255565b60c060405180830381865afa15801561046b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061048f9190611384565b90506105d160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663d5a9bbde86866040518363ffffffff1660e01b81526004016104ef929190611255565b60c060405180830381865afa15801561050c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105309190611384565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663d5a9bbde85856040518363ffffffff1660e01b815260040161058b929190611255565b60c060405180830381865afa1580156105a8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105cc9190611384565b6105dd565b94505050505092915050565b6105e5610dd1565b604051806040016040528084815260200183815250905092915050565b61060a610dd1565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c73f46bf60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16632e02cb02866020015187602001516040518363ffffffff1660e01b81526004016106ac929190611255565b60c060405180830381865afa1580156106c9573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106ed9190611384565b6040518263ffffffff1660e01b815260040161070991906113b1565b60c060405180830381865afa158015610726573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061074a9190611384565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16632e02cb02856000015186600001516040518363ffffffff1660e01b81526004016107b2929190611255565b60c060405180830381865afa1580156107cf573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107f39190611384565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4f7438e83856040518363ffffffff1660e01b8152600401610853929190611255565b60c060405180830381865afa158015610870573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108949190611384565b9050610b0760008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663752d6e1a8760000151846040518363ffffffff1660e01b81526004016108f8929190611255565b60c060405180830381865afa158015610915573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109399190611384565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663752d6e1a60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4f7438e60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b815260040160c060405180830381865afa158015610a1c573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a409190611384565b8b602001516040518363ffffffff1660e01b8152600401610a62929190611255565b60c060405180830381865afa158015610a7f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610aa39190611384565b856040518363ffffffff1660e01b8152600401610ac1929190611255565b60c060405180830381865afa158015610ade573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b029190611384565b6105dd565b9350505050919050565b610b19610dd1565b610c6960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663d5a9bbde856000015185600001516040518363ffffffff1660e01b8152600401610b7f929190611255565b60c060405180830381865afa158015610b9c573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610bc09190611384565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663d5a9bbde866020015186602001516040518363ffffffff1660e01b8152600401610c23929190611255565b60c060405180830381865afa158015610c40573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c649190611384565b6105dd565b905092915050565b610c79610dd1565b610dc960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4f7438e856000015185600001516040518363ffffffff1660e01b8152600401610cdf929190611255565b60c060405180830381865afa158015610cfc573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d209190611384565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4f7438e866020015186602001516040518363ffffffff1660e01b8152600401610d83929190611255565b60c060405180830381865afa158015610da0573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610dc49190611384565b6105dd565b905092915050565b6040518060400160405280610de4610df7565b8152602001610df1610df7565b81525090565b6040518060600160405280610e0a610e2a565b8152602001610e17610e2a565b8152602001610e24610e2a565b81525090565b6040518060400160405280610e3d610e50565b8152602001610e4a610e50565b81525090565b6040518060200160405280600081525090565b6000604051905090565b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610ec082610e77565b810181811067ffffffffffffffff82111715610edf57610ede610e88565b5b80604052505050565b6000610ef2610e63565b9050610efe8282610eb7565b919050565b6000819050919050565b610f1681610f03565b8114610f2157600080fd5b50565b600081359050610f3381610f0d565b92915050565b600060208284031215610f4f57610f4e610e72565b5b610f596020610ee8565b90506000610f6984828501610f24565b60008301525092915050565b600060408284031215610f8b57610f8a610e72565b5b610f956040610ee8565b90506000610fa584828501610f39565b6000830152506020610fb984828501610f39565b60208301525092915050565b600060c08284031215610fdb57610fda610e72565b5b610fe56060610ee8565b90506000610ff584828501610f75565b600083015250604061100984828501610f75565b602083015250608061101d84828501610f75565b60408301525092915050565b600061018082840312156110405761103f610e72565b5b61104a6040610ee8565b9050600061105a84828501610fc5565b60008301525060c061106e84828501610fc5565b60208301525092915050565b600080610300838503121561109257611091610e6d565b5b60006110a085828601611029565b9250506101806110b285828601611029565b9150509250929050565b6110c581610f03565b82525050565b6020820160008201516110e160008501826110bc565b50505050565b6040820160008201516110fd60008501826110cb565b50602082015161111060208501826110cb565b50505050565b60c08201600082015161112c60008501826110e7565b50602082015161113f60408501826110e7565b50604082015161115260808501826110e7565b50505050565b6101808201600082015161116f6000850182611116565b50602082015161118260c0850182611116565b50505050565b60006101808201905061119e6000830184611158565b92915050565b60008061018083850312156111bc576111bb610e6d565b5b60006111ca85828601610fc5565b92505060c06111db85828601610fc5565b9150509250929050565b600061018082840312156111fc576111fb610e6d565b5b600061120a84828501611029565b91505092915050565b60c08201600082015161122960008501826110e7565b50602082015161123c60408501826110e7565b50604082015161124f60808501826110e7565b50505050565b60006101808201905061126b6000830185611213565b61127860c0830184611213565b9392505050565b60008151905061128e81610f0d565b92915050565b6000602082840312156112aa576112a9610e72565b5b6112b46020610ee8565b905060006112c48482850161127f565b60008301525092915050565b6000604082840312156112e6576112e5610e72565b5b6112f06040610ee8565b9050600061130084828501611294565b600083015250602061131484828501611294565b60208301525092915050565b600060c0828403121561133657611335610e72565b5b6113406060610ee8565b90506000611350848285016112d0565b6000830152506040611364848285016112d0565b6020830152506080611378848285016112d0565b60408301525092915050565b600060c0828403121561139a57611399610e6d565b5b60006113a884828501611320565b91505092915050565b600060c0820190506113c66000830184611213565b9291505056fea2646970667358221220b420f529ecac5930c0f1eed7b15a5c9c04f5366549c6c61d23b079eb8828e44d64736f6c634300081b0033";
+  "0x608060405234801561001057600080fd5b50604051611bc6380380611bc6833981810160405281019061003291906100ed565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061011a565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006100a88261007d565b9050919050565b60006100ba8261009d565b9050919050565b6100ca816100af565b81146100d557600080fd5b50565b6000815190506100e7816100c1565b92915050565b60006020828403121561010357610102610078565b5b6000610111848285016100d8565b91505092915050565b611a9d806101296000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80636bc90c281461005c57806377839c691461008c5780639e0ddc50146100bc578063f6700795146100ec578063f87386c31461011c575b600080fd5b6100766004803603810190610071919061135d565b61014c565b60405161008391906115d2565b60405180910390f35b6100a660048036038101906100a1919061135d565b6102b6565b6040516100b391906115d2565b60405180910390f35b6100d660048036038101906100d1919061135d565b61076a565b6040516100e391906115d2565b60405180910390f35b610106600480360381019061010191906115f4565b6108d4565b60405161011391906115d2565b60405180910390f35b6101366004803603810190610131919061163d565b610e0b565b60405161014391906115d2565b60405180910390f35b610154610e30565b6102ae60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f7052ed6856000015185600001516040518363ffffffff1660e01b81526004016101ba929190611713565b600060405180830381865afa1580156101d7573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061020091906119fc565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f7052ed6866020015186602001516040518363ffffffff1660e01b8152600401610263929190611713565b600060405180830381865afa158015610280573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906102a991906119fc565b610e0b565b905092915050565b6102be610e30565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663b52ab3b160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16634aa28cb5876020015187602001516040518363ffffffff1660e01b8152600401610360929190611713565b600060405180830381865afa15801561037d573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906103a691906119fc565b6040518263ffffffff1660e01b81526004016103c29190611a45565b600060405180830381865afa1580156103df573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061040891906119fc565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16634aa28cb5866000015186600001516040518363ffffffff1660e01b8152600401610470929190611713565b600060405180830381865afa15801561048d573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906104b691906119fc565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16634aa28cb5876020015187600001516040518363ffffffff1660e01b815260040161051e929190611713565b600060405180830381865afa15801561053b573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061056491906119fc565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16634aa28cb5886000015188602001516040518363ffffffff1660e01b81526004016105cc929190611713565b600060405180830381865afa1580156105e9573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061061291906119fc565b905061075e60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16637e28928086866040518363ffffffff1660e01b8152600401610672929190611713565b600060405180830381865afa15801561068f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906106b891906119fc565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16637e28928085856040518363ffffffff1660e01b8152600401610713929190611713565b600060405180830381865afa158015610730573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061075991906119fc565b610e0b565b94505050505092915050565b610772610e30565b6108cc60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16637e289280856000015185600001516040518363ffffffff1660e01b81526004016107d8929190611713565b600060405180830381865afa1580156107f5573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061081e91906119fc565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16637e289280866020015186602001516040518363ffffffff1660e01b8152600401610881929190611713565b600060405180830381865afa15801561089e573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906108c791906119fc565b610e0b565b905092915050565b6108dc610e30565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663b52ab3b160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16634aa28cb5866020015187602001516040518363ffffffff1660e01b815260040161097e929190611713565b600060405180830381865afa15801561099b573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906109c491906119fc565b6040518263ffffffff1660e01b81526004016109e09190611a45565b600060405180830381865afa1580156109fd573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610a2691906119fc565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16634aa28cb5856000015186600001516040518363ffffffff1660e01b8152600401610a8e929190611713565b600060405180830381865afa158015610aab573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610ad491906119fc565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f7052ed683856040518363ffffffff1660e01b8152600401610b34929190611713565b600060405180830381865afa158015610b51573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610b7a91906119fc565b9050610e0160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ba510cc38760000151846040518363ffffffff1660e01b8152600401610bde929190611713565b600060405180830381865afa158015610bfb573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610c2491906119fc565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663ba510cc360008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f7052ed660008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610d07573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610d3091906119fc565b8b602001516040518363ffffffff1660e01b8152600401610d52929190611713565b600060405180830381865afa158015610d6f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610d9891906119fc565b856040518363ffffffff1660e01b8152600401610db6929190611713565b600060405180830381865afa158015610dd3573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610dfc91906119fc565b610e0b565b9350505050919050565b610e13610e30565b604051806040016040528084815260200183815250905092915050565b6040518060400160405280610e43610e56565b8152602001610e50610e56565b81525090565b6040518060600160405280610e69610e89565b8152602001610e76610e89565b8152602001610e83610e89565b81525090565b6040518060400160405280610e9c610eaf565b8152602001610ea9610eaf565b81525090565b6040518060200160405280610ec2610ec8565b81525090565b604051806060016040528060608152602001600015158152602001600081525090565b6000604051905090565b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610f4d82610f04565b810181811067ffffffffffffffff82111715610f6c57610f6b610f15565b5b80604052505050565b6000610f7f610eeb565b9050610f8b8282610f44565b919050565b600080fd5b600080fd5b600080fd5b600067ffffffffffffffff821115610fba57610fb9610f15565b5b610fc382610f04565b9050602081019050919050565b82818337600083830152505050565b6000610ff2610fed84610f9f565b610f75565b90508281526020810184848401111561100e5761100d610f9a565b5b611019848285610fd0565b509392505050565b600082601f83011261103657611035610f95565b5b8135611046848260208601610fdf565b91505092915050565b60008115159050919050565b6110648161104f565b811461106f57600080fd5b50565b6000813590506110818161105b565b92915050565b6000819050919050565b61109a81611087565b81146110a557600080fd5b50565b6000813590506110b781611091565b92915050565b6000606082840312156110d3576110d2610eff565b5b6110dd6060610f75565b9050600082013567ffffffffffffffff8111156110fd576110fc610f90565b5b61110984828501611021565b600083015250602061111d84828501611072565b6020830152506040611131848285016110a8565b60408301525092915050565b60006020828403121561115357611152610eff565b5b61115d6020610f75565b9050600082013567ffffffffffffffff81111561117d5761117c610f90565b5b611189848285016110bd565b60008301525092915050565b6000604082840312156111ab576111aa610eff565b5b6111b56040610f75565b9050600082013567ffffffffffffffff8111156111d5576111d4610f90565b5b6111e18482850161113d565b600083015250602082013567ffffffffffffffff81111561120557611204610f90565b5b6112118482850161113d565b60208301525092915050565b60006060828403121561123357611232610eff565b5b61123d6060610f75565b9050600082013567ffffffffffffffff81111561125d5761125c610f90565b5b61126984828501611195565b600083015250602082013567ffffffffffffffff81111561128d5761128c610f90565b5b61129984828501611195565b602083015250604082013567ffffffffffffffff8111156112bd576112bc610f90565b5b6112c984828501611195565b60408301525092915050565b6000604082840312156112eb576112ea610eff565b5b6112f56040610f75565b9050600082013567ffffffffffffffff81111561131557611314610f90565b5b6113218482850161121d565b600083015250602082013567ffffffffffffffff81111561134557611344610f90565b5b6113518482850161121d565b60208301525092915050565b6000806040838503121561137457611373610ef5565b5b600083013567ffffffffffffffff81111561139257611391610efa565b5b61139e858286016112d5565b925050602083013567ffffffffffffffff8111156113bf576113be610efa565b5b6113cb858286016112d5565b9150509250929050565b600081519050919050565b600082825260208201905092915050565b60005b8381101561140f5780820151818401526020810190506113f4565b60008484015250505050565b6000611426826113d5565b61143081856113e0565b93506114408185602086016113f1565b61144981610f04565b840191505092915050565b61145d8161104f565b82525050565b61146c81611087565b82525050565b6000606083016000830151848203600086015261148f828261141b565b91505060208301516114a46020860182611454565b5060408301516114b76040860182611463565b508091505092915050565b600060208301600083015184820360008601526114df8282611472565b9150508091505092915050565b6000604083016000830151848203600086015261150982826114c2565b9150506020830151848203602086015261152382826114c2565b9150508091505092915050565b6000606083016000830151848203600086015261154d82826114ec565b9150506020830151848203602086015261156782826114ec565b9150506040830151848203604086015261158182826114ec565b9150508091505092915050565b600060408301600083015184820360008601526115ab8282611530565b915050602083015184820360208601526115c58282611530565b9150508091505092915050565b600060208201905081810360008301526115ec818461158e565b905092915050565b60006020828403121561160a57611609610ef5565b5b600082013567ffffffffffffffff81111561162857611627610efa565b5b611634848285016112d5565b91505092915050565b6000806040838503121561165457611653610ef5565b5b600083013567ffffffffffffffff81111561167257611671610efa565b5b61167e8582860161121d565b925050602083013567ffffffffffffffff81111561169f5761169e610efa565b5b6116ab8582860161121d565b9150509250929050565b600060608301600083015184820360008601526116d282826114ec565b915050602083015184820360208601526116ec82826114ec565b9150506040830151848203604086015261170682826114ec565b9150508091505092915050565b6000604082019050818103600083015261172d81856116b5565b9050818103602083015261174181846116b5565b90509392505050565b600061175d61175884610f9f565b610f75565b90508281526020810184848401111561177957611778610f9a565b5b6117848482856113f1565b509392505050565b600082601f8301126117a1576117a0610f95565b5b81516117b184826020860161174a565b91505092915050565b6000815190506117c98161105b565b92915050565b6000815190506117de81611091565b92915050565b6000606082840312156117fa576117f9610eff565b5b6118046060610f75565b9050600082015167ffffffffffffffff81111561182457611823610f90565b5b6118308482850161178c565b6000830152506020611844848285016117ba565b6020830152506040611858848285016117cf565b60408301525092915050565b60006020828403121561187a57611879610eff565b5b6118846020610f75565b9050600082015167ffffffffffffffff8111156118a4576118a3610f90565b5b6118b0848285016117e4565b60008301525092915050565b6000604082840312156118d2576118d1610eff565b5b6118dc6040610f75565b9050600082015167ffffffffffffffff8111156118fc576118fb610f90565b5b61190884828501611864565b600083015250602082015167ffffffffffffffff81111561192c5761192b610f90565b5b61193884828501611864565b60208301525092915050565b60006060828403121561195a57611959610eff565b5b6119646060610f75565b9050600082015167ffffffffffffffff81111561198457611983610f90565b5b611990848285016118bc565b600083015250602082015167ffffffffffffffff8111156119b4576119b3610f90565b5b6119c0848285016118bc565b602083015250604082015167ffffffffffffffff8111156119e4576119e3610f90565b5b6119f0848285016118bc565b60408301525092915050565b600060208284031215611a1257611a11610ef5565b5b600082015167ffffffffffffffff811115611a3057611a2f610efa565b5b611a3c84828501611944565b91505092915050565b60006020820190508181036000830152611a5f81846116b5565b90509291505056fea26469706673582212209c4e47fcf970c5417cb9565eca90264e3b8ccdb99219a9521b8e5810c993443164736f6c634300081b0033";
 
 type TwelveExtensionConstructorParams =
   | [signer?: Signer]

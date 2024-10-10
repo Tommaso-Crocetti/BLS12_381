@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./finiteField.sol"; // Importa il contratto FiniteField
+import "./bigFiniteField.sol"; // Importa il contratto FiniteField
 
 struct Zp_2 {
     Zp a; // Parte reale
@@ -11,9 +11,9 @@ struct Zp_2 {
 /// @title Quadratic Extension Field Zp[i] where i^2 = -1
 /// @notice Rappresenta Zp_2i in Zp[x]/(x^2 + 1)
 contract QuadraticExtension {
-    FiniteField f;
+    BigFiniteField f;
 
-    constructor(FiniteField field) {
+    constructor(BigFiniteField field) {
         f = field;
     }
 
