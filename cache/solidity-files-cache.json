@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\BigNumber.sol": {
-      "lastModificationDate": 1728565825684,
+      "lastModificationDate": 1728579128963,
       "contentHash": "6accd9eba2b4831d58c7fc6b4fd40d23",
       "sourceName": "contracts/BigNumber.sol",
       "solcConfig": {
@@ -227,7 +227,7 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\bigFiniteField.sol": {
-      "lastModificationDate": 1728570645817,
+      "lastModificationDate": 1728579125779,
       "contentHash": "f8673e075703a07a5d4eda0b11862651",
       "sourceName": "contracts/field/bigFiniteField.sol",
       "solcConfig": {
