@@ -5,8 +5,6 @@ import { QuadraticExtension, QuadraticExtension__factory } from "../typechain-ty
 import { ZpStruct, ZpStructOutput } from "../typechain-types/field/finiteField.sol/FiniteField";
 import { Zp_2Struct, Zp_2StructOutput } from "../typechain-types/field/quadraticExtension.sol/QuadraticExtension";
 
-
-
 function toZpStruct(output: ZpStructOutput): ZpStruct {
     return { value: output.value }; // Restituisce un oggetto con la proprietà value
 }

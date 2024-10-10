@@ -48,7 +48,7 @@ library BigNumbers {
      *  @param bitlen bit length of output.
      *  @return BigNumber instance
      */
-    function init(
+    function init_(
         bytes memory val, 
         bool neg, 
         uint bitlen
@@ -63,7 +63,7 @@ library BigNumbers {
      *  @param neg neg whether the BN is +/-
      *  @return BigNumber instance
      */
-    function init(
+    function init__(
         bytes memory val, 
         bool neg
     ) public view returns(BigNumber memory){

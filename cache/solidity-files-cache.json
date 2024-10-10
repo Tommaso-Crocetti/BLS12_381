@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\BigNumber.sol": {
-      "lastModificationDate": 1728554928893,
-      "contentHash": "a900ee6c9420ecdfb4afe04009e7094a",
+      "lastModificationDate": 1728565825684,
+      "contentHash": "6accd9eba2b4831d58c7fc6b4fd40d23",
       "sourceName": "contracts/BigNumber.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -190,44 +190,6 @@
         "TwelveExtension"
       ]
     },
-    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\bigFiniteField.sol": {
-      "lastModificationDate": 1728556552544,
-      "contentHash": "5f4c9dc95acc947d568d336267fa96a8",
-      "sourceName": "contracts/field/bigFiniteField.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../BigNumber.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "bigFiniteField"
-      ]
-    },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\node_modules\\hardhat\\console.sol": {
       "lastModificationDate": 1728554940950,
       "contentHash": "178d0fdb8d813b0290d52e83f8793caa",
@@ -262,6 +224,45 @@
       ],
       "artifacts": [
         "console"
+      ]
+    },
+    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\bigFiniteField.sol": {
+      "lastModificationDate": 1728570645817,
+      "contentHash": "f8673e075703a07a5d4eda0b11862651",
+      "sourceName": "contracts/field/bigFiniteField.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol",
+        "../BigNumber.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "BigFiniteField"
       ]
     }
   }

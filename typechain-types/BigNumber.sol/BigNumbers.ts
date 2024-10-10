@@ -47,9 +47,9 @@ export interface BigNumbersInterface extends Interface {
       | "gt"
       | "gte"
       | "hash"
-      | "init(uint256,bool)"
-      | "init(bytes,bool,uint256)"
-      | "init(bytes,bool)"
+      | "init"
+      | "init_"
+      | "init__"
       | "isOdd"
       | "isZero((bytes,bool,uint256))"
       | "isZero(bytes)"
@@ -120,15 +120,15 @@ export interface BigNumbersInterface extends Interface {
     values: [BigNumberStruct]
   ): string;
   encodeFunctionData(
-    functionFragment: "init(uint256,bool)",
+    functionFragment: "init",
     values: [BigNumberish, boolean]
   ): string;
   encodeFunctionData(
-    functionFragment: "init(bytes,bool,uint256)",
+    functionFragment: "init_",
     values: [BytesLike, boolean, BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: "init(bytes,bool)",
+    functionFragment: "init__",
     values: [BytesLike, boolean]
   ): string;
   encodeFunctionData(
@@ -220,18 +220,9 @@ export interface BigNumbersInterface extends Interface {
   decodeFunctionResult(functionFragment: "gt", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "gte", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "hash", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "init(uint256,bool)",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "init(bytes,bool,uint256)",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "init(bytes,bool)",
-    data: BytesLike
-  ): Result;
+  decodeFunctionResult(functionFragment: "init", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "init_", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "init__", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "isOdd", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "isZero((bytes,bool,uint256))",
@@ -375,19 +366,19 @@ export interface BigNumbers extends BaseContract {
 
   hash: TypedContractMethod<[a: BigNumberStruct], [string], "view">;
 
-  "init(uint256,bool)": TypedContractMethod<
+  init: TypedContractMethod<
     [val: BigNumberish, neg: boolean],
     [BigNumberStructOutput],
     "view"
   >;
 
-  "init(bytes,bool,uint256)": TypedContractMethod<
+  init_: TypedContractMethod<
     [val: BytesLike, neg: boolean, bitlen: BigNumberish],
     [BigNumberStructOutput],
     "view"
   >;
 
-  "init(bytes,bool)": TypedContractMethod<
+  init__: TypedContractMethod<
     [val: BytesLike, neg: boolean],
     [BigNumberStructOutput],
     "view"
@@ -561,21 +552,21 @@ export interface BigNumbers extends BaseContract {
     nameOrSignature: "hash"
   ): TypedContractMethod<[a: BigNumberStruct], [string], "view">;
   getFunction(
-    nameOrSignature: "init(uint256,bool)"
+    nameOrSignature: "init"
   ): TypedContractMethod<
     [val: BigNumberish, neg: boolean],
     [BigNumberStructOutput],
     "view"
   >;
   getFunction(
-    nameOrSignature: "init(bytes,bool,uint256)"
+    nameOrSignature: "init_"
   ): TypedContractMethod<
     [val: BytesLike, neg: boolean, bitlen: BigNumberish],
     [BigNumberStructOutput],
     "view"
   >;
   getFunction(
-    nameOrSignature: "init(bytes,bool)"
+    nameOrSignature: "init__"
   ): TypedContractMethod<
     [val: BytesLike, neg: boolean],
     [BigNumberStructOutput],

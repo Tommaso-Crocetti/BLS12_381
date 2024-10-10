@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "hardhat/console.sol";
 import "../BigNumber.sol";
 
 struct Zp {
     BigNumber value; // Valore dell'elemento (modulo p)
 }
 
-contract bigFiniteField {
+contract BigFiniteField {
     BigNumber public p; // Primo modulo p
 
     modifier verify(BigNumber memory bn) {
@@ -26,9 +27,18 @@ contract bigFiniteField {
         _;
     }
 
+    function bytesToUint256(bytes memory b) public pure returns (uint256) {
+        require(b.length == 32, "Invalid bytes length. Must be 32 bytes.");
+        uint256 value;
+        assembly {
+            value := mload(add(b, 32))
+        }
+        return value;
+    }
+
     // Costruttore che inizializza il campo finito con un primo modulo p
     constructor(bytes memory prime) {
-        p = BigNumbers.init(prime, false);
+        p = BigNumbers.init__(prime, false);
     }
 
     // Funzione per creare un elemento nel campo finito
@@ -43,8 +53,7 @@ contract bigFiniteField {
         Zp memory x,
         Zp memory y
     ) public view verify(x.value) verify(y.value) returns (Zp memory) {
-        return
-            createElement(BigNumbers.mod(BigNumbers.add(x.value, y.value), p));
+        return createElement(BigNumbers.add(x.value, y.value));
     }
 
     // Operazione di sottrazione nel campo finito
