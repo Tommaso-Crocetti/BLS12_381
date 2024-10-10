@@ -2,4 +2,5 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as bigNumberSol from "./BigNumber.sol";
+export * as curveSol from "./curve.sol";
 export * as field from "./field";

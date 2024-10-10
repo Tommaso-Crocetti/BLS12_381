@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./field/BigFiniteField.sol";
+import "./field/bigFiniteField.sol";
 import "./field/quadraticExtension.sol";
 import "./field/sexticExtension.sol";
 import "./field/twelveExtension.sol";
@@ -33,20 +33,20 @@ contract Curve {
     BigNumber private order;
     Point_0 private g0;
     Point_1 private g1;
-    FiniteField private fField;
+    BigFiniteField private fField;
     QuadraticExtension private qField;
     SexticExtension private sField;
     TwelveExtension private tField;
 
     function isOnCurve_0(
-        FiniteField f,
+        BigFiniteField f,
         Point_0 memory p
     ) public view returns (bool) {
         if (p.pointType == PointType.PointAtInfinity) return false;
         Zp memory l = f.mul(p.y, p.y);
         Zp memory r = f.sum(
             f.mul(f.mul(p.x, p.x), p.x),
-            f.mul_nonres(f.createElement(4))
+            f.mul_nonres(f.createElement(BigNumbers.init(4, false)))
         );
         return f.equals(l, r);
     }
@@ -59,7 +59,7 @@ contract Curve {
         Zp_2 memory l = q.mul(p.y, p.y);
         Zp_2 memory r = q.sum(
             q.mul(q.mul(p.x, p.x), p.x),
-            q.mul_nonres(q.createElement(Zp(4), fField.zero()))
+            q.mul_nonres(q.createElement(Zp(BigNumbers.init(4, false)), fField.zero()))
         );
         return q.equals(l, r);
     }
@@ -67,7 +67,7 @@ contract Curve {
     function untwist(Point_1 memory p) public view returns (Point_2 memory) {
         Zp_6 memory t0 = sField.createElement(
             qField.zero(),
-            qField.createElement(fField.createElement(1), fField.zero()),
+            qField.createElement(fField.createElement(BigNumbers.one()), fField.zero()),
             qField.zero()
         );
         Zp_12 memory t1 = tField.createElement(

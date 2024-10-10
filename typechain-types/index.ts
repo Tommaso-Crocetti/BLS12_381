@@ -3,11 +3,15 @@
 /* eslint-disable */
 import type * as bigNumberSol from "./BigNumber.sol";
 export type { bigNumberSol };
+import type * as curveSol from "./curve.sol";
+export type { curveSol };
 import type * as field from "./field";
 export type { field };
 export * as factories from "./factories";
 export type { BigNumbers } from "./BigNumber.sol/BigNumbers";
 export { BigNumbers__factory } from "./factories/BigNumber.sol/BigNumbers__factory";
+export type { Curve } from "./curve.sol/Curve";
+export { Curve__factory } from "./factories/curve.sol/Curve__factory";
 export type { BigFiniteField } from "./field/bigFiniteField.sol/BigFiniteField";
 export { BigFiniteField__factory } from "./factories/field/bigFiniteField.sol/BigFiniteField__factory";
 export type { FiniteField } from "./field/finiteField.sol/FiniteField";

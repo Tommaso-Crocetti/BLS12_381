@@ -1,0 +1,1280 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Curve",
+  "sourceName": "contracts/curve.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract BigFiniteField",
+          "name": "f",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum Curve.PointType",
+              "name": "pointType",
+              "type": "uint8"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "internalType": "bytes",
+                      "name": "val",
+                      "type": "bytes"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "neg",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "bitlen",
+                      "type": "uint256"
+                    }
+                  ],
+                  "internalType": "struct BigNumber",
+                  "name": "value",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp",
+              "name": "x",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "internalType": "bytes",
+                      "name": "val",
+                      "type": "bytes"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "neg",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "bitlen",
+                      "type": "uint256"
+                    }
+                  ],
+                  "internalType": "struct BigNumber",
+                  "name": "value",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp",
+              "name": "y",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Curve.Point_0",
+          "name": "p",
+          "type": "tuple"
+        }
+      ],
+      "name": "isOnCurve_0",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract QuadraticExtension",
+          "name": "q",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum Curve.PointType",
+              "name": "pointType",
+              "type": "uint8"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "a",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "b",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp_2",
+              "name": "x",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "a",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "b",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp_2",
+              "name": "y",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Curve.Point_1",
+          "name": "p",
+          "type": "tuple"
+        }
+      ],
+      "name": "isOnCurve_1",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum Curve.PointType",
+              "name": "pointType",
+              "type": "uint8"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "a",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "b",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp_2",
+              "name": "x",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "a",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "bytes",
+                          "name": "val",
+                          "type": "bytes"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "neg",
+                          "type": "bool"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "bitlen",
+                          "type": "uint256"
+                        }
+                      ],
+                      "internalType": "struct BigNumber",
+                      "name": "value",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp",
+                  "name": "b",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp_2",
+              "name": "y",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Curve.Point_1",
+          "name": "p",
+          "type": "tuple"
+        }
+      ],
+      "name": "untwist",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum Curve.PointType",
+              "name": "pointType",
+              "type": "uint8"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "a",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "b",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "c",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp_6",
+                  "name": "a",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "a",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "b",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "c",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp_6",
+                  "name": "b",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp_12",
+              "name": "x",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "a",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "b",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "c",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp_6",
+                  "name": "a",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "a",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "b",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "a",
+                          "type": "tuple"
+                        },
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "internalType": "bytes",
+                                  "name": "val",
+                                  "type": "bytes"
+                                },
+                                {
+                                  "internalType": "bool",
+                                  "name": "neg",
+                                  "type": "bool"
+                                },
+                                {
+                                  "internalType": "uint256",
+                                  "name": "bitlen",
+                                  "type": "uint256"
+                                }
+                              ],
+                              "internalType": "struct BigNumber",
+                              "name": "value",
+                              "type": "tuple"
+                            }
+                          ],
+                          "internalType": "struct Zp",
+                          "name": "b",
+                          "type": "tuple"
+                        }
+                      ],
+                      "internalType": "struct Zp_2",
+                      "name": "c",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Zp_6",
+                  "name": "b",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Zp_12",
+              "name": "y",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Curve.Point_2",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50612c8c8061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806314cb7ac314610046578063354a5725146100765780638d7c4bc0146100a6575b600080fd5b610060600480360381019061005b9190611e93565b6100d6565b60405161006d91906121a7565b60405180910390f35b610090600480360381019061008b9190612239565b61104b565b60405161009d91906122a4565b60405180910390f35b6100c060048036038101906100bb9190612399565b61154b565b6040516100cd91906122a4565b60405180910390f35b6100de6119a6565b6000601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639faceb7e601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa15801561018b573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906101b491906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c700da6b601760009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16631701474273__$7db5d2dbc3ae63372df6c39d501ad0f72a$__63901717d16040518163ffffffff1660e01b8152600401600060405180830381865af4158015610279573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906102a29190612638565b6040518263ffffffff1660e01b81526004016102be91906126d1565b600060405180830381865afa1580156102db573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061030491906126f3565b601760009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610371573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061039a91906126f3565b6040518363ffffffff1660e01b81526004016103b7929190612766565b600060405180830381865afa1580156103d4573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906103fd91906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa15801561046a573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061049391906125ef565b6040518463ffffffff1660e01b81526004016104b1939291906127e1565b600060405180830381865afa1580156104ce573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906104f791906128e5565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c3601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639faceb7e8760200151601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa1580156105e9573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061061291906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa15801561067f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906106a891906125ef565b6040518463ffffffff1660e01b81526004016106c6939291906127e1565b600060405180830381865afa1580156106e3573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061070c91906128e5565b601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610779573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906107a291906128e5565b6040518363ffffffff1660e01b81526004016107bf92919061298c565b600060405180830381865afa1580156107dc573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906108059190612a4b565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f6700795601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c3601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa1580156108f2573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061091b91906128e5565b876040518363ffffffff1660e01b815260040161093992919061298c565b600060405180830381865afa158015610956573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061097f9190612a4b565b6040518263ffffffff1660e01b815260040161099b9190612ad8565b600060405180830381865afa1580156109b8573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906109e19190612a4b565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c3601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639faceb7e8960400151601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610ad3573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610afc91906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610b69573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610b9291906125ef565b6040518463ffffffff1660e01b8152600401610bb0939291906127e1565b600060405180830381865afa158015610bcd573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610bf691906128e5565b601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610c63573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610c8c91906128e5565b6040518363ffffffff1660e01b8152600401610ca992919061298c565b600060405180830381865afa158015610cc6573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610cef9190612a4b565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f6700795601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c388601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610ddd573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610e0691906128e5565b6040518363ffffffff1660e01b8152600401610e2392919061298c565b600060405180830381865afa158015610e40573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610e699190612a4b565b6040518263ffffffff1660e01b8152600401610e859190612ad8565b600060405180830381865afa158015610ea2573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610ecb9190612a4b565b9050604051806060016040528060006001811115610eec57610eeb611edc565b5b8152602001601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6987876040518363ffffffff1660e01b8152600401610f4e929190612afa565b600060405180830381865afa158015610f6b573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610f949190612a4b565b8152602001601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6985856040518363ffffffff1660e01b8152600401610ff6929190612afa565b600060405180830381865afa158015611013573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061103c9190612a4b565b81525095505050505050919050565b60006001808111156110605761105f611edc565b5b8260000151600181111561107757611076611edc565b5b036110855760009050611545565b60008373ffffffffffffffffffffffffffffffffffffffff166307a5ecaa846040015185604001516040518363ffffffff1660e01b81526004016110ca929190612b31565b600060405180830381865afa1580156110e7573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061111091906125ef565b905060008473ffffffffffffffffffffffffffffffffffffffff1663fbb740a88673ffffffffffffffffffffffffffffffffffffffff166307a5ecaa8873ffffffffffffffffffffffffffffffffffffffff166307a5ecaa89602001518a602001516040518363ffffffff1660e01b815260040161118f929190612b31565b600060405180830381865afa1580156111ac573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906111d591906125ef565b88602001516040518363ffffffff1660e01b81526004016111f7929190612b31565b600060405180830381865afa158015611214573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061123d91906125ef565b8773ffffffffffffffffffffffffffffffffffffffff16639d2e83f58973ffffffffffffffffffffffffffffffffffffffff1663c700da6b604051806020016040528073__$7db5d2dbc3ae63372df6c39d501ad0f72a$__6340957f72600460006040518363ffffffff1660e01b81526004016112bb929190612bbc565b600060405180830381865af41580156112d8573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906113019190612638565b815250601760009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015611371573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061139a91906126f3565b6040518363ffffffff1660e01b81526004016113b7929190612766565b600060405180830381865afa1580156113d4573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906113fd91906125ef565b6040518263ffffffff1660e01b81526004016114199190612be5565b600060405180830381865afa158015611436573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061145f91906125ef565b6040518363ffffffff1660e01b815260040161147c929190612b31565b600060405180830381865afa158015611499573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906114c291906125ef565b90508473ffffffffffffffffffffffffffffffffffffffff1663ab80cf7683836040518363ffffffff1660e01b81526004016114ff929190612b31565b602060405180830381865afa15801561151c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906115409190612c07565b925050505b92915050565b60006001808111156115605761155f611edc565b5b8260000151600181111561157757611576611edc565b5b0361158557600090506119a0565b60008373ffffffffffffffffffffffffffffffffffffffff1663b5e28325846040015185604001516040518363ffffffff1660e01b81526004016115ca929190612766565b600060405180830381865afa1580156115e7573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061161091906126f3565b905060008473ffffffffffffffffffffffffffffffffffffffff1663a9a52e7e8673ffffffffffffffffffffffffffffffffffffffff1663b5e283258873ffffffffffffffffffffffffffffffffffffffff1663b5e2832589602001518a602001516040518363ffffffff1660e01b815260040161168f929190612766565b600060405180830381865afa1580156116ac573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906116d591906126f3565b88602001516040518363ffffffff1660e01b81526004016116f7929190612766565b600060405180830381865afa158015611714573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061173d91906126f3565b8773ffffffffffffffffffffffffffffffffffffffff1663085eb2b98973ffffffffffffffffffffffffffffffffffffffff16631701474273__$7db5d2dbc3ae63372df6c39d501ad0f72a$__6340957f72600460006040518363ffffffff1660e01b81526004016117b0929190612bbc565b600060405180830381865af41580156117cd573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906117f69190612638565b6040518263ffffffff1660e01b815260040161181291906126d1565b600060405180830381865afa15801561182f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061185891906126f3565b6040518263ffffffff1660e01b81526004016118749190612c34565b600060405180830381865afa158015611891573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906118ba91906126f3565b6040518363ffffffff1660e01b81526004016118d7929190612766565b600060405180830381865afa1580156118f4573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061191d91906126f3565b90508473ffffffffffffffffffffffffffffffffffffffff1663d4d4555483836040518363ffffffff1660e01b815260040161195a929190612766565b602060405180830381865afa158015611977573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061199b9190612c07565b925050505b92915050565b6040518060600160405280600060018111156119c5576119c4611edc565b5b81526020016119d26119e5565b81526020016119df6119e5565b81525090565b60405180604001604052806119f8611a0b565b8152602001611a05611a0b565b81525090565b6040518060600160405280611a1e611a3e565b8152602001611a2b611a3e565b8152602001611a38611a3e565b81525090565b6040518060400160405280611a51611a64565b8152602001611a5e611a64565b81525090565b6040518060200160405280611a77611a7d565b81525090565b604051806060016040528060608152602001600015158152602001600081525090565b6000604051905090565b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b611b0282611ab9565b810181811067ffffffffffffffff82111715611b2157611b20611aca565b5b80604052505050565b6000611b34611aa0565b9050611b408282611af9565b919050565b600080fd5b60028110611b5757600080fd5b50565b600081359050611b6981611b4a565b92915050565b600080fd5b600080fd5b600067ffffffffffffffff821115611b9457611b93611aca565b5b611b9d82611ab9565b9050602081019050919050565b82818337600083830152505050565b6000611bcc611bc784611b79565b611b2a565b905082815260208101848484011115611be857611be7611b74565b5b611bf3848285611baa565b509392505050565b600082601f830112611c1057611c0f611b6f565b5b8135611c20848260208601611bb9565b91505092915050565b60008115159050919050565b611c3e81611c29565b8114611c4957600080fd5b50565b600081359050611c5b81611c35565b92915050565b6000819050919050565b611c7481611c61565b8114611c7f57600080fd5b50565b600081359050611c9181611c6b565b92915050565b600060608284031215611cad57611cac611ab4565b5b611cb76060611b2a565b9050600082013567ffffffffffffffff811115611cd757611cd6611b45565b5b611ce384828501611bfb565b6000830152506020611cf784828501611c4c565b6020830152506040611d0b84828501611c82565b60408301525092915050565b600060208284031215611d2d57611d2c611ab4565b5b611d376020611b2a565b9050600082013567ffffffffffffffff811115611d5757611d56611b45565b5b611d6384828501611c97565b60008301525092915050565b600060408284031215611d8557611d84611ab4565b5b611d8f6040611b2a565b9050600082013567ffffffffffffffff811115611daf57611dae611b45565b5b611dbb84828501611d17565b600083015250602082013567ffffffffffffffff811115611ddf57611dde611b45565b5b611deb84828501611d17565b60208301525092915050565b600060608284031215611e0d57611e0c611ab4565b5b611e176060611b2a565b90506000611e2784828501611b5a565b600083015250602082013567ffffffffffffffff811115611e4b57611e4a611b45565b5b611e5784828501611d6f565b602083015250604082013567ffffffffffffffff811115611e7b57611e7a611b45565b5b611e8784828501611d6f565b60408301525092915050565b600060208284031215611ea957611ea8611aaa565b5b600082013567ffffffffffffffff811115611ec757611ec6611aaf565b5b611ed384828501611df7565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b60028110611f1c57611f1b611edc565b5b50565b6000819050611f2d82611f0b565b919050565b6000611f3d82611f1f565b9050919050565b611f4d81611f32565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b83811015611f8d578082015181840152602081019050611f72565b60008484015250505050565b6000611fa482611f53565b611fae8185611f5e565b9350611fbe818560208601611f6f565b611fc781611ab9565b840191505092915050565b611fdb81611c29565b82525050565b611fea81611c61565b82525050565b6000606083016000830151848203600086015261200d8282611f99565b91505060208301516120226020860182611fd2565b5060408301516120356040860182611fe1565b508091505092915050565b6000602083016000830151848203600086015261205d8282611ff0565b9150508091505092915050565b600060408301600083015184820360008601526120878282612040565b915050602083015184820360208601526120a18282612040565b9150508091505092915050565b600060608301600083015184820360008601526120cb828261206a565b915050602083015184820360208601526120e5828261206a565b915050604083015184820360408601526120ff828261206a565b9150508091505092915050565b6000604083016000830151848203600086015261212982826120ae565b9150506020830151848203602086015261214382826120ae565b9150508091505092915050565b60006060830160008301516121686000860182611f44565b5060208301518482036020860152612180828261210c565b9150506040830151848203604086015261219a828261210c565b9150508091505092915050565b600060208201905081810360008301526121c18184612150565b905092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006121f4826121c9565b9050919050565b6000612206826121e9565b9050919050565b612216816121fb565b811461222157600080fd5b50565b6000813590506122338161220d565b92915050565b600080604083850312156122505761224f611aaa565b5b600061225e85828601612224565b925050602083013567ffffffffffffffff81111561227f5761227e611aaf565b5b61228b85828601611df7565b9150509250929050565b61229e81611c29565b82525050565b60006020820190506122b96000830184612295565b92915050565b60006122ca826121e9565b9050919050565b6122da816122bf565b81146122e557600080fd5b50565b6000813590506122f7816122d1565b92915050565b60006060828403121561231357612312611ab4565b5b61231d6060611b2a565b9050600061232d84828501611b5a565b600083015250602082013567ffffffffffffffff81111561235157612350611b45565b5b61235d84828501611d17565b602083015250604082013567ffffffffffffffff81111561238157612380611b45565b5b61238d84828501611d17565b60408301525092915050565b600080604083850312156123b0576123af611aaa565b5b60006123be858286016122e8565b925050602083013567ffffffffffffffff8111156123df576123de611aaf565b5b6123eb858286016122fd565b9150509250929050565b600061240861240384611b79565b611b2a565b90508281526020810184848401111561242457612423611b74565b5b61242f848285611f6f565b509392505050565b600082601f83011261244c5761244b611b6f565b5b815161245c8482602086016123f5565b91505092915050565b60008151905061247481611c35565b92915050565b60008151905061248981611c6b565b92915050565b6000606082840312156124a5576124a4611ab4565b5b6124af6060611b2a565b9050600082015167ffffffffffffffff8111156124cf576124ce611b45565b5b6124db84828501612437565b60008301525060206124ef84828501612465565b60208301525060406125038482850161247a565b60408301525092915050565b60006020828403121561252557612524611ab4565b5b61252f6020611b2a565b9050600082015167ffffffffffffffff81111561254f5761254e611b45565b5b61255b8482850161248f565b60008301525092915050565b60006040828403121561257d5761257c611ab4565b5b6125876040611b2a565b9050600082015167ffffffffffffffff8111156125a7576125a6611b45565b5b6125b38482850161250f565b600083015250602082015167ffffffffffffffff8111156125d7576125d6611b45565b5b6125e38482850161250f565b60208301525092915050565b60006020828403121561260557612604611aaa565b5b600082015167ffffffffffffffff81111561262357612622611aaf565b5b61262f84828501612567565b91505092915050565b60006020828403121561264e5761264d611aaa565b5b600082015167ffffffffffffffff81111561266c5761266b611aaf565b5b6126788482850161248f565b91505092915050565b6000606083016000830151848203600086015261269e8282611f99565b91505060208301516126b36020860182611fd2565b5060408301516126c66040860182611fe1565b508091505092915050565b600060208201905081810360008301526126eb8184612681565b905092915050565b60006020828403121561270957612708611aaa565b5b600082015167ffffffffffffffff81111561272757612726611aaf565b5b6127338482850161250f565b91505092915050565b600060208301600083015184820360008601526127598282611ff0565b9150508091505092915050565b60006040820190508181036000830152612780818561273c565b90508181036020830152612794818461273c565b90509392505050565b600060408301600083015184820360008601526127ba8282612040565b915050602083015184820360208601526127d48282612040565b9150508091505092915050565b600060608201905081810360008301526127fb818661279d565b9050818103602083015261280f818561279d565b90508181036040830152612823818461279d565b9050949350505050565b60006060828403121561284357612842611ab4565b5b61284d6060611b2a565b9050600082015167ffffffffffffffff81111561286d5761286c611b45565b5b61287984828501612567565b600083015250602082015167ffffffffffffffff81111561289d5761289c611b45565b5b6128a984828501612567565b602083015250604082015167ffffffffffffffff8111156128cd576128cc611b45565b5b6128d984828501612567565b60408301525092915050565b6000602082840312156128fb576128fa611aaa565b5b600082015167ffffffffffffffff81111561291957612918611aaf565b5b6129258482850161282d565b91505092915050565b6000606083016000830151848203600086015261294b828261206a565b91505060208301518482036020860152612965828261206a565b9150506040830151848203604086015261297f828261206a565b9150508091505092915050565b600060408201905081810360008301526129a6818561292e565b905081810360208301526129ba818461292e565b90509392505050565b6000604082840312156129d9576129d8611ab4565b5b6129e36040611b2a565b9050600082015167ffffffffffffffff811115612a0357612a02611b45565b5b612a0f8482850161282d565b600083015250602082015167ffffffffffffffff811115612a3357612a32611b45565b5b612a3f8482850161282d565b60208301525092915050565b600060208284031215612a6157612a60611aaa565b5b600082015167ffffffffffffffff811115612a7f57612a7e611aaf565b5b612a8b848285016129c3565b91505092915050565b60006040830160008301518482036000860152612ab182826120ae565b91505060208301518482036020860152612acb82826120ae565b9150508091505092915050565b60006020820190508181036000830152612af28184612a94565b905092915050565b60006040820190508181036000830152612b148185612a94565b90508181036020830152612b288184612a94565b90509392505050565b60006040820190508181036000830152612b4b818561279d565b90508181036020830152612b5f818461279d565b90509392505050565b6000819050919050565b6000819050919050565b6000612b97612b92612b8d84612b68565b612b72565b611c61565b9050919050565b612ba781612b7c565b82525050565b612bb681611c29565b82525050565b6000604082019050612bd16000830185612b9e565b612bde6020830184612bad565b9392505050565b60006020820190508181036000830152612bff818461279d565b905092915050565b600060208284031215612c1d57612c1c611aaa565b5b6000612c2b84828501612465565b91505092915050565b60006020820190508181036000830152612c4e818461273c565b90509291505056fea264697066735822122023c28802a0d025a768989fed53766abca861d79bb6323ee291efdd9821f4609a64736f6c634300081b0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806314cb7ac314610046578063354a5725146100765780638d7c4bc0146100a6575b600080fd5b610060600480360381019061005b9190611e93565b6100d6565b60405161006d91906121a7565b60405180910390f35b610090600480360381019061008b9190612239565b61104b565b60405161009d91906122a4565b60405180910390f35b6100c060048036038101906100bb9190612399565b61154b565b6040516100cd91906122a4565b60405180910390f35b6100de6119a6565b6000601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639faceb7e601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa15801561018b573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906101b491906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c700da6b601760009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16631701474273__$7db5d2dbc3ae63372df6c39d501ad0f72a$__63901717d16040518163ffffffff1660e01b8152600401600060405180830381865af4158015610279573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906102a29190612638565b6040518263ffffffff1660e01b81526004016102be91906126d1565b600060405180830381865afa1580156102db573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061030491906126f3565b601760009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610371573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061039a91906126f3565b6040518363ffffffff1660e01b81526004016103b7929190612766565b600060405180830381865afa1580156103d4573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906103fd91906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa15801561046a573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061049391906125ef565b6040518463ffffffff1660e01b81526004016104b1939291906127e1565b600060405180830381865afa1580156104ce573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906104f791906128e5565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c3601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639faceb7e8760200151601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa1580156105e9573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061061291906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa15801561067f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906106a891906125ef565b6040518463ffffffff1660e01b81526004016106c6939291906127e1565b600060405180830381865afa1580156106e3573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061070c91906128e5565b601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610779573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906107a291906128e5565b6040518363ffffffff1660e01b81526004016107bf92919061298c565b600060405180830381865afa1580156107dc573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906108059190612a4b565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f6700795601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c3601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa1580156108f2573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061091b91906128e5565b876040518363ffffffff1660e01b815260040161093992919061298c565b600060405180830381865afa158015610956573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061097f9190612a4b565b6040518263ffffffff1660e01b815260040161099b9190612ad8565b600060405180830381865afa1580156109b8573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906109e19190612a4b565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c3601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639faceb7e8960400151601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610ad3573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610afc91906125ef565b601860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610b69573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610b9291906125ef565b6040518463ffffffff1660e01b8152600401610bb0939291906127e1565b600060405180830381865afa158015610bcd573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610bf691906128e5565b601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610c63573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610c8c91906128e5565b6040518363ffffffff1660e01b8152600401610ca992919061298c565b600060405180830381865afa158015610cc6573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610cef9190612a4b565b90506000601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f6700795601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f87386c388601960009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610ddd573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610e0691906128e5565b6040518363ffffffff1660e01b8152600401610e2392919061298c565b600060405180830381865afa158015610e40573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610e699190612a4b565b6040518263ffffffff1660e01b8152600401610e859190612ad8565b600060405180830381865afa158015610ea2573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610ecb9190612a4b565b9050604051806060016040528060006001811115610eec57610eeb611edc565b5b8152602001601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6987876040518363ffffffff1660e01b8152600401610f4e929190612afa565b600060405180830381865afa158015610f6b573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610f949190612a4b565b8152602001601a60009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6985856040518363ffffffff1660e01b8152600401610ff6929190612afa565b600060405180830381865afa158015611013573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061103c9190612a4b565b81525095505050505050919050565b60006001808111156110605761105f611edc565b5b8260000151600181111561107757611076611edc565b5b036110855760009050611545565b60008373ffffffffffffffffffffffffffffffffffffffff166307a5ecaa846040015185604001516040518363ffffffff1660e01b81526004016110ca929190612b31565b600060405180830381865afa1580156110e7573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061111091906125ef565b905060008473ffffffffffffffffffffffffffffffffffffffff1663fbb740a88673ffffffffffffffffffffffffffffffffffffffff166307a5ecaa8873ffffffffffffffffffffffffffffffffffffffff166307a5ecaa89602001518a602001516040518363ffffffff1660e01b815260040161118f929190612b31565b600060405180830381865afa1580156111ac573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906111d591906125ef565b88602001516040518363ffffffff1660e01b81526004016111f7929190612b31565b600060405180830381865afa158015611214573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061123d91906125ef565b8773ffffffffffffffffffffffffffffffffffffffff16639d2e83f58973ffffffffffffffffffffffffffffffffffffffff1663c700da6b604051806020016040528073__$7db5d2dbc3ae63372df6c39d501ad0f72a$__6340957f72600460006040518363ffffffff1660e01b81526004016112bb929190612bbc565b600060405180830381865af41580156112d8573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906113019190612638565b815250601760009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015611371573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061139a91906126f3565b6040518363ffffffff1660e01b81526004016113b7929190612766565b600060405180830381865afa1580156113d4573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906113fd91906125ef565b6040518263ffffffff1660e01b81526004016114199190612be5565b600060405180830381865afa158015611436573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061145f91906125ef565b6040518363ffffffff1660e01b815260040161147c929190612b31565b600060405180830381865afa158015611499573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906114c291906125ef565b90508473ffffffffffffffffffffffffffffffffffffffff1663ab80cf7683836040518363ffffffff1660e01b81526004016114ff929190612b31565b602060405180830381865afa15801561151c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906115409190612c07565b925050505b92915050565b60006001808111156115605761155f611edc565b5b8260000151600181111561157757611576611edc565b5b0361158557600090506119a0565b60008373ffffffffffffffffffffffffffffffffffffffff1663b5e28325846040015185604001516040518363ffffffff1660e01b81526004016115ca929190612766565b600060405180830381865afa1580156115e7573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061161091906126f3565b905060008473ffffffffffffffffffffffffffffffffffffffff1663a9a52e7e8673ffffffffffffffffffffffffffffffffffffffff1663b5e283258873ffffffffffffffffffffffffffffffffffffffff1663b5e2832589602001518a602001516040518363ffffffff1660e01b815260040161168f929190612766565b600060405180830381865afa1580156116ac573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906116d591906126f3565b88602001516040518363ffffffff1660e01b81526004016116f7929190612766565b600060405180830381865afa158015611714573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061173d91906126f3565b8773ffffffffffffffffffffffffffffffffffffffff1663085eb2b98973ffffffffffffffffffffffffffffffffffffffff16631701474273__$7db5d2dbc3ae63372df6c39d501ad0f72a$__6340957f72600460006040518363ffffffff1660e01b81526004016117b0929190612bbc565b600060405180830381865af41580156117cd573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906117f69190612638565b6040518263ffffffff1660e01b815260040161181291906126d1565b600060405180830381865afa15801561182f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061185891906126f3565b6040518263ffffffff1660e01b81526004016118749190612c34565b600060405180830381865afa158015611891573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906118ba91906126f3565b6040518363ffffffff1660e01b81526004016118d7929190612766565b600060405180830381865afa1580156118f4573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061191d91906126f3565b90508473ffffffffffffffffffffffffffffffffffffffff1663d4d4555483836040518363ffffffff1660e01b815260040161195a929190612766565b602060405180830381865afa158015611977573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061199b9190612c07565b925050505b92915050565b6040518060600160405280600060018111156119c5576119c4611edc565b5b81526020016119d26119e5565b81526020016119df6119e5565b81525090565b60405180604001604052806119f8611a0b565b8152602001611a05611a0b565b81525090565b6040518060600160405280611a1e611a3e565b8152602001611a2b611a3e565b8152602001611a38611a3e565b81525090565b6040518060400160405280611a51611a64565b8152602001611a5e611a64565b81525090565b6040518060200160405280611a77611a7d565b81525090565b604051806060016040528060608152602001600015158152602001600081525090565b6000604051905090565b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b611b0282611ab9565b810181811067ffffffffffffffff82111715611b2157611b20611aca565b5b80604052505050565b6000611b34611aa0565b9050611b408282611af9565b919050565b600080fd5b60028110611b5757600080fd5b50565b600081359050611b6981611b4a565b92915050565b600080fd5b600080fd5b600067ffffffffffffffff821115611b9457611b93611aca565b5b611b9d82611ab9565b9050602081019050919050565b82818337600083830152505050565b6000611bcc611bc784611b79565b611b2a565b905082815260208101848484011115611be857611be7611b74565b5b611bf3848285611baa565b509392505050565b600082601f830112611c1057611c0f611b6f565b5b8135611c20848260208601611bb9565b91505092915050565b60008115159050919050565b611c3e81611c29565b8114611c4957600080fd5b50565b600081359050611c5b81611c35565b92915050565b6000819050919050565b611c7481611c61565b8114611c7f57600080fd5b50565b600081359050611c9181611c6b565b92915050565b600060608284031215611cad57611cac611ab4565b5b611cb76060611b2a565b9050600082013567ffffffffffffffff811115611cd757611cd6611b45565b5b611ce384828501611bfb565b6000830152506020611cf784828501611c4c565b6020830152506040611d0b84828501611c82565b60408301525092915050565b600060208284031215611d2d57611d2c611ab4565b5b611d376020611b2a565b9050600082013567ffffffffffffffff811115611d5757611d56611b45565b5b611d6384828501611c97565b60008301525092915050565b600060408284031215611d8557611d84611ab4565b5b611d8f6040611b2a565b9050600082013567ffffffffffffffff811115611daf57611dae611b45565b5b611dbb84828501611d17565b600083015250602082013567ffffffffffffffff811115611ddf57611dde611b45565b5b611deb84828501611d17565b60208301525092915050565b600060608284031215611e0d57611e0c611ab4565b5b611e176060611b2a565b90506000611e2784828501611b5a565b600083015250602082013567ffffffffffffffff811115611e4b57611e4a611b45565b5b611e5784828501611d6f565b602083015250604082013567ffffffffffffffff811115611e7b57611e7a611b45565b5b611e8784828501611d6f565b60408301525092915050565b600060208284031215611ea957611ea8611aaa565b5b600082013567ffffffffffffffff811115611ec757611ec6611aaf565b5b611ed384828501611df7565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b60028110611f1c57611f1b611edc565b5b50565b6000819050611f2d82611f0b565b919050565b6000611f3d82611f1f565b9050919050565b611f4d81611f32565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b83811015611f8d578082015181840152602081019050611f72565b60008484015250505050565b6000611fa482611f53565b611fae8185611f5e565b9350611fbe818560208601611f6f565b611fc781611ab9565b840191505092915050565b611fdb81611c29565b82525050565b611fea81611c61565b82525050565b6000606083016000830151848203600086015261200d8282611f99565b91505060208301516120226020860182611fd2565b5060408301516120356040860182611fe1565b508091505092915050565b6000602083016000830151848203600086015261205d8282611ff0565b9150508091505092915050565b600060408301600083015184820360008601526120878282612040565b915050602083015184820360208601526120a18282612040565b9150508091505092915050565b600060608301600083015184820360008601526120cb828261206a565b915050602083015184820360208601526120e5828261206a565b915050604083015184820360408601526120ff828261206a565b9150508091505092915050565b6000604083016000830151848203600086015261212982826120ae565b9150506020830151848203602086015261214382826120ae565b9150508091505092915050565b60006060830160008301516121686000860182611f44565b5060208301518482036020860152612180828261210c565b9150506040830151848203604086015261219a828261210c565b9150508091505092915050565b600060208201905081810360008301526121c18184612150565b905092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006121f4826121c9565b9050919050565b6000612206826121e9565b9050919050565b612216816121fb565b811461222157600080fd5b50565b6000813590506122338161220d565b92915050565b600080604083850312156122505761224f611aaa565b5b600061225e85828601612224565b925050602083013567ffffffffffffffff81111561227f5761227e611aaf565b5b61228b85828601611df7565b9150509250929050565b61229e81611c29565b82525050565b60006020820190506122b96000830184612295565b92915050565b60006122ca826121e9565b9050919050565b6122da816122bf565b81146122e557600080fd5b50565b6000813590506122f7816122d1565b92915050565b60006060828403121561231357612312611ab4565b5b61231d6060611b2a565b9050600061232d84828501611b5a565b600083015250602082013567ffffffffffffffff81111561235157612350611b45565b5b61235d84828501611d17565b602083015250604082013567ffffffffffffffff81111561238157612380611b45565b5b61238d84828501611d17565b60408301525092915050565b600080604083850312156123b0576123af611aaa565b5b60006123be858286016122e8565b925050602083013567ffffffffffffffff8111156123df576123de611aaf565b5b6123eb858286016122fd565b9150509250929050565b600061240861240384611b79565b611b2a565b90508281526020810184848401111561242457612423611b74565b5b61242f848285611f6f565b509392505050565b600082601f83011261244c5761244b611b6f565b5b815161245c8482602086016123f5565b91505092915050565b60008151905061247481611c35565b92915050565b60008151905061248981611c6b565b92915050565b6000606082840312156124a5576124a4611ab4565b5b6124af6060611b2a565b9050600082015167ffffffffffffffff8111156124cf576124ce611b45565b5b6124db84828501612437565b60008301525060206124ef84828501612465565b60208301525060406125038482850161247a565b60408301525092915050565b60006020828403121561252557612524611ab4565b5b61252f6020611b2a565b9050600082015167ffffffffffffffff81111561254f5761254e611b45565b5b61255b8482850161248f565b60008301525092915050565b60006040828403121561257d5761257c611ab4565b5b6125876040611b2a565b9050600082015167ffffffffffffffff8111156125a7576125a6611b45565b5b6125b38482850161250f565b600083015250602082015167ffffffffffffffff8111156125d7576125d6611b45565b5b6125e38482850161250f565b60208301525092915050565b60006020828403121561260557612604611aaa565b5b600082015167ffffffffffffffff81111561262357612622611aaf565b5b61262f84828501612567565b91505092915050565b60006020828403121561264e5761264d611aaa565b5b600082015167ffffffffffffffff81111561266c5761266b611aaf565b5b6126788482850161248f565b91505092915050565b6000606083016000830151848203600086015261269e8282611f99565b91505060208301516126b36020860182611fd2565b5060408301516126c66040860182611fe1565b508091505092915050565b600060208201905081810360008301526126eb8184612681565b905092915050565b60006020828403121561270957612708611aaa565b5b600082015167ffffffffffffffff81111561272757612726611aaf565b5b6127338482850161250f565b91505092915050565b600060208301600083015184820360008601526127598282611ff0565b9150508091505092915050565b60006040820190508181036000830152612780818561273c565b90508181036020830152612794818461273c565b90509392505050565b600060408301600083015184820360008601526127ba8282612040565b915050602083015184820360208601526127d48282612040565b9150508091505092915050565b600060608201905081810360008301526127fb818661279d565b9050818103602083015261280f818561279d565b90508181036040830152612823818461279d565b9050949350505050565b60006060828403121561284357612842611ab4565b5b61284d6060611b2a565b9050600082015167ffffffffffffffff81111561286d5761286c611b45565b5b61287984828501612567565b600083015250602082015167ffffffffffffffff81111561289d5761289c611b45565b5b6128a984828501612567565b602083015250604082015167ffffffffffffffff8111156128cd576128cc611b45565b5b6128d984828501612567565b60408301525092915050565b6000602082840312156128fb576128fa611aaa565b5b600082015167ffffffffffffffff81111561291957612918611aaf565b5b6129258482850161282d565b91505092915050565b6000606083016000830151848203600086015261294b828261206a565b91505060208301518482036020860152612965828261206a565b9150506040830151848203604086015261297f828261206a565b9150508091505092915050565b600060408201905081810360008301526129a6818561292e565b905081810360208301526129ba818461292e565b90509392505050565b6000604082840312156129d9576129d8611ab4565b5b6129e36040611b2a565b9050600082015167ffffffffffffffff811115612a0357612a02611b45565b5b612a0f8482850161282d565b600083015250602082015167ffffffffffffffff811115612a3357612a32611b45565b5b612a3f8482850161282d565b60208301525092915050565b600060208284031215612a6157612a60611aaa565b5b600082015167ffffffffffffffff811115612a7f57612a7e611aaf565b5b612a8b848285016129c3565b91505092915050565b60006040830160008301518482036000860152612ab182826120ae565b91505060208301518482036020860152612acb82826120ae565b9150508091505092915050565b60006020820190508181036000830152612af28184612a94565b905092915050565b60006040820190508181036000830152612b148185612a94565b90508181036020830152612b288184612a94565b90509392505050565b60006040820190508181036000830152612b4b818561279d565b90508181036020830152612b5f818461279d565b90509392505050565b6000819050919050565b6000819050919050565b6000612b97612b92612b8d84612b68565b612b72565b611c61565b9050919050565b612ba781612b7c565b82525050565b612bb681611c29565b82525050565b6000604082019050612bd16000830185612b9e565b612bde6020830184612bad565b9392505050565b60006020820190508181036000830152612bff818461279d565b905092915050565b600060208284031215612c1d57612c1c611aaa565b5b6000612c2b84828501612465565b91505092915050565b60006020820190508181036000830152612c4e818461273c565b90509291505056fea264697066735822122023c28802a0d025a768989fed53766abca861d79bb6323ee291efdd9821f4609a64736f6c634300081b0033",
+  "linkReferences": {
+    "contracts/BigNumber.sol": {
+      "BigNumbers": [
+        {
+          "length": 20,
+          "start": 593
+        },
+        {
+          "length": 20,
+          "start": 4769
+        },
+        {
+          "length": 20,
+          "start": 6038
+        }
+      ]
+    }
+  },
+  "deployedLinkReferences": {
+    "contracts/BigNumber.sol": {
+      "BigNumbers": [
+        {
+          "length": 20,
+          "start": 562
+        },
+        {
+          "length": 20,
+          "start": 4738
+        },
+        {
+          "length": 20,
+          "start": 6007
+        }
+      ]
+    }
+  }
+}

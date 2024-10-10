@@ -41,6 +41,7 @@ export type ZpStructOutput = [value: BigNumberStructOutput] & {
 export interface BigFiniteFieldInterface extends Interface {
   getFunction(
     nameOrSignature:
+      | "bytesToUint256"
       | "createElement"
       | "div"
       | "equals"
@@ -53,6 +54,10 @@ export interface BigFiniteFieldInterface extends Interface {
       | "zero"
   ): FunctionFragment;
 
+  encodeFunctionData(
+    functionFragment: "bytesToUint256",
+    values: [BytesLike]
+  ): string;
   encodeFunctionData(
     functionFragment: "createElement",
     values: [BigNumberStruct]
@@ -85,6 +90,10 @@ export interface BigFiniteFieldInterface extends Interface {
   ): string;
   encodeFunctionData(functionFragment: "zero", values?: undefined): string;
 
+  decodeFunctionResult(
+    functionFragment: "bytesToUint256",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(
     functionFragment: "createElement",
     data: BytesLike
@@ -143,6 +152,8 @@ export interface BigFiniteField extends BaseContract {
     event?: TCEvent
   ): Promise<this>;
 
+  bytesToUint256: TypedContractMethod<[b: BytesLike], [bigint], "view">;
+
   createElement: TypedContractMethod<
     [value: BigNumberStruct],
     [ZpStructOutput],
@@ -191,6 +202,9 @@ export interface BigFiniteField extends BaseContract {
     key: string | FunctionFragment
   ): T;
 
+  getFunction(
+    nameOrSignature: "bytesToUint256"
+  ): TypedContractMethod<[b: BytesLike], [bigint], "view">;
   getFunction(
     nameOrSignature: "createElement"
   ): TypedContractMethod<[value: BigNumberStruct], [ZpStructOutput], "view">;

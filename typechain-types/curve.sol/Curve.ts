@@ -21,9 +21,23 @@ import type {
   TypedContractMethod,
 } from "../common";
 
-export type ZpStruct = { value: BigNumberish };
+export type BigNumberStruct = {
+  val: BytesLike;
+  neg: boolean;
+  bitlen: BigNumberish;
+};
 
-export type ZpStructOutput = [value: bigint] & { value: bigint };
+export type BigNumberStructOutput = [
+  val: string,
+  neg: boolean,
+  bitlen: bigint
+] & { val: string; neg: boolean; bitlen: bigint };
+
+export type ZpStruct = { value: BigNumberStruct };
+
+export type ZpStructOutput = [value: BigNumberStructOutput] & {
+  value: BigNumberStructOutput;
+};
 
 export type Zp_2Struct = { a: ZpStruct; b: ZpStruct };
 

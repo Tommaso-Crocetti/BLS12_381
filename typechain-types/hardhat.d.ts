@@ -18,6 +18,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.BigNumbers__factory>;
     getContractFactory(
+      name: "Curve",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Curve__factory>;
+    getContractFactory(
       name: "BigFiniteField",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.BigFiniteField__factory>;
@@ -44,6 +48,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.BigNumbers>;
     getContractAt(
+      name: "Curve",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Curve>;
+    getContractAt(
       name: "BigFiniteField",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -73,6 +82,10 @@ declare module "hardhat/types/runtime" {
       name: "BigNumbers",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.BigNumbers>;
+    deployContract(
+      name: "Curve",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.Curve>;
     deployContract(
       name: "BigFiniteField",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -99,6 +112,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.BigNumbers>;
+    deployContract(
+      name: "Curve",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.Curve>;
     deployContract(
       name: "BigFiniteField",
       args: any[],
