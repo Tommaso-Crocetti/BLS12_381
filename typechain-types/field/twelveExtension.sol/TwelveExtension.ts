@@ -20,53 +20,31 @@ import type {
   TypedContractMethod,
 } from "../../common";
 
-export declare namespace FiniteField {
-  export type ZpStruct = { value: BigNumberish };
+export type ZpStruct = { value: BigNumberish };
 
-  export type ZpStructOutput = [value: bigint] & { value: bigint };
-}
+export type ZpStructOutput = [value: bigint] & { value: bigint };
 
-export declare namespace QuadraticExtension {
-  export type Zp_2Struct = { a: FiniteField.ZpStruct; b: FiniteField.ZpStruct };
+export type Zp_2Struct = { a: ZpStruct; b: ZpStruct };
 
-  export type Zp_2StructOutput = [
-    a: FiniteField.ZpStructOutput,
-    b: FiniteField.ZpStructOutput
-  ] & { a: FiniteField.ZpStructOutput; b: FiniteField.ZpStructOutput };
-}
+export type Zp_2StructOutput = [a: ZpStructOutput, b: ZpStructOutput] & {
+  a: ZpStructOutput;
+  b: ZpStructOutput;
+};
 
-export declare namespace SexticExtension {
-  export type Zp_6Struct = {
-    a: QuadraticExtension.Zp_2Struct;
-    b: QuadraticExtension.Zp_2Struct;
-    c: QuadraticExtension.Zp_2Struct;
-  };
+export type Zp_6Struct = { a: Zp_2Struct; b: Zp_2Struct; c: Zp_2Struct };
 
-  export type Zp_6StructOutput = [
-    a: QuadraticExtension.Zp_2StructOutput,
-    b: QuadraticExtension.Zp_2StructOutput,
-    c: QuadraticExtension.Zp_2StructOutput
-  ] & {
-    a: QuadraticExtension.Zp_2StructOutput;
-    b: QuadraticExtension.Zp_2StructOutput;
-    c: QuadraticExtension.Zp_2StructOutput;
-  };
-}
+export type Zp_6StructOutput = [
+  a: Zp_2StructOutput,
+  b: Zp_2StructOutput,
+  c: Zp_2StructOutput
+] & { a: Zp_2StructOutput; b: Zp_2StructOutput; c: Zp_2StructOutput };
 
-export declare namespace TwelveExtension {
-  export type Zp_12Struct = {
-    a: SexticExtension.Zp_6Struct;
-    b: SexticExtension.Zp_6Struct;
-  };
+export type Zp_12Struct = { a: Zp_6Struct; b: Zp_6Struct };
 
-  export type Zp_12StructOutput = [
-    a: SexticExtension.Zp_6StructOutput,
-    b: SexticExtension.Zp_6StructOutput
-  ] & {
-    a: SexticExtension.Zp_6StructOutput;
-    b: SexticExtension.Zp_6StructOutput;
-  };
-}
+export type Zp_12StructOutput = [a: Zp_6StructOutput, b: Zp_6StructOutput] & {
+  a: Zp_6StructOutput;
+  b: Zp_6StructOutput;
+};
 
 export interface TwelveExtensionInterface extends Interface {
   getFunction(
@@ -75,23 +53,23 @@ export interface TwelveExtensionInterface extends Interface {
 
   encodeFunctionData(
     functionFragment: "createElement",
-    values: [SexticExtension.Zp_6Struct, SexticExtension.Zp_6Struct]
+    values: [Zp_6Struct, Zp_6Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "inverse",
-    values: [TwelveExtension.Zp_12Struct]
+    values: [Zp_12Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "mul",
-    values: [TwelveExtension.Zp_12Struct, TwelveExtension.Zp_12Struct]
+    values: [Zp_12Struct, Zp_12Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "sub",
-    values: [TwelveExtension.Zp_12Struct, TwelveExtension.Zp_12Struct]
+    values: [Zp_12Struct, Zp_12Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "sum",
-    values: [TwelveExtension.Zp_12Struct, TwelveExtension.Zp_12Struct]
+    values: [Zp_12Struct, Zp_12Struct]
   ): string;
 
   decodeFunctionResult(
@@ -148,32 +126,28 @@ export interface TwelveExtension extends BaseContract {
   ): Promise<this>;
 
   createElement: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_12StructOutput],
     "view"
   >;
 
-  inverse: TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
-    "view"
-  >;
+  inverse: TypedContractMethod<[x: Zp_12Struct], [Zp_12StructOutput], "view">;
 
   mul: TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct, y: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_12Struct, y: Zp_12Struct],
+    [Zp_12StructOutput],
     "view"
   >;
 
   sub: TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct, y: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_12Struct, y: Zp_12Struct],
+    [Zp_12StructOutput],
     "view"
   >;
 
   sum: TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct, y: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_12Struct, y: Zp_12Struct],
+    [Zp_12StructOutput],
     "view"
   >;
 
@@ -184,36 +158,32 @@ export interface TwelveExtension extends BaseContract {
   getFunction(
     nameOrSignature: "createElement"
   ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_12StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "inverse"
-  ): TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[x: Zp_12Struct], [Zp_12StructOutput], "view">;
   getFunction(
     nameOrSignature: "mul"
   ): TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct, y: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_12Struct, y: Zp_12Struct],
+    [Zp_12StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "sub"
   ): TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct, y: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_12Struct, y: Zp_12Struct],
+    [Zp_12StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "sum"
   ): TypedContractMethod<
-    [x: TwelveExtension.Zp_12Struct, y: TwelveExtension.Zp_12Struct],
-    [TwelveExtension.Zp_12StructOutput],
+    [x: Zp_12Struct, y: Zp_12Struct],
+    [Zp_12StructOutput],
     "view"
   >;
 

@@ -1,19 +1,23 @@
 import { ethers } from "hardhat";
 import { expect } from "chai";
-import { FiniteField, FiniteField__factory } from "../typechain-types";
-import { QuadraticExtension, QuadraticExtension__factory } from "../typechain-types";
+import { FiniteField, FiniteField__factory } from "../typechain-types"; 
+import { QuadraticExtension, QuadraticExtension__factory } from "../typechain-types/"
 import { SexticExtension, SexticExtension__factory } from "../typechain-types";
+import { ZpStruct, ZpStructOutput } from "../typechain-types/field/finiteField.sol/FiniteField";
+import { Zp_2Struct, Zp_2StructOutput } from "../typechain-types/field/quadraticExtension.sol/QuadraticExtension";
+import { Zp_6Struct, Zp_6StructOutput } from "../typechain-types/field/sexticExtension.sol/SexticExtension";
+
 
 // Utility functions to convert structs
-function toZpStruct(output: FiniteField.ZpStructOutput): FiniteField.ZpStruct {
+function toZpStruct(output: ZpStructOutput): ZpStruct {
   return { value: output.value };
 }
 
-function toZp_2Struct(output: QuadraticExtension.Zp_2StructOutput): QuadraticExtension.Zp_2Struct {
+function toZp_2Struct(output: Zp_2StructOutput): Zp_2Struct {
   return { a: toZpStruct(output.a), b: toZpStruct(output.b) };
 }
 
-function toZp_6Struct(output: SexticExtension.Zp_6StructOutput): SexticExtension.Zp_6Struct {
+function toZp_6Struct(output: Zp_6StructOutput): Zp_6Struct {
   return {
     a: toZp_2Struct(output.a),
     b: toZp_2Struct(output.b),
@@ -25,8 +29,8 @@ describe("Sextic Extension Contract", function () {
     let finiteField: FiniteField;
     let quadraticExtension: QuadraticExtension;
     let sexticExtension: SexticExtension;
-    let element6x: SexticExtension.Zp_6StructOutput;
-    let element6y: SexticExtension.Zp_6StructOutput;
+    let element6x: Zp_6StructOutput;
+    let element6y: Zp_6StructOutput;
 
     beforeEach(async function () {
         const FiniteFieldFactory: FiniteField__factory = (await ethers.getContractFactory("FiniteField")) as FiniteField__factory;
@@ -38,35 +42,35 @@ describe("Sextic Extension Contract", function () {
         const SexticExtensionFactory: SexticExtension__factory = (await ethers.getContractFactory("SexticExtension")) as SexticExtension__factory;
         sexticExtension = await SexticExtensionFactory.deploy(quadraticExtension);
 
-        const a: FiniteField.ZpStructOutput = await finiteField.createElement(3);
-        const b: FiniteField.ZpStructOutput = await finiteField.createElement(5);
-        const x: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
+        const a: ZpStructOutput = await finiteField.createElement(3);
+        const b: ZpStructOutput = await finiteField.createElement(5);
+        const x: Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
 
-        const c: FiniteField.ZpStructOutput = await finiteField.createElement(1);
-        const d: FiniteField.ZpStructOutput = await finiteField.createElement(2);
-        const y: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(c), toZpStruct(d));
+        const c: ZpStructOutput = await finiteField.createElement(1);
+        const d: ZpStructOutput = await finiteField.createElement(2);
+        const y: Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(c), toZpStruct(d));
 
         element6x = await sexticExtension.createElement(toZp_2Struct(x), toZp_2Struct(y), toZp_2Struct(x));
         element6y = await sexticExtension.createElement(toZp_2Struct(y), toZp_2Struct(x), toZp_2Struct(y));
     });
 
     it("should create sextic field elements correctly", async function () {
-        const a: FiniteField.ZpStructOutput = await finiteField.createElement(3);
-        const b: FiniteField.ZpStructOutput = await finiteField.createElement(5);
-        const x: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
+        const a: ZpStructOutput = await finiteField.createElement(3);
+        const b: ZpStructOutput = await finiteField.createElement(5);
+        const x: Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
 
-        const c: FiniteField.ZpStructOutput = await finiteField.createElement(1);
-        const d: FiniteField.ZpStructOutput = await finiteField.createElement(2);
-        const y: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(c), toZpStruct(d));
+        const c: ZpStructOutput = await finiteField.createElement(1);
+        const d: ZpStructOutput = await finiteField.createElement(2);
+        const y: Zp_2StructOutput = await quadraticExtension.createElement(toZpStruct(c), toZpStruct(d));
 
-        const element6: SexticExtension.Zp_6StructOutput = await sexticExtension.createElement(toZp_2Struct(x), toZp_2Struct(y), toZp_2Struct(x));
+        const element6: Zp_6StructOutput = await sexticExtension.createElement(toZp_2Struct(x), toZp_2Struct(y), toZp_2Struct(x));
         expect(element6.a.a.value).to.equal(3);
         expect(element6.b.a.value).to.equal(1);
         expect(element6.c.a.value).to.equal(3);
     });
 
     it("should add sextic elements correctly", async function () {
-        const sum: SexticExtension.Zp_6StructOutput = await sexticExtension.sum(toZp_6Struct(element6x), toZp_6Struct(element6y));
+        const sum: Zp_6StructOutput = await sexticExtension.sum(toZp_6Struct(element6x), toZp_6Struct(element6y));
 
         expect(sum.a.a.value).to.equal(4);
         expect(sum.b.a.value).to.equal(4);
@@ -78,7 +82,7 @@ describe("Sextic Extension Contract", function () {
 
     it("should subtract sextic elements correctly", async function () {
 
-        const sub: SexticExtension.Zp_6StructOutput = await sexticExtension.sub(toZp_6Struct(element6x), toZp_6Struct(element6y));
+        const sub: Zp_6StructOutput = await sexticExtension.sub(toZp_6Struct(element6x), toZp_6Struct(element6y));
 
         expect(sub.a.a.value).to.equal(2);
         expect(sub.b.a.value).to.equal(5);
@@ -91,13 +95,13 @@ describe("Sextic Extension Contract", function () {
 
     it("should multiply elements in Zp_6 correctly", async function () {
         // Creazione degli elementi Zp_2 per l'elemento x in Zp_6
-        const x_a: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(
+        const x_a: Zp_2StructOutput = await quadraticExtension.createElement(
             { value: 3 }, { value: 5 }
         );
-        const x_b: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(
+        const x_b: Zp_2StructOutput = await quadraticExtension.createElement(
             { value: 1 }, { value: 2 }
         );
-        const x_c: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(
+        const x_c: Zp_2StructOutput = await quadraticExtension.createElement(
             { value: 4 }, { value: 0 }
         );
         const x = await sexticExtension.createElement(
@@ -105,13 +109,13 @@ describe("Sextic Extension Contract", function () {
         );
 
         // Creazione degli elementi Zp_2 per l'elemento y in Zp_6
-        const y_a: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(
+        const y_a: Zp_2StructOutput = await quadraticExtension.createElement(
             { value: 2 }, { value: 6 }
         );
-        const y_b: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(
+        const y_b: Zp_2StructOutput = await quadraticExtension.createElement(
             { value: 1 }, { value: 3 }
         );
-        const y_c: QuadraticExtension.Zp_2StructOutput = await quadraticExtension.createElement(
+        const y_c: Zp_2StructOutput = await quadraticExtension.createElement(
             { value: 0 }, { value: 1 }
         );
         const y = await sexticExtension.createElement(
@@ -122,9 +126,9 @@ describe("Sextic Extension Contract", function () {
         const result = await sexticExtension.mul(toZp_6Struct(x), toZp_6Struct(y));
 
         // Risultati attesi
-        const expected_a = await quadraticExtension.createElement({ value: 2 }, { value: 5 });
-        const expected_b = await quadraticExtension.createElement({ value: 3 }, { value: 3 });
-        const expected_c = await quadraticExtension.createElement({ value: 6 }, { value: 0 });
+        const expected_a = await quadraticExtension.createElement({ value: 5 }, { value: 3 });
+        const expected_b = await quadraticExtension.createElement({ value: 3 }, { value: 6 });
+        const expected_c = await quadraticExtension.createElement({ value: 5 }, { value: 4 });
 
         // Assert: Verifica se il risultato della moltiplicazione è corretto
         expect(result.a.a.value).to.equal(expected_a.a.value);

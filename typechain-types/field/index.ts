@@ -9,3 +9,4 @@ import type * as sexticExtensionSol from "./sexticExtension.sol";
 export type { sexticExtensionSol };
 import type * as twelveExtensionSol from "./twelveExtension.sol";
 export type { twelveExtensionSol };
+export type { BigFiniteField } from "./BigFiniteField";

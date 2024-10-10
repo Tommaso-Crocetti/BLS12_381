@@ -20,11 +20,9 @@ import type {
   TypedContractMethod,
 } from "../../common";
 
-export declare namespace FiniteField {
-  export type ZpStruct = { value: BigNumberish };
+export type ZpStruct = { value: BigNumberish };
 
-  export type ZpStructOutput = [value: bigint] & { value: bigint };
-}
+export type ZpStructOutput = [value: bigint] & { value: bigint };
 
 export interface FiniteFieldInterface extends Interface {
   getFunction(
@@ -34,7 +32,6 @@ export interface FiniteFieldInterface extends Interface {
       | "equals"
       | "exp"
       | "inverse"
-      | "isPrime"
       | "mul"
       | "mul_nonres"
       | "p"
@@ -49,40 +46,33 @@ export interface FiniteFieldInterface extends Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "div",
-    values: [FiniteField.ZpStruct, FiniteField.ZpStruct]
+    values: [ZpStruct, ZpStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "equals",
-    values: [FiniteField.ZpStruct, FiniteField.ZpStruct]
+    values: [ZpStruct, ZpStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "exp",
     values: [BigNumberish, BigNumberish]
   ): string;
-  encodeFunctionData(
-    functionFragment: "inverse",
-    values: [FiniteField.ZpStruct]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "isPrime",
-    values: [BigNumberish]
-  ): string;
+  encodeFunctionData(functionFragment: "inverse", values: [ZpStruct]): string;
   encodeFunctionData(
     functionFragment: "mul",
-    values: [FiniteField.ZpStruct, FiniteField.ZpStruct]
+    values: [ZpStruct, ZpStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "mul_nonres",
-    values: [FiniteField.ZpStruct]
+    values: [ZpStruct]
   ): string;
   encodeFunctionData(functionFragment: "p", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "sub",
-    values: [FiniteField.ZpStruct, FiniteField.ZpStruct]
+    values: [ZpStruct, ZpStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "sum",
-    values: [FiniteField.ZpStruct, FiniteField.ZpStruct]
+    values: [ZpStruct, ZpStruct]
   ): string;
   encodeFunctionData(functionFragment: "zero", values?: undefined): string;
 
@@ -94,7 +84,6 @@ export interface FiniteFieldInterface extends Interface {
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "exp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "inverse", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "isPrime", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul_nonres", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "p", data: BytesLike): Result;
@@ -148,21 +137,17 @@ export interface FiniteField extends BaseContract {
 
   createElement: TypedContractMethod<
     [value: BigNumberish],
-    [FiniteField.ZpStructOutput],
+    [ZpStructOutput],
     "view"
   >;
 
   div: TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
+    [a: ZpStruct, b: ZpStruct],
+    [ZpStructOutput],
     "view"
   >;
 
-  equals: TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [boolean],
-    "view"
-  >;
+  equals: TypedContractMethod<[a: ZpStruct, b: ZpStruct], [boolean], "view">;
 
   exp: TypedContractMethod<
     [base: BigNumberish, exponent: BigNumberish],
@@ -170,41 +155,31 @@ export interface FiniteField extends BaseContract {
     "view"
   >;
 
-  inverse: TypedContractMethod<
-    [a: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
-
-  isPrime: TypedContractMethod<[num: BigNumberish], [boolean], "view">;
+  inverse: TypedContractMethod<[a: ZpStruct], [ZpStructOutput], "view">;
 
   mul: TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
+    [a: ZpStruct, b: ZpStruct],
+    [ZpStructOutput],
     "view"
   >;
 
-  mul_nonres: TypedContractMethod<
-    [a: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
+  mul_nonres: TypedContractMethod<[a: ZpStruct], [ZpStructOutput], "view">;
 
   p: TypedContractMethod<[], [bigint], "view">;
 
   sub: TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
+    [a: ZpStruct, b: ZpStruct],
+    [ZpStructOutput],
     "view"
   >;
 
   sum: TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
+    [a: ZpStruct, b: ZpStruct],
+    [ZpStructOutput],
     "view"
   >;
 
-  zero: TypedContractMethod<[], [FiniteField.ZpStructOutput], "view">;
+  zero: TypedContractMethod<[], [ZpStructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
@@ -212,25 +187,13 @@ export interface FiniteField extends BaseContract {
 
   getFunction(
     nameOrSignature: "createElement"
-  ): TypedContractMethod<
-    [value: BigNumberish],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[value: BigNumberish], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "div"
-  ): TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[a: ZpStruct, b: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "equals"
-  ): TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [boolean],
-    "view"
-  >;
+  ): TypedContractMethod<[a: ZpStruct, b: ZpStruct], [boolean], "view">;
   getFunction(
     nameOrSignature: "exp"
   ): TypedContractMethod<
@@ -240,46 +203,23 @@ export interface FiniteField extends BaseContract {
   >;
   getFunction(
     nameOrSignature: "inverse"
-  ): TypedContractMethod<
-    [a: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
-  getFunction(
-    nameOrSignature: "isPrime"
-  ): TypedContractMethod<[num: BigNumberish], [boolean], "view">;
+  ): TypedContractMethod<[a: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "mul"
-  ): TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[a: ZpStruct, b: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "mul_nonres"
-  ): TypedContractMethod<
-    [a: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[a: ZpStruct], [ZpStructOutput], "view">;
   getFunction(nameOrSignature: "p"): TypedContractMethod<[], [bigint], "view">;
   getFunction(
     nameOrSignature: "sub"
-  ): TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[a: ZpStruct, b: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "sum"
-  ): TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [FiniteField.ZpStructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[a: ZpStruct, b: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "zero"
-  ): TypedContractMethod<[], [FiniteField.ZpStructOutput], "view">;
+  ): TypedContractMethod<[], [ZpStructOutput], "view">;
 
   filters: {};
 }

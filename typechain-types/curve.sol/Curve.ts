@@ -21,63 +21,74 @@ import type {
   TypedContractMethod,
 } from "../common";
 
-export declare namespace FiniteField {
-  export type ZpStruct = { value: BigNumberish };
+export type ZpStruct = { value: BigNumberish };
 
-  export type ZpStructOutput = [value: bigint] & { value: bigint };
-}
+export type ZpStructOutput = [value: bigint] & { value: bigint };
+
+export type Zp_2Struct = { a: ZpStruct; b: ZpStruct };
+
+export type Zp_2StructOutput = [a: ZpStructOutput, b: ZpStructOutput] & {
+  a: ZpStructOutput;
+  b: ZpStructOutput;
+};
+
+export type Zp_6Struct = { a: Zp_2Struct; b: Zp_2Struct; c: Zp_2Struct };
+
+export type Zp_6StructOutput = [
+  a: Zp_2StructOutput,
+  b: Zp_2StructOutput,
+  c: Zp_2StructOutput
+] & { a: Zp_2StructOutput; b: Zp_2StructOutput; c: Zp_2StructOutput };
+
+export type Zp_12Struct = { a: Zp_6Struct; b: Zp_6Struct };
+
+export type Zp_12StructOutput = [a: Zp_6StructOutput, b: Zp_6StructOutput] & {
+  a: Zp_6StructOutput;
+  b: Zp_6StructOutput;
+};
 
 export declare namespace Curve {
   export type Point_0Struct = {
     pointType: BigNumberish;
-    field: AddressLike;
-    x: FiniteField.ZpStruct;
-    y: FiniteField.ZpStruct;
+    x: ZpStruct;
+    y: ZpStruct;
   };
 
   export type Point_0StructOutput = [
     pointType: bigint,
-    field: string,
-    x: FiniteField.ZpStructOutput,
-    y: FiniteField.ZpStructOutput
-  ] & {
-    pointType: bigint;
-    field: string;
-    x: FiniteField.ZpStructOutput;
-    y: FiniteField.ZpStructOutput;
-  };
+    x: ZpStructOutput,
+    y: ZpStructOutput
+  ] & { pointType: bigint; x: ZpStructOutput; y: ZpStructOutput };
 
   export type Point_1Struct = {
     pointType: BigNumberish;
-    field: AddressLike;
-    x: QuadraticExtension.Zp_2Struct;
-    y: QuadraticExtension.Zp_2Struct;
+    x: Zp_2Struct;
+    y: Zp_2Struct;
   };
 
   export type Point_1StructOutput = [
     pointType: bigint,
-    field: string,
-    x: QuadraticExtension.Zp_2StructOutput,
-    y: QuadraticExtension.Zp_2StructOutput
-  ] & {
-    pointType: bigint;
-    field: string;
-    x: QuadraticExtension.Zp_2StructOutput;
-    y: QuadraticExtension.Zp_2StructOutput;
+    x: Zp_2StructOutput,
+    y: Zp_2StructOutput
+  ] & { pointType: bigint; x: Zp_2StructOutput; y: Zp_2StructOutput };
+
+  export type Point_2Struct = {
+    pointType: BigNumberish;
+    x: Zp_12Struct;
+    y: Zp_12Struct;
   };
-}
 
-export declare namespace QuadraticExtension {
-  export type Zp_2Struct = { a: FiniteField.ZpStruct; b: FiniteField.ZpStruct };
-
-  export type Zp_2StructOutput = [
-    a: FiniteField.ZpStructOutput,
-    b: FiniteField.ZpStructOutput
-  ] & { a: FiniteField.ZpStructOutput; b: FiniteField.ZpStructOutput };
+  export type Point_2StructOutput = [
+    pointType: bigint,
+    x: Zp_12StructOutput,
+    y: Zp_12StructOutput
+  ] & { pointType: bigint; x: Zp_12StructOutput; y: Zp_12StructOutput };
 }
 
 export interface CurveInterface extends Interface {
-  getFunction(nameOrSignature: "isOnCurve_0" | "isOnCurve_1"): FunctionFragment;
+  getFunction(
+    nameOrSignature: "isOnCurve_0" | "isOnCurve_1" | "untwist"
+  ): FunctionFragment;
 
   encodeFunctionData(
     functionFragment: "isOnCurve_0",
@@ -87,6 +98,10 @@ export interface CurveInterface extends Interface {
     functionFragment: "isOnCurve_1",
     values: [AddressLike, Curve.Point_1Struct]
   ): string;
+  encodeFunctionData(
+    functionFragment: "untwist",
+    values: [Curve.Point_1Struct]
+  ): string;
 
   decodeFunctionResult(
     functionFragment: "isOnCurve_0",
@@ -96,6 +111,7 @@ export interface CurveInterface extends Interface {
     functionFragment: "isOnCurve_1",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "untwist", data: BytesLike): Result;
 }
 
 export interface Curve extends BaseContract {
@@ -153,6 +169,12 @@ export interface Curve extends BaseContract {
     "view"
   >;
 
+  untwist: TypedContractMethod<
+    [p: Curve.Point_1Struct],
+    [Curve.Point_2StructOutput],
+    "view"
+  >;
+
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
   ): T;
@@ -169,6 +191,13 @@ export interface Curve extends BaseContract {
   ): TypedContractMethod<
     [q: AddressLike, p: Curve.Point_1Struct],
     [boolean],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "untwist"
+  ): TypedContractMethod<
+    [p: Curve.Point_1Struct],
+    [Curve.Point_2StructOutput],
     "view"
   >;
 

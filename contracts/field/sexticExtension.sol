@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "hardhat/console.sol";
 import "./quadraticExtension.sol"; // Importa il contratto quadraticExtension
 
 struct Zp_6 {

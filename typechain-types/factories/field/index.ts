@@ -5,3 +5,4 @@ export * as finiteFieldSol from "./finiteField.sol";
 export * as quadraticExtensionSol from "./quadraticExtension.sol";
 export * as sexticExtensionSol from "./sexticExtension.sol";
 export * as twelveExtensionSol from "./twelveExtension.sol";
+export { BigFiniteField__factory } from "./BigFiniteField__factory";

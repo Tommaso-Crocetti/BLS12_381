@@ -14,9 +14,13 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
-      name: "Curve",
+      name: "BigNumbers",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Curve__factory>;
+    ): Promise<Contracts.BigNumbers__factory>;
+    getContractFactory(
+      name: "BigFiniteField",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BigFiniteField__factory>;
     getContractFactory(
       name: "FiniteField",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -35,10 +39,15 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.TwelveExtension__factory>;
 
     getContractAt(
-      name: "Curve",
+      name: "BigNumbers",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.Curve>;
+    ): Promise<Contracts.BigNumbers>;
+    getContractAt(
+      name: "BigFiniteField",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BigFiniteField>;
     getContractAt(
       name: "FiniteField",
       address: string | ethers.Addressable,
@@ -61,9 +70,13 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.TwelveExtension>;
 
     deployContract(
-      name: "Curve",
+      name: "BigNumbers",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Curve>;
+    ): Promise<Contracts.BigNumbers>;
+    deployContract(
+      name: "BigFiniteField",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BigFiniteField>;
     deployContract(
       name: "FiniteField",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -82,10 +95,15 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.TwelveExtension>;
 
     deployContract(
-      name: "Curve",
+      name: "BigNumbers",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Curve>;
+    ): Promise<Contracts.BigNumbers>;
+    deployContract(
+      name: "BigFiniteField",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BigFiniteField>;
     deployContract(
       name: "FiniteField",
       args: any[],

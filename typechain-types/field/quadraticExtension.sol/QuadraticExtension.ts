@@ -20,20 +20,16 @@ import type {
   TypedContractMethod,
 } from "../../common";
 
-export declare namespace FiniteField {
-  export type ZpStruct = { value: BigNumberish };
+export type ZpStruct = { value: BigNumberish };
 
-  export type ZpStructOutput = [value: bigint] & { value: bigint };
-}
+export type ZpStructOutput = [value: bigint] & { value: bigint };
 
-export declare namespace QuadraticExtension {
-  export type Zp_2Struct = { a: FiniteField.ZpStruct; b: FiniteField.ZpStruct };
+export type Zp_2Struct = { a: ZpStruct; b: ZpStruct };
 
-  export type Zp_2StructOutput = [
-    a: FiniteField.ZpStructOutput,
-    b: FiniteField.ZpStructOutput
-  ] & { a: FiniteField.ZpStructOutput; b: FiniteField.ZpStructOutput };
-}
+export type Zp_2StructOutput = [a: ZpStructOutput, b: ZpStructOutput] & {
+  a: ZpStructOutput;
+  b: ZpStructOutput;
+};
 
 export interface QuadraticExtensionInterface extends Interface {
   getFunction(
@@ -51,35 +47,32 @@ export interface QuadraticExtensionInterface extends Interface {
 
   encodeFunctionData(
     functionFragment: "createElement",
-    values: [FiniteField.ZpStruct, FiniteField.ZpStruct]
+    values: [ZpStruct, ZpStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "div",
-    values: [QuadraticExtension.Zp_2Struct, QuadraticExtension.Zp_2Struct]
+    values: [Zp_2Struct, Zp_2Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "equals",
-    values: [QuadraticExtension.Zp_2Struct, QuadraticExtension.Zp_2Struct]
+    values: [Zp_2Struct, Zp_2Struct]
   ): string;
-  encodeFunctionData(
-    functionFragment: "inverse",
-    values: [QuadraticExtension.Zp_2Struct]
-  ): string;
+  encodeFunctionData(functionFragment: "inverse", values: [Zp_2Struct]): string;
   encodeFunctionData(
     functionFragment: "mul",
-    values: [QuadraticExtension.Zp_2Struct, QuadraticExtension.Zp_2Struct]
+    values: [Zp_2Struct, Zp_2Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "mul_nonres",
-    values: [QuadraticExtension.Zp_2Struct]
+    values: [Zp_2Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "sub",
-    values: [QuadraticExtension.Zp_2Struct, QuadraticExtension.Zp_2Struct]
+    values: [Zp_2Struct, Zp_2Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "sum",
-    values: [QuadraticExtension.Zp_2Struct, QuadraticExtension.Zp_2Struct]
+    values: [Zp_2Struct, Zp_2Struct]
   ): string;
   encodeFunctionData(functionFragment: "zero", values?: undefined): string;
 
@@ -141,54 +134,46 @@ export interface QuadraticExtension extends BaseContract {
   ): Promise<this>;
 
   createElement: TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [a: ZpStruct, b: ZpStruct],
+    [Zp_2StructOutput],
     "view"
   >;
 
   div: TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
 
   equals: TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
+    [x: Zp_2Struct, y: Zp_2Struct],
     [boolean],
     "view"
   >;
 
-  inverse: TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
-    "view"
-  >;
+  inverse: TypedContractMethod<[x: Zp_2Struct], [Zp_2StructOutput], "view">;
 
   mul: TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
 
-  mul_nonres: TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
-    "view"
-  >;
+  mul_nonres: TypedContractMethod<[x: Zp_2Struct], [Zp_2StructOutput], "view">;
 
   sub: TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
 
   sum: TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
 
-  zero: TypedContractMethod<[], [QuadraticExtension.Zp_2StructOutput], "view">;
+  zero: TypedContractMethod<[], [Zp_2StructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
@@ -197,62 +182,50 @@ export interface QuadraticExtension extends BaseContract {
   getFunction(
     nameOrSignature: "createElement"
   ): TypedContractMethod<
-    [a: FiniteField.ZpStruct, b: FiniteField.ZpStruct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [a: ZpStruct, b: ZpStruct],
+    [Zp_2StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "div"
   ): TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "equals"
-  ): TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [boolean],
-    "view"
-  >;
+  ): TypedContractMethod<[x: Zp_2Struct, y: Zp_2Struct], [boolean], "view">;
   getFunction(
     nameOrSignature: "inverse"
-  ): TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[x: Zp_2Struct], [Zp_2StructOutput], "view">;
   getFunction(
     nameOrSignature: "mul"
   ): TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "mul_nonres"
-  ): TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[x: Zp_2Struct], [Zp_2StructOutput], "view">;
   getFunction(
     nameOrSignature: "sub"
   ): TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "sum"
   ): TypedContractMethod<
-    [x: QuadraticExtension.Zp_2Struct, y: QuadraticExtension.Zp_2Struct],
-    [QuadraticExtension.Zp_2StructOutput],
+    [x: Zp_2Struct, y: Zp_2Struct],
+    [Zp_2StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "zero"
-  ): TypedContractMethod<[], [QuadraticExtension.Zp_2StructOutput], "view">;
+  ): TypedContractMethod<[], [Zp_2StructOutput], "view">;
 
   filters: {};
 }

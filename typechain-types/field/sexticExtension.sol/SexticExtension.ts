@@ -20,38 +20,24 @@ import type {
   TypedContractMethod,
 } from "../../common";
 
-export declare namespace FiniteField {
-  export type ZpStruct = { value: BigNumberish };
+export type ZpStruct = { value: BigNumberish };
 
-  export type ZpStructOutput = [value: bigint] & { value: bigint };
-}
+export type ZpStructOutput = [value: bigint] & { value: bigint };
 
-export declare namespace QuadraticExtension {
-  export type Zp_2Struct = { a: FiniteField.ZpStruct; b: FiniteField.ZpStruct };
+export type Zp_2Struct = { a: ZpStruct; b: ZpStruct };
 
-  export type Zp_2StructOutput = [
-    a: FiniteField.ZpStructOutput,
-    b: FiniteField.ZpStructOutput
-  ] & { a: FiniteField.ZpStructOutput; b: FiniteField.ZpStructOutput };
-}
+export type Zp_2StructOutput = [a: ZpStructOutput, b: ZpStructOutput] & {
+  a: ZpStructOutput;
+  b: ZpStructOutput;
+};
 
-export declare namespace SexticExtension {
-  export type Zp_6Struct = {
-    a: QuadraticExtension.Zp_2Struct;
-    b: QuadraticExtension.Zp_2Struct;
-    c: QuadraticExtension.Zp_2Struct;
-  };
+export type Zp_6Struct = { a: Zp_2Struct; b: Zp_2Struct; c: Zp_2Struct };
 
-  export type Zp_6StructOutput = [
-    a: QuadraticExtension.Zp_2StructOutput,
-    b: QuadraticExtension.Zp_2StructOutput,
-    c: QuadraticExtension.Zp_2StructOutput
-  ] & {
-    a: QuadraticExtension.Zp_2StructOutput;
-    b: QuadraticExtension.Zp_2StructOutput;
-    c: QuadraticExtension.Zp_2StructOutput;
-  };
-}
+export type Zp_6StructOutput = [
+  a: Zp_2StructOutput,
+  b: Zp_2StructOutput,
+  c: Zp_2StructOutput
+] & { a: Zp_2StructOutput; b: Zp_2StructOutput; c: Zp_2StructOutput };
 
 export interface SexticExtensionInterface extends Interface {
   getFunction(
@@ -69,39 +55,32 @@ export interface SexticExtensionInterface extends Interface {
 
   encodeFunctionData(
     functionFragment: "createElement",
-    values: [
-      QuadraticExtension.Zp_2Struct,
-      QuadraticExtension.Zp_2Struct,
-      QuadraticExtension.Zp_2Struct
-    ]
+    values: [Zp_2Struct, Zp_2Struct, Zp_2Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "div",
-    values: [SexticExtension.Zp_6Struct, SexticExtension.Zp_6Struct]
+    values: [Zp_6Struct, Zp_6Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "equals",
-    values: [SexticExtension.Zp_6Struct, SexticExtension.Zp_6Struct]
+    values: [Zp_6Struct, Zp_6Struct]
   ): string;
-  encodeFunctionData(
-    functionFragment: "inverse",
-    values: [SexticExtension.Zp_6Struct]
-  ): string;
+  encodeFunctionData(functionFragment: "inverse", values: [Zp_6Struct]): string;
   encodeFunctionData(
     functionFragment: "mul",
-    values: [SexticExtension.Zp_6Struct, SexticExtension.Zp_6Struct]
+    values: [Zp_6Struct, Zp_6Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "mul_nonres",
-    values: [SexticExtension.Zp_6Struct]
+    values: [Zp_6Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "sub",
-    values: [SexticExtension.Zp_6Struct, SexticExtension.Zp_6Struct]
+    values: [Zp_6Struct, Zp_6Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "sum",
-    values: [SexticExtension.Zp_6Struct, SexticExtension.Zp_6Struct]
+    values: [Zp_6Struct, Zp_6Struct]
   ): string;
   encodeFunctionData(functionFragment: "zero", values?: undefined): string;
 
@@ -163,58 +142,46 @@ export interface SexticExtension extends BaseContract {
   ): Promise<this>;
 
   createElement: TypedContractMethod<
-    [
-      a: QuadraticExtension.Zp_2Struct,
-      b: QuadraticExtension.Zp_2Struct,
-      c: QuadraticExtension.Zp_2Struct
-    ],
-    [SexticExtension.Zp_6StructOutput],
+    [a: Zp_2Struct, b: Zp_2Struct, c: Zp_2Struct],
+    [Zp_6StructOutput],
     "view"
   >;
 
   div: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
 
   equals: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
+    [x: Zp_6Struct, y: Zp_6Struct],
     [boolean],
     "view"
   >;
 
-  inverse: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
-    "view"
-  >;
+  inverse: TypedContractMethod<[x: Zp_6Struct], [Zp_6StructOutput], "view">;
 
   mul: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
 
-  mul_nonres: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
-    "view"
-  >;
+  mul_nonres: TypedContractMethod<[x: Zp_6Struct], [Zp_6StructOutput], "view">;
 
   sub: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
 
   sum: TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
 
-  zero: TypedContractMethod<[], [SexticExtension.Zp_6StructOutput], "view">;
+  zero: TypedContractMethod<[], [Zp_6StructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
@@ -223,66 +190,50 @@ export interface SexticExtension extends BaseContract {
   getFunction(
     nameOrSignature: "createElement"
   ): TypedContractMethod<
-    [
-      a: QuadraticExtension.Zp_2Struct,
-      b: QuadraticExtension.Zp_2Struct,
-      c: QuadraticExtension.Zp_2Struct
-    ],
-    [SexticExtension.Zp_6StructOutput],
+    [a: Zp_2Struct, b: Zp_2Struct, c: Zp_2Struct],
+    [Zp_6StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "div"
   ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "equals"
-  ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [boolean],
-    "view"
-  >;
+  ): TypedContractMethod<[x: Zp_6Struct, y: Zp_6Struct], [boolean], "view">;
   getFunction(
     nameOrSignature: "inverse"
-  ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[x: Zp_6Struct], [Zp_6StructOutput], "view">;
   getFunction(
     nameOrSignature: "mul"
   ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "mul_nonres"
-  ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
-    "view"
-  >;
+  ): TypedContractMethod<[x: Zp_6Struct], [Zp_6StructOutput], "view">;
   getFunction(
     nameOrSignature: "sub"
   ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "sum"
   ): TypedContractMethod<
-    [x: SexticExtension.Zp_6Struct, y: SexticExtension.Zp_6Struct],
-    [SexticExtension.Zp_6StructOutput],
+    [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_6StructOutput],
     "view"
   >;
   getFunction(
     nameOrSignature: "zero"
-  ): TypedContractMethod<[], [SexticExtension.Zp_6StructOutput], "view">;
+  ): TypedContractMethod<[], [Zp_6StructOutput], "view">;
 
   filters: {};
 }
