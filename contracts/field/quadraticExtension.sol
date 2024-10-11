@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./bigFiniteField.sol"; // Importa il contratto FiniteField
+import "./bigFiniteField.sol";
 
 struct Zp_2 {
     Zp a; // Parte reale

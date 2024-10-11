@@ -75,6 +75,6 @@ describe("BigFiniteField Contract", function () {
   it("should revert on division by zero", async function () {
     const elementA: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(await bigNumbers.init(3, false)));
     const elementB: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(await bigNumbers.zero()));
-    await expect(bigFiniteField.div(toZpStruct(elementA), toZpStruct(elementB))).to.be.revertedWith("Inverso per zero non definito.");
+    await expect(bigFiniteField.div(toZpStruct(elementA), toZpStruct(elementB))).to.be.revertedWith("Inverso di zero non definito.");
   });
 });

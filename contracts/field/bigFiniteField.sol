@@ -9,10 +9,10 @@ struct Zp {
 }
 
 contract BigFiniteField {
-    BigNumber public p; // Primo modulo p
+    BigNumber private p; // Primo modulo p
 
     modifier verify(BigNumber memory bn) {
-        require(bn.neg == false);
+        //require(bn.neg == false);
         uint msword;
         bytes memory val = bn.val;
         assembly {
@@ -27,18 +27,13 @@ contract BigFiniteField {
         _;
     }
 
-    function bytesToUint256(bytes memory b) public pure returns (uint256) {
-        require(b.length == 32, "Invalid bytes length. Must be 32 bytes.");
-        uint256 value;
-        assembly {
-            value := mload(add(b, 32))
-        }
-        return value;
-    }
-
     // Costruttore che inizializza il campo finito con un primo modulo p
     constructor(bytes memory prime) {
         p = BigNumbers.init__(prime, false);
+    }
+
+    function get_p() public view returns (BigNumber memory) {
+        return p;
     }
 
     // Funzione per creare un elemento nel campo finito
@@ -62,7 +57,7 @@ contract BigFiniteField {
         Zp memory y
     ) public view verify(x.value) verify(y.value) returns (Zp memory) {
         return
-            createElement(BigNumbers.mod(BigNumbers.sub(x.value, y.value), p));
+            createElement(BigNumbers.sub(x.value, y.value));
     }
 
     // Operazione di moltiplicazione nel campo finito
@@ -78,7 +73,7 @@ contract BigFiniteField {
     ) public view verify(x.value) returns (Zp memory) {
         require(
             BigNumbers.cmp(x.value, BigNumbers.zero(), false) != 0,
-            "Inverso per zero non definito."
+            "Inverso di zero non definito."
         );
         return
             createElement(
@@ -113,5 +108,21 @@ contract BigFiniteField {
 
     function zero() public pure returns (Zp memory) {
         return Zp(BigNumbers.zero());
+    }
+
+    function one() public pure returns (Zp memory) {
+        return Zp(BigNumbers.one());
+    }
+
+    function two() public pure returns (Zp memory) {
+        return Zp(BigNumbers.two());
+    }
+
+    function three() public view returns (Zp memory) {
+        return Zp(BigNumbers.three());
+    }
+
+    function four() public view returns (Zp memory) {
+        return Zp(BigNumbers.four());
     }
 }

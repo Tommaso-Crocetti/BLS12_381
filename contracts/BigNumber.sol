@@ -849,6 +849,14 @@ library BigNumbers {
     ) public pure returns(BigNumber memory) {
         return BigNumber(TWO, false, 2);
     }
+
+    function three() public view returns (BigNumber memory) {
+        return init(3, false);
+    }
+
+    function four() public view returns (BigNumber memory) {
+        return init(4, false);
+    }
     // ***************** END EXPOSED HELPER FUNCTIONS ******************
 
 

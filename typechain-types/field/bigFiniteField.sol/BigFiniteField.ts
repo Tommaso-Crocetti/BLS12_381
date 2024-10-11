@@ -41,23 +41,22 @@ export type ZpStructOutput = [value: BigNumberStructOutput] & {
 export interface BigFiniteFieldInterface extends Interface {
   getFunction(
     nameOrSignature:
-      | "bytesToUint256"
       | "createElement"
       | "div"
       | "equals"
+      | "four"
+      | "get_p"
       | "inverse"
       | "mul"
       | "mul_nonres"
-      | "p"
+      | "one"
       | "sub"
       | "sum"
+      | "three"
+      | "two"
       | "zero"
   ): FunctionFragment;
 
-  encodeFunctionData(
-    functionFragment: "bytesToUint256",
-    values: [BytesLike]
-  ): string;
   encodeFunctionData(
     functionFragment: "createElement",
     values: [BigNumberStruct]
@@ -70,6 +69,8 @@ export interface BigFiniteFieldInterface extends Interface {
     functionFragment: "equals",
     values: [ZpStruct, ZpStruct]
   ): string;
+  encodeFunctionData(functionFragment: "four", values?: undefined): string;
+  encodeFunctionData(functionFragment: "get_p", values?: undefined): string;
   encodeFunctionData(functionFragment: "inverse", values: [ZpStruct]): string;
   encodeFunctionData(
     functionFragment: "mul",
@@ -79,7 +80,7 @@ export interface BigFiniteFieldInterface extends Interface {
     functionFragment: "mul_nonres",
     values: [ZpStruct]
   ): string;
-  encodeFunctionData(functionFragment: "p", values?: undefined): string;
+  encodeFunctionData(functionFragment: "one", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "sub",
     values: [ZpStruct, ZpStruct]
@@ -88,24 +89,26 @@ export interface BigFiniteFieldInterface extends Interface {
     functionFragment: "sum",
     values: [ZpStruct, ZpStruct]
   ): string;
+  encodeFunctionData(functionFragment: "three", values?: undefined): string;
+  encodeFunctionData(functionFragment: "two", values?: undefined): string;
   encodeFunctionData(functionFragment: "zero", values?: undefined): string;
 
-  decodeFunctionResult(
-    functionFragment: "bytesToUint256",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(
     functionFragment: "createElement",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "div", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "get_p", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "inverse", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul_nonres", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "p", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "one", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "sub", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "sum", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "three", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "two", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "zero", data: BytesLike): Result;
 }
 
@@ -152,8 +155,6 @@ export interface BigFiniteField extends BaseContract {
     event?: TCEvent
   ): Promise<this>;
 
-  bytesToUint256: TypedContractMethod<[b: BytesLike], [bigint], "view">;
-
   createElement: TypedContractMethod<
     [value: BigNumberStruct],
     [ZpStructOutput],
@@ -168,6 +169,10 @@ export interface BigFiniteField extends BaseContract {
 
   equals: TypedContractMethod<[x: ZpStruct, y: ZpStruct], [boolean], "view">;
 
+  four: TypedContractMethod<[], [ZpStructOutput], "view">;
+
+  get_p: TypedContractMethod<[], [BigNumberStructOutput], "view">;
+
   inverse: TypedContractMethod<[x: ZpStruct], [ZpStructOutput], "view">;
 
   mul: TypedContractMethod<
@@ -178,11 +183,7 @@ export interface BigFiniteField extends BaseContract {
 
   mul_nonres: TypedContractMethod<[x: ZpStruct], [ZpStructOutput], "view">;
 
-  p: TypedContractMethod<
-    [],
-    [[string, boolean, bigint] & { val: string; neg: boolean; bitlen: bigint }],
-    "view"
-  >;
+  one: TypedContractMethod<[], [ZpStructOutput], "view">;
 
   sub: TypedContractMethod<
     [x: ZpStruct, y: ZpStruct],
@@ -196,15 +197,16 @@ export interface BigFiniteField extends BaseContract {
     "view"
   >;
 
+  three: TypedContractMethod<[], [ZpStructOutput], "view">;
+
+  two: TypedContractMethod<[], [ZpStructOutput], "view">;
+
   zero: TypedContractMethod<[], [ZpStructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
   ): T;
 
-  getFunction(
-    nameOrSignature: "bytesToUint256"
-  ): TypedContractMethod<[b: BytesLike], [bigint], "view">;
   getFunction(
     nameOrSignature: "createElement"
   ): TypedContractMethod<[value: BigNumberStruct], [ZpStructOutput], "view">;
@@ -215,6 +217,12 @@ export interface BigFiniteField extends BaseContract {
     nameOrSignature: "equals"
   ): TypedContractMethod<[x: ZpStruct, y: ZpStruct], [boolean], "view">;
   getFunction(
+    nameOrSignature: "four"
+  ): TypedContractMethod<[], [ZpStructOutput], "view">;
+  getFunction(
+    nameOrSignature: "get_p"
+  ): TypedContractMethod<[], [BigNumberStructOutput], "view">;
+  getFunction(
     nameOrSignature: "inverse"
   ): TypedContractMethod<[x: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
@@ -224,18 +232,20 @@ export interface BigFiniteField extends BaseContract {
     nameOrSignature: "mul_nonres"
   ): TypedContractMethod<[x: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
-    nameOrSignature: "p"
-  ): TypedContractMethod<
-    [],
-    [[string, boolean, bigint] & { val: string; neg: boolean; bitlen: bigint }],
-    "view"
-  >;
+    nameOrSignature: "one"
+  ): TypedContractMethod<[], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "sub"
   ): TypedContractMethod<[x: ZpStruct, y: ZpStruct], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "sum"
   ): TypedContractMethod<[x: ZpStruct, y: ZpStruct], [ZpStructOutput], "view">;
+  getFunction(
+    nameOrSignature: "three"
+  ): TypedContractMethod<[], [ZpStructOutput], "view">;
+  getFunction(
+    nameOrSignature: "two"
+  ): TypedContractMethod<[], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "zero"
   ): TypedContractMethod<[], [ZpStructOutput], "view">;

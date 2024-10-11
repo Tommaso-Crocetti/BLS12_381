@@ -44,6 +44,7 @@ export interface BigNumbersInterface extends Interface {
       | "cmp"
       | "divVerify"
       | "eq"
+      | "four"
       | "gt"
       | "gte"
       | "hash"
@@ -66,6 +67,7 @@ export interface BigNumbersInterface extends Interface {
       | "shl"
       | "shr"
       | "sub"
+      | "three"
       | "two"
       | "verify"
       | "zero"
@@ -107,6 +109,7 @@ export interface BigNumbersInterface extends Interface {
     functionFragment: "eq",
     values: [BigNumberStruct, BigNumberStruct]
   ): string;
+  encodeFunctionData(functionFragment: "four", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "gt",
     values: [BigNumberStruct, BigNumberStruct]
@@ -192,6 +195,7 @@ export interface BigNumbersInterface extends Interface {
     functionFragment: "sub",
     values: [BigNumberStruct, BigNumberStruct]
   ): string;
+  encodeFunctionData(functionFragment: "three", values?: undefined): string;
   encodeFunctionData(functionFragment: "two", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "verify",
@@ -217,6 +221,7 @@ export interface BigNumbersInterface extends Interface {
   decodeFunctionResult(functionFragment: "cmp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "divVerify", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "eq", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "gt", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "gte", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "hash", data: BytesLike): Result;
@@ -254,6 +259,7 @@ export interface BigNumbersInterface extends Interface {
   decodeFunctionResult(functionFragment: "shl", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "shr", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "sub", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "three", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "two", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "verify", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "zero", data: BytesLike): Result;
@@ -351,6 +357,8 @@ export interface BigNumbers extends BaseContract {
     [boolean],
     "view"
   >;
+
+  four: TypedContractMethod<[], [BigNumberStructOutput], "view">;
 
   gt: TypedContractMethod<
     [a: BigNumberStruct, b: BigNumberStruct],
@@ -473,6 +481,8 @@ export interface BigNumbers extends BaseContract {
     "view"
   >;
 
+  three: TypedContractMethod<[], [BigNumberStructOutput], "view">;
+
   two: TypedContractMethod<[], [BigNumberStructOutput], "view">;
 
   verify: TypedContractMethod<[bn: BigNumberStruct], [void], "view">;
@@ -534,6 +544,9 @@ export interface BigNumbers extends BaseContract {
     [boolean],
     "view"
   >;
+  getFunction(
+    nameOrSignature: "four"
+  ): TypedContractMethod<[], [BigNumberStructOutput], "view">;
   getFunction(
     nameOrSignature: "gt"
   ): TypedContractMethod<
@@ -673,6 +686,9 @@ export interface BigNumbers extends BaseContract {
     [BigNumberStructOutput],
     "view"
   >;
+  getFunction(
+    nameOrSignature: "three"
+  ): TypedContractMethod<[], [BigNumberStructOutput], "view">;
   getFunction(
     nameOrSignature: "two"
   ): TypedContractMethod<[], [BigNumberStructOutput], "view">;

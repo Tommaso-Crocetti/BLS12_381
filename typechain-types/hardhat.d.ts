@@ -41,6 +41,10 @@ declare module "hardhat/types/runtime" {
       name: "TwelveExtension",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TwelveExtension__factory>;
+    getContractFactory(
+      name: "PointZp",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.PointZp__factory>;
 
     getContractAt(
       name: "BigNumbers",
@@ -77,6 +81,11 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.TwelveExtension>;
+    getContractAt(
+      name: "PointZp",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.PointZp>;
 
     deployContract(
       name: "BigNumbers",
@@ -106,6 +115,10 @@ declare module "hardhat/types/runtime" {
       name: "TwelveExtension",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TwelveExtension>;
+    deployContract(
+      name: "PointZp",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PointZp>;
 
     deployContract(
       name: "BigNumbers",
@@ -142,6 +155,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TwelveExtension>;
+    deployContract(
+      name: "PointZp",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PointZp>;
 
     // default types
     getContractFactory(

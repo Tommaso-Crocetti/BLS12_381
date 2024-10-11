@@ -98,6 +98,6 @@ describe("Quadratic Extension Contract", function () {
         const a: ZpStructOutput = await bigFiniteField.zero();
         const b: ZpStructOutput = await bigFiniteField.zero();
         y = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
-        await expect(quadraticExtension.div(toZp_2Struct(x), toZp_2Struct(y))).to.be.revertedWith("Inverso per zero non definito.");
+        await expect(quadraticExtension.div(toZp_2Struct(x), toZp_2Struct(y))).to.be.revertedWith("Inverso di zero non definito.");
     });
 });

@@ -5,18 +5,9 @@ import "./field/bigFiniteField.sol";
 import "./field/quadraticExtension.sol";
 import "./field/sexticExtension.sol";
 import "./field/twelveExtension.sol";
+import "./PointZp.sol";
 
 contract Curve {
-    enum PointType {
-        Affine,
-        PointAtInfinity
-    }
-
-    struct Point_0 {
-        PointType pointType;
-        Zp x;
-        Zp y;
-    }
 
     struct Point_1 {
         PointType pointType;
@@ -31,24 +22,23 @@ contract Curve {
     }
 
     BigNumber private order;
-    Point_0 private g0;
+    Point_Zp private g0;
     Point_1 private g1;
     BigFiniteField private fField;
     QuadraticExtension private qField;
     SexticExtension private sField;
     TwelveExtension private tField;
 
-    function isOnCurve_0(
-        BigFiniteField f,
-        Point_0 memory p
+    function isOnCurve(
+        Point_Zp memory p
     ) public view returns (bool) {
         if (p.pointType == PointType.PointAtInfinity) return false;
-        Zp memory l = f.mul(p.y, p.y);
-        Zp memory r = f.sum(
-            f.mul(f.mul(p.x, p.x), p.x),
-            f.mul_nonres(f.createElement(BigNumbers.init(4, false)))
+        Zp memory l = fField.mul(p.y, p.y);
+        Zp memory r = fField.sum(
+            fField.mul(fField.mul(p.x, p.x), p.x),
+            fField.mul_nonres(fField.four())
         );
-        return f.equals(l, r);
+        return fField.equals(l, r);
     }
 
     function isOnCurve_1(

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
-import "./quadraticExtension.sol"; // Importa il contratto quadraticExtension
+import "./quadraticExtension.sol";
 
 struct Zp_6 {
     Zp_2 a;

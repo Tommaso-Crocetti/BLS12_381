@@ -53,4 +53,8 @@ contract TwelveExtension {
         Zp_6 memory d = s.sub(t1, t0);
         return createElement(s.div(x.a, d), s.div(s.sub(s.zero(), x.b), d));
     }
+
+    function equals(Zp_12 memory x, Zp_12 memory y) public view returns (bool) {
+        return (s.equals(x.a, y.a) && s.equals(x.b, y.b));
+    }
 }

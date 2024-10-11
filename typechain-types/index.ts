@@ -7,6 +7,7 @@ import type * as curveSol from "./curve.sol";
 export type { curveSol };
 import type * as field from "./field";
 export type { field };
+export type { PointZp } from "./PointZp";
 export * as factories from "./factories";
 export type { BigNumbers } from "./BigNumber.sol/BigNumbers";
 export { BigNumbers__factory } from "./factories/BigNumber.sol/BigNumbers__factory";
@@ -22,3 +23,4 @@ export type { SexticExtension } from "./field/sexticExtension.sol/SexticExtensio
 export { SexticExtension__factory } from "./factories/field/sexticExtension.sol/SexticExtension__factory";
 export type { TwelveExtension } from "./field/twelveExtension.sol/TwelveExtension";
 export { TwelveExtension__factory } from "./factories/field/twelveExtension.sol/TwelveExtension__factory";
+export { PointZp__factory } from "./factories/PointZp__factory";
