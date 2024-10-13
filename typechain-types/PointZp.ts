@@ -52,7 +52,7 @@ export type Point_ZpStructOutput = [
 
 export interface PointZpInterface extends Interface {
   getFunction(
-    nameOrSignature: "add" | "double" | "negate" | "newPoint"
+    nameOrSignature: "add" | "double" | "multiply" | "negate" | "newPoint"
   ): FunctionFragment;
 
   encodeFunctionData(
@@ -62,6 +62,10 @@ export interface PointZpInterface extends Interface {
   encodeFunctionData(
     functionFragment: "double",
     values: [Point_ZpStruct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "multiply",
+    values: [Point_ZpStruct, BigNumberStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "negate",
@@ -74,6 +78,7 @@ export interface PointZpInterface extends Interface {
 
   decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "double", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "multiply", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "negate", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "newPoint", data: BytesLike): Result;
 }
@@ -133,6 +138,12 @@ export interface PointZp extends BaseContract {
     "view"
   >;
 
+  multiply: TypedContractMethod<
+    [self: Point_ZpStruct, k: BigNumberStruct],
+    [Point_ZpStructOutput],
+    "view"
+  >;
+
   negate: TypedContractMethod<
     [self: Point_ZpStruct],
     [Point_ZpStructOutput],
@@ -160,6 +171,13 @@ export interface PointZp extends BaseContract {
     nameOrSignature: "double"
   ): TypedContractMethod<
     [self: Point_ZpStruct],
+    [Point_ZpStructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "multiply"
+  ): TypedContractMethod<
+    [self: Point_ZpStruct, k: BigNumberStruct],
     [Point_ZpStructOutput],
     "view"
   >;
