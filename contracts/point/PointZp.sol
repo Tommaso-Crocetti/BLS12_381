@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./field/bigFiniteField.sol";
+import "../field/bigFiniteField.sol";
 
 enum PointType {
     Affine,
@@ -97,6 +97,7 @@ contract PointZp {
         Point_Zp memory acc
     ) private view returns (Point_Zp memory) {
         if (BigNumbers.cmp(k, BigNumbers.zero(), false) == 0) return acc;
-        if (BigNumbers.isOdd(k)) return 
+        if (BigNumbers.isOdd(k)) return doubleAndAdd(BigNumbers.shr(k, 1), double(self), add(acc, self));
+        return doubleAndAdd(BigNumbers.shr(k, 1), double(self), acc);
     }
 }

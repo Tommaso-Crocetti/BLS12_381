@@ -57,4 +57,24 @@ contract TwelveExtension {
     function equals(Zp_12 memory x, Zp_12 memory y) public view returns (bool) {
         return (s.equals(x.a, y.a) && s.equals(x.b, y.b));
     }
+
+    function zero() public view returns (Zp_12 memory) {
+        return Zp_12(s.zero(), s.zero());
+    }
+
+    function one() public view returns (Zp_12 memory) {
+        return Zp_12(s.one(), s.one());
+    }
+
+    function two() public view returns (Zp_12 memory) {
+        return Zp_12(s.two(), s.two());
+    }
+
+    function three() public view returns (Zp_12 memory) {
+        return Zp_12(s.three(), s.three());
+    }
+
+    function four() public view returns (Zp_12 memory) {
+        return Zp_12(s.four(), s.four());
+    }
 }
