@@ -80,19 +80,4 @@ contract QuadraticExtension {
         return Zp_2(f.zero(), f.zero());
     }
 
-    function one() public view returns (Zp_2 memory) {
-        return Zp_2(f.one(), f.one());
-    }
-
-    function two() public view returns (Zp_2 memory) {
-        return Zp_2(f.two(), f.two());
-    }
-
-    function three() public view returns (Zp_2 memory) {
-        return Zp_2(f.three(), f.three());
-    }
-
-    function four() public view returns (Zp_2 memory) {
-        return Zp_2(f.four(), f.four());
-    }
 }

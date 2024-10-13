@@ -62,19 +62,4 @@ contract TwelveExtension {
         return Zp_12(s.zero(), s.zero());
     }
 
-    function one() public view returns (Zp_12 memory) {
-        return Zp_12(s.one(), s.one());
-    }
-
-    function two() public view returns (Zp_12 memory) {
-        return Zp_12(s.two(), s.two());
-    }
-
-    function three() public view returns (Zp_12 memory) {
-        return Zp_12(s.three(), s.three());
-    }
-
-    function four() public view returns (Zp_12 memory) {
-        return Zp_12(s.four(), s.four());
-    }
 }

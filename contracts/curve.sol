@@ -36,52 +36,73 @@ contract Curve {
     }
 
     function isOnCurve(
-        Point_Zp memory p
+        Point_Zp memory point
     ) public view returns (bool) {
-        if (p.pointType == PointType.PointAtInfinity) return false;
-        Zp memory l = fField.mul(p.y, p.y);
+        if (point.pointType == PointType.PointAtInfinity) return false;
+        Zp memory l = fField.mul(point.y, point.y);
         Zp memory r = fField.sum(
-            fField.mul(fField.mul(p.x, p.x), p.x),
+            fField.mul(fField.mul(point.x, point.x), point.x),
             fField.mul_nonres(fField.four())
         );
         return fField.equals(l, r);
     }
 
-    function isOnCurve_1(
-        QuadraticExtension q,
-        Point_1 memory p
+    function isOnCurveTwist(
+        PointZp_2 memory point
     ) public view returns (bool) {
-        if (p.pointType == PointType.PointAtInfinity) return false;
-        Zp_2 memory l = q.mul(p.y, p.y);
+        if (point.pointType == PointType.PointAtInfinity) return false;
+        Zp_2 memory l = q.mul(point.y, point.y);
         Zp_2 memory r = q.sum(
-            q.mul(q.mul(p.x, p.x), p.x),
-            q.mul_nonres(q.createElement(Zp(BigNumbers.init(4, false)), fField.zero()))
+            q.mul(q.mul(point.x, point.x), point.x),
+            q.mul_nonres(q.createElement(fField.four(), fField.zero()))
         );
         return q.equals(l, r);
     }
 
-    function untwist(Point_1 memory p) public view returns (Point_2 memory) {
-        Zp_6 memory t0 = sField.createElement(
-            qField.zero(),
-            qField.createElement(fField.createElement(BigNumbers.one()), fField.zero()),
+    function isOnCurve_12(
+        PointZp_12 memory point
+    ) public view returns (bool) {
+        if (point.pointType == PointType.PointAtInfinity) return false;
+        Zp_12 memory l = tField.mul(point.y, point.y);
+        Zp_12 memory r = tField.sum(
+            tField.mul(tField.mul(point.x, point.x), point.x),
+            tField.mul_nonres(tField.createElement(
+                sField.createElement(qField.createElement(fField.four(), fField.zero()),
+                    qField.zero(), qField.zero()),
+                sField.zero()
+            ))
+        );
+        return t.equals(l, r);
+    }
+
+    //verificare correttezza, dovrebbe usare factor clearing
+    function Subgroup_0Check(PointZp memory point) public view returns (bool) {
+        return pZp.multiply(order, p).pointType == PointType.Affine;
+    }
+
+    function Subgroup_1Check(PointZp_2 memory point) public view returns (bool) {
+        return pZp_2.multiply(order, p).pointType == PointType.Affine;
+    }
+
+    function untwist(PointZp_2 memory point) public view returns (PointZp_12 memory) {
+        Zp_6 memory a = sField.createElement(qField.zero(),
+            qField.createElement(fField.one(), fField.zero()),
             qField.zero()
         );
-        Zp_12 memory t1 = tField.createElement(
-            sField.createElement(p.x, qField.zero(), qField.zero()),
+        Zp_12 memory x = tField.createElement(sField.createElement(point.x,
+                qField.zero(),
+                qField,zero()
+            ),
             sField.zero()
         );
-        Zp_12 memory t2 = tField.inverse(
-            tField.createElement(sField.zero(), t0)
-        );
-        Zp_12 memory t3 = tField.createElement(
-            sField.createElement(p.y, qField.zero(), qField.zero()),
+        Zp_12 memory y = tField.createElement(sField.createElement(point.y,
+                qField.zero(),
+                qField,zero()
+            ),
             sField.zero()
         );
-        Zp_12 memory t4 = tField.inverse(
-            tField.createElement(t0, sField.zero())
+        return pZp_12.newPoint(tField.mul(x, tField.inverse(tField.createElement(a, sField.zero()))),
+            tField.mul(y, tField.inverse(tField.createElement(sField.zero(), a)))
         );
-
-        return
-            Point_2(PointType.Affine, tField.mul(t1, t2), tField.mul(t3, t4));
     }
 }
