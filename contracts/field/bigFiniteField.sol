@@ -28,8 +28,8 @@ contract BigFiniteField {
     }
 
     // Costruttore che inizializza il campo finito con un primo modulo p
-    constructor(bytes memory prime) {
-        p = BigNumbers.init__(prime, false);
+    constructor(BigNumber memory prime) verify(prime) {
+        p = prime;
     }
 
     function get_p() public view returns (BigNumber memory) {

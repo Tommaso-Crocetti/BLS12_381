@@ -1,12 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "./PointZp.sol";
 import "../field/quadraticExtension.sol";
-
-enum PointType {
-    Affine,
-    PointAtInfinity
-}
 
 struct Point_Zp_2 {
     PointType pointType;
