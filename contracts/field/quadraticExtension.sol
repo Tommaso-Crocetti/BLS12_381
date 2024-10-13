@@ -77,7 +77,22 @@ contract QuadraticExtension {
     }
 
     function zero() public view returns (Zp_2 memory) {
-        return Zp_2(f.zero(), f.zero());
+        return createElement(f.zero(), f.zero());
     }
 
+    function one() public view returns (Zp_2 memory) {
+        return createElement(f.one(), f.zero());
+    }
+
+    function two() public view returns (Zp_2 memory) {
+        return createElement(f.two(), f.zero());
+    }
+
+    function three() public view returns (Zp_2 memory) {
+        return createElement(f.three(), f.zero());
+    }
+
+    function four() public view returns (Zp_2 memory) {
+        return createElement(f.four(), f.zero());
+    }
 }

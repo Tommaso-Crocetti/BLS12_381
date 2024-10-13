@@ -42,6 +42,14 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TwelveExtension__factory>;
     getContractFactory(
+      name: "PointZp_12",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.PointZp_12__factory>;
+    getContractFactory(
+      name: "PointZp_2",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.PointZp_2__factory>;
+    getContractFactory(
       name: "PointZp",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PointZp__factory>;
@@ -82,6 +90,16 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.TwelveExtension>;
     getContractAt(
+      name: "PointZp_12",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.PointZp_12>;
+    getContractAt(
+      name: "PointZp_2",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.PointZp_2>;
+    getContractAt(
       name: "PointZp",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -116,6 +134,14 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TwelveExtension>;
     deployContract(
+      name: "PointZp_12",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PointZp_12>;
+    deployContract(
+      name: "PointZp_2",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PointZp_2>;
+    deployContract(
       name: "PointZp",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.PointZp>;
@@ -155,6 +181,16 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TwelveExtension>;
+    deployContract(
+      name: "PointZp_12",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PointZp_12>;
+    deployContract(
+      name: "PointZp_2",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PointZp_2>;
     deployContract(
       name: "PointZp",
       args: any[],

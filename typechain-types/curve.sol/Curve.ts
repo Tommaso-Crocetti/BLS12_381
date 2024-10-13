@@ -8,7 +8,6 @@ import type {
   FunctionFragment,
   Result,
   Interface,
-  AddressLike,
   ContractRunner,
   ContractMethod,
   Listener,
@@ -58,6 +57,18 @@ export type Zp_2StructOutput = [a: ZpStructOutput, b: ZpStructOutput] & {
   b: ZpStructOutput;
 };
 
+export type Point_Zp_2Struct = {
+  pointType: BigNumberish;
+  x: Zp_2Struct;
+  y: Zp_2Struct;
+};
+
+export type Point_Zp_2StructOutput = [
+  pointType: bigint,
+  x: Zp_2StructOutput,
+  y: Zp_2StructOutput
+] & { pointType: bigint; x: Zp_2StructOutput; y: Zp_2StructOutput };
+
 export type Zp_6Struct = { a: Zp_2Struct; b: Zp_2Struct; c: Zp_2Struct };
 
 export type Zp_6StructOutput = [
@@ -73,53 +84,69 @@ export type Zp_12StructOutput = [a: Zp_6StructOutput, b: Zp_6StructOutput] & {
   b: Zp_6StructOutput;
 };
 
-export declare namespace Curve {
-  export type Point_1Struct = {
-    pointType: BigNumberish;
-    x: Zp_2Struct;
-    y: Zp_2Struct;
-  };
+export type Point_Zp_12Struct = {
+  pointType: BigNumberish;
+  x: Zp_12Struct;
+  y: Zp_12Struct;
+};
 
-  export type Point_1StructOutput = [
-    pointType: bigint,
-    x: Zp_2StructOutput,
-    y: Zp_2StructOutput
-  ] & { pointType: bigint; x: Zp_2StructOutput; y: Zp_2StructOutput };
-
-  export type Point_2Struct = {
-    pointType: BigNumberish;
-    x: Zp_12Struct;
-    y: Zp_12Struct;
-  };
-
-  export type Point_2StructOutput = [
-    pointType: bigint,
-    x: Zp_12StructOutput,
-    y: Zp_12StructOutput
-  ] & { pointType: bigint; x: Zp_12StructOutput; y: Zp_12StructOutput };
-}
+export type Point_Zp_12StructOutput = [
+  pointType: bigint,
+  x: Zp_12StructOutput,
+  y: Zp_12StructOutput
+] & { pointType: bigint; x: Zp_12StructOutput; y: Zp_12StructOutput };
 
 export interface CurveInterface extends Interface {
   getFunction(
-    nameOrSignature: "isOnCurve" | "isOnCurve_1" | "untwist"
+    nameOrSignature:
+      | "Subgroup_0Check"
+      | "Subgroup_1Check"
+      | "isOnCurve"
+      | "isOnCurveTwist"
+      | "isOnCurve_12"
+      | "untwist"
   ): FunctionFragment;
 
+  encodeFunctionData(
+    functionFragment: "Subgroup_0Check",
+    values: [Point_ZpStruct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "Subgroup_1Check",
+    values: [Point_Zp_2Struct]
+  ): string;
   encodeFunctionData(
     functionFragment: "isOnCurve",
     values: [Point_ZpStruct]
   ): string;
   encodeFunctionData(
-    functionFragment: "isOnCurve_1",
-    values: [AddressLike, Curve.Point_1Struct]
+    functionFragment: "isOnCurveTwist",
+    values: [Point_Zp_2Struct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "isOnCurve_12",
+    values: [Point_Zp_12Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "untwist",
-    values: [Curve.Point_1Struct]
+    values: [Point_Zp_2Struct]
   ): string;
 
+  decodeFunctionResult(
+    functionFragment: "Subgroup_0Check",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "Subgroup_1Check",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(functionFragment: "isOnCurve", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "isOnCurve_1",
+    functionFragment: "isOnCurveTwist",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "isOnCurve_12",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "untwist", data: BytesLike): Result;
@@ -168,17 +195,35 @@ export interface Curve extends BaseContract {
     event?: TCEvent
   ): Promise<this>;
 
-  isOnCurve: TypedContractMethod<[p: Point_ZpStruct], [boolean], "view">;
+  Subgroup_0Check: TypedContractMethod<
+    [point: Point_ZpStruct],
+    [boolean],
+    "view"
+  >;
 
-  isOnCurve_1: TypedContractMethod<
-    [q: AddressLike, p: Curve.Point_1Struct],
+  Subgroup_1Check: TypedContractMethod<
+    [point: Point_Zp_2Struct],
+    [boolean],
+    "view"
+  >;
+
+  isOnCurve: TypedContractMethod<[point: Point_ZpStruct], [boolean], "view">;
+
+  isOnCurveTwist: TypedContractMethod<
+    [point: Point_Zp_2Struct],
+    [boolean],
+    "view"
+  >;
+
+  isOnCurve_12: TypedContractMethod<
+    [point: Point_Zp_12Struct],
     [boolean],
     "view"
   >;
 
   untwist: TypedContractMethod<
-    [p: Curve.Point_1Struct],
-    [Curve.Point_2StructOutput],
+    [point: Point_Zp_2Struct],
+    [Point_Zp_12StructOutput],
     "view"
   >;
 
@@ -187,20 +232,25 @@ export interface Curve extends BaseContract {
   ): T;
 
   getFunction(
-    nameOrSignature: "isOnCurve"
-  ): TypedContractMethod<[p: Point_ZpStruct], [boolean], "view">;
+    nameOrSignature: "Subgroup_0Check"
+  ): TypedContractMethod<[point: Point_ZpStruct], [boolean], "view">;
   getFunction(
-    nameOrSignature: "isOnCurve_1"
-  ): TypedContractMethod<
-    [q: AddressLike, p: Curve.Point_1Struct],
-    [boolean],
-    "view"
-  >;
+    nameOrSignature: "Subgroup_1Check"
+  ): TypedContractMethod<[point: Point_Zp_2Struct], [boolean], "view">;
+  getFunction(
+    nameOrSignature: "isOnCurve"
+  ): TypedContractMethod<[point: Point_ZpStruct], [boolean], "view">;
+  getFunction(
+    nameOrSignature: "isOnCurveTwist"
+  ): TypedContractMethod<[point: Point_Zp_2Struct], [boolean], "view">;
+  getFunction(
+    nameOrSignature: "isOnCurve_12"
+  ): TypedContractMethod<[point: Point_Zp_12Struct], [boolean], "view">;
   getFunction(
     nameOrSignature: "untwist"
   ): TypedContractMethod<
-    [p: Curve.Point_1Struct],
-    [Curve.Point_2StructOutput],
+    [point: Point_Zp_2Struct],
+    [Point_Zp_12StructOutput],
     "view"
   >;
 

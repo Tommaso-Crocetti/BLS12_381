@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./PointZp.sol";
+import "./pointZp.sol";
 import "../field/twelveExtension.sol";
 
 struct Point_Zp_12 {

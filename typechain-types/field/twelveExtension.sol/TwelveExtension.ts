@@ -65,10 +65,15 @@ export interface TwelveExtensionInterface extends Interface {
     nameOrSignature:
       | "createElement"
       | "equals"
+      | "four"
       | "inverse"
       | "mul"
+      | "one"
       | "sub"
       | "sum"
+      | "three"
+      | "two"
+      | "zero"
   ): FunctionFragment;
 
   encodeFunctionData(
@@ -79,6 +84,7 @@ export interface TwelveExtensionInterface extends Interface {
     functionFragment: "equals",
     values: [Zp_12Struct, Zp_12Struct]
   ): string;
+  encodeFunctionData(functionFragment: "four", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "inverse",
     values: [Zp_12Struct]
@@ -87,6 +93,7 @@ export interface TwelveExtensionInterface extends Interface {
     functionFragment: "mul",
     values: [Zp_12Struct, Zp_12Struct]
   ): string;
+  encodeFunctionData(functionFragment: "one", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "sub",
     values: [Zp_12Struct, Zp_12Struct]
@@ -95,16 +102,24 @@ export interface TwelveExtensionInterface extends Interface {
     functionFragment: "sum",
     values: [Zp_12Struct, Zp_12Struct]
   ): string;
+  encodeFunctionData(functionFragment: "three", values?: undefined): string;
+  encodeFunctionData(functionFragment: "two", values?: undefined): string;
+  encodeFunctionData(functionFragment: "zero", values?: undefined): string;
 
   decodeFunctionResult(
     functionFragment: "createElement",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "inverse", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "one", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "sub", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "sum", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "three", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "two", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "zero", data: BytesLike): Result;
 }
 
 export interface TwelveExtension extends BaseContract {
@@ -162,6 +177,8 @@ export interface TwelveExtension extends BaseContract {
     "view"
   >;
 
+  four: TypedContractMethod<[], [Zp_12StructOutput], "view">;
+
   inverse: TypedContractMethod<[x: Zp_12Struct], [Zp_12StructOutput], "view">;
 
   mul: TypedContractMethod<
@@ -169,6 +186,8 @@ export interface TwelveExtension extends BaseContract {
     [Zp_12StructOutput],
     "view"
   >;
+
+  one: TypedContractMethod<[], [Zp_12StructOutput], "view">;
 
   sub: TypedContractMethod<
     [x: Zp_12Struct, y: Zp_12Struct],
@@ -181,6 +200,12 @@ export interface TwelveExtension extends BaseContract {
     [Zp_12StructOutput],
     "view"
   >;
+
+  three: TypedContractMethod<[], [Zp_12StructOutput], "view">;
+
+  two: TypedContractMethod<[], [Zp_12StructOutput], "view">;
+
+  zero: TypedContractMethod<[], [Zp_12StructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
@@ -197,6 +222,9 @@ export interface TwelveExtension extends BaseContract {
     nameOrSignature: "equals"
   ): TypedContractMethod<[x: Zp_12Struct, y: Zp_12Struct], [boolean], "view">;
   getFunction(
+    nameOrSignature: "four"
+  ): TypedContractMethod<[], [Zp_12StructOutput], "view">;
+  getFunction(
     nameOrSignature: "inverse"
   ): TypedContractMethod<[x: Zp_12Struct], [Zp_12StructOutput], "view">;
   getFunction(
@@ -206,6 +234,9 @@ export interface TwelveExtension extends BaseContract {
     [Zp_12StructOutput],
     "view"
   >;
+  getFunction(
+    nameOrSignature: "one"
+  ): TypedContractMethod<[], [Zp_12StructOutput], "view">;
   getFunction(
     nameOrSignature: "sub"
   ): TypedContractMethod<
@@ -220,6 +251,15 @@ export interface TwelveExtension extends BaseContract {
     [Zp_12StructOutput],
     "view"
   >;
+  getFunction(
+    nameOrSignature: "three"
+  ): TypedContractMethod<[], [Zp_12StructOutput], "view">;
+  getFunction(
+    nameOrSignature: "two"
+  ): TypedContractMethod<[], [Zp_12StructOutput], "view">;
+  getFunction(
+    nameOrSignature: "zero"
+  ): TypedContractMethod<[], [Zp_12StructOutput], "view">;
 
   filters: {};
 }

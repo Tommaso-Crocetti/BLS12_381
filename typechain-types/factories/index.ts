@@ -4,4 +4,4 @@
 export * as bigNumberSol from "./BigNumber.sol";
 export * as curveSol from "./curve.sol";
 export * as field from "./field";
-export { PointZp__factory } from "./PointZp__factory";
+export * as point from "./point";

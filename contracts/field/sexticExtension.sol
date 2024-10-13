@@ -81,7 +81,23 @@ contract SexticExtension {
     }
 
     function zero() public view returns (Zp_6 memory) {
-        return Zp_6(q.zero(), q.zero(), q.zero());
+        return createElement(q.zero(), q.zero(), q.zero());
+    }
+
+        function one() public view returns (Zp_6 memory) {
+        return createElement(q.one(), q.zero(), q.zero());
+    }
+
+    function two() public view returns (Zp_6 memory) {
+        return createElement(q.two(), q.zero(), q.zero());
+    }
+
+    function three() public view returns (Zp_6 memory) {
+        return createElement(q.three(), q.zero(), q.zero());
+    }
+
+    function four() public view returns (Zp_6 memory) {
+        return createElement(q.four(), q.zero(), q.zero());
     }
 
 }

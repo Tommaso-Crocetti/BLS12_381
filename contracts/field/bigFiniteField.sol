@@ -11,6 +11,11 @@ struct Zp {
 contract BigFiniteField {
     BigNumber private p; // Primo modulo p
 
+    // Costruttore che inizializza il campo finito con un primo modulo p
+    constructor(BigNumber memory prime) verify(prime) {
+        p = prime;
+    }
+
     modifier verify(BigNumber memory bn) {
         //require(bn.neg == false);
         uint msword;
@@ -26,12 +31,7 @@ contract BigFiniteField {
             );
         _;
     }
-
-    // Costruttore che inizializza il campo finito con un primo modulo p
-    constructor(BigNumber memory prime) verify(prime) {
-        p = prime;
-    }
-
+    
     function get_p() public view returns (BigNumber memory) {
         return p;
     }
