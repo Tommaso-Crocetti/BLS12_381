@@ -44,8 +44,8 @@ describe("Sextic Extension Contract", function () {
                 BigNumbers: await bigNumbers.getAddress()
             }
         }) as BigFiniteField__factory;
-        const value = 7;
-        bigFiniteField = await bigFiniteFieldFactory.deploy(ethers.toBeHex(value.toString()));
+        const prime = toBigNumber(await bigNumbers.init(7, false));
+        bigFiniteField = await bigFiniteFieldFactory.deploy(prime);
         const quadraticExtensionFactory: QuadraticExtension__factory = await ethers.getContractFactory("QuadraticExtension") as QuadraticExtension__factory;
         quadraticExtension = await quadraticExtensionFactory.deploy(bigFiniteField);
 

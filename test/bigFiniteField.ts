@@ -26,8 +26,8 @@ describe("BigFiniteField Contract", function () {
             BigNumbers: await bigNumbers.getAddress()
         }
     }) as BigFiniteField__factory;
-    const value = 7;
-    bigFiniteField = await bigFiniteFieldFactory.deploy(ethers.toBeHex(value.toString()));
+    const prime = toBigNumber(await bigNumbers.init(7, false));
+    bigFiniteField = await bigFiniteFieldFactory.deploy(prime);
     const valueA: BigNumberStructOutput = await bigNumbers.init(3, false);
     const valueB: BigNumberStructOutput = await bigNumbers.init(5, false);
     elementA = await bigFiniteField.createElement(toBigNumber(valueA));
