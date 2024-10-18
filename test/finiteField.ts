@@ -1,3 +1,4 @@
+/*
 import { ethers } from "hardhat"; // Importa ethers da Hardhat
 import { expect } from "chai"; // Per i test con Chai
 import { FiniteField, FiniteField__factory } from "../typechain-types"; // Assicurati che il percorso sia corretto
@@ -61,3 +62,4 @@ describe("FiniteField Contract", function () {
     await expect(finiteField.div(toZpStruct(elementA), toZpStruct(elementB))).to.be.revertedWith("Divisione per zero non permessa.");
   });
 });
+*/

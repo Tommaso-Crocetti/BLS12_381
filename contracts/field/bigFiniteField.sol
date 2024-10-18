@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
 import "../BigNumber.sol";
 
 struct Zp {
@@ -31,7 +30,7 @@ contract BigFiniteField {
             );
         _;
     }
-    
+
     function get_p() public view returns (BigNumber memory) {
         return p;
     }
@@ -56,8 +55,7 @@ contract BigFiniteField {
         Zp memory x,
         Zp memory y
     ) public view verify(x.value) verify(y.value) returns (Zp memory) {
-        return
-            createElement(BigNumbers.sub(x.value, y.value));
+        return createElement(BigNumbers.sub(x.value, y.value));
     }
 
     // Operazione di moltiplicazione nel campo finito
@@ -103,7 +101,7 @@ contract BigFiniteField {
         Zp memory x,
         Zp memory y
     ) public pure verify(x.value) verify(y.value) returns (bool) {
-        return BigNumbers.cmp(x.value, y.value, false) == 0;
+        return BigNumbers.eq(x.value, y.value);
     }
 
     function zero() public pure returns (Zp memory) {

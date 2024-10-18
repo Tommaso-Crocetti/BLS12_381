@@ -52,7 +52,13 @@ export type Point_ZpStructOutput = [
 
 export interface PointZpInterface extends Interface {
   getFunction(
-    nameOrSignature: "add" | "double" | "multiply" | "negate" | "newPoint"
+    nameOrSignature:
+      | "add"
+      | "double"
+      | "multiply"
+      | "negate"
+      | "newPoint"
+      | "point_at_infinity"
   ): FunctionFragment;
 
   encodeFunctionData(
@@ -73,7 +79,11 @@ export interface PointZpInterface extends Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "newPoint",
-    values: [BigNumberish, ZpStruct, ZpStruct]
+    values: [ZpStruct, ZpStruct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "point_at_infinity",
+    values?: undefined
   ): string;
 
   decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
@@ -81,6 +91,10 @@ export interface PointZpInterface extends Interface {
   decodeFunctionResult(functionFragment: "multiply", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "negate", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "newPoint", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "point_at_infinity",
+    data: BytesLike
+  ): Result;
 }
 
 export interface PointZp extends BaseContract {
@@ -151,10 +165,12 @@ export interface PointZp extends BaseContract {
   >;
 
   newPoint: TypedContractMethod<
-    [pointType: BigNumberish, x: ZpStruct, y: ZpStruct],
+    [x: ZpStruct, y: ZpStruct],
     [Point_ZpStructOutput],
     "view"
   >;
+
+  point_at_infinity: TypedContractMethod<[], [Point_ZpStructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
@@ -191,10 +207,13 @@ export interface PointZp extends BaseContract {
   getFunction(
     nameOrSignature: "newPoint"
   ): TypedContractMethod<
-    [pointType: BigNumberish, x: ZpStruct, y: ZpStruct],
+    [x: ZpStruct, y: ZpStruct],
     [Point_ZpStructOutput],
     "view"
   >;
+  getFunction(
+    nameOrSignature: "point_at_infinity"
+  ): TypedContractMethod<[], [Point_ZpStructOutput], "view">;
 
   filters: {};
 }

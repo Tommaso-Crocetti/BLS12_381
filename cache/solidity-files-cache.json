@@ -1,6 +1,42 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
+    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1728554940950,
+      "contentHash": "178d0fdb8d813b0290d52e83f8793caa",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\BigNumber.sol": {
       "lastModificationDate": 1728646378149,
       "contentHash": "d2291ce03710982ad93ba61e091886ae",
@@ -76,8 +112,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\bigFiniteField.sol": {
-      "lastModificationDate": 1729000948619,
-      "contentHash": "b445d908797f281413f183cd54ca955f",
+      "lastModificationDate": 1729157814742,
+      "contentHash": "435ca698790c7ee8495afa2d61da9c68",
       "sourceName": "contracts/field/bigFiniteField.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -104,7 +140,6 @@
         }
       },
       "imports": [
-        "hardhat/console.sol",
         "../BigNumber.sol"
       ],
       "versionPragmas": [
@@ -112,119 +147,6 @@
       ],
       "artifacts": [
         "BigFiniteField"
-      ]
-    },
-    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\node_modules\\hardhat\\console.sol": {
-      "lastModificationDate": 1728554940950,
-      "contentHash": "178d0fdb8d813b0290d52e83f8793caa",
-      "sourceName": "hardhat/console.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.9.0"
-      ],
-      "artifacts": [
-        "console"
-      ]
-    },
-    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp.sol": {
-      "lastModificationDate": 1729001034333,
-      "contentHash": "bb56d006fed526fe2b25e0b9bd725931",
-      "sourceName": "contracts/point/pointZp.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../field/bigFiniteField.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "PointZp"
-      ]
-    },
-    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_2.sol": {
-      "lastModificationDate": 1729001021277,
-      "contentHash": "799c7bec0f5688e3fdc1e19b1b4e9314",
-      "sourceName": "contracts/point/pointZp_2.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./pointZp.sol",
-        "../field/quadraticExtension.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "PointZp_2"
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\quadraticExtension.sol": {
@@ -266,8 +188,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\sexticExtension.sol": {
-      "lastModificationDate": 1729000948620,
-      "contentHash": "b2e7318b81beae4fa7629ccf099cec5f",
+      "lastModificationDate": 1729073860646,
+      "contentHash": "361c1acd6ebccc200d9bf4e5dcf89876",
       "sourceName": "contracts/field/sexticExtension.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -294,7 +216,6 @@
         }
       },
       "imports": [
-        "hardhat/console.sol",
         "./quadraticExtension.sol"
       ],
       "versionPragmas": [
@@ -381,9 +302,86 @@
         "PointZp_12"
       ]
     },
+    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp.sol": {
+      "lastModificationDate": 1729160006185,
+      "contentHash": "b17b4bcf888bf9d730d22bbed338eb5c",
+      "sourceName": "contracts/point/pointZp.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../field/bigFiniteField.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PointZp"
+      ]
+    },
+    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_2.sol": {
+      "lastModificationDate": 1729001021277,
+      "contentHash": "799c7bec0f5688e3fdc1e19b1b4e9314",
+      "sourceName": "contracts/point/pointZp_2.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./pointZp.sol",
+        "../field/quadraticExtension.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PointZp_2"
+      ]
+    },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\curve.sol": {
-      "lastModificationDate": 1729012892769,
-      "contentHash": "393fda29b4c6dabf1dbb58cffb396edd",
+      "lastModificationDate": 1729178165675,
+      "contentHash": "19bb85f72c93cb3b507970025595ea6f",
       "sourceName": "contracts/curve.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -410,6 +408,7 @@
         }
       },
       "imports": [
+        "hardhat/console.sol",
         "./BigNumber.sol",
         "./field/bigFiniteField.sol",
         "./field/sexticExtension.sol",

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "hardhat/console.sol";
 import "./BigNumber.sol";
 import "./field/bigFiniteField.sol";
 import "./field/sexticExtension.sol";
@@ -27,7 +28,6 @@ contract Curve {
     PointZp_12 private pZp_12 = new PointZp_12(tField);
     Point_Zp private g0 =
         pZp.newPoint(
-            PointType.Affine,
             fField.createElement(
                 BigNumbers.init__(
                     "0x17f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb",
@@ -74,11 +74,14 @@ contract Curve {
             )
         );
 
+    function get_g0() public view returns (Point_Zp memory) {
+        return g0;
+    }
+
     //costruttore per passare parametro per inizializzare i vari valori per ora fissi?
 
     //verifcare correttezza, specialmente isOnCurve_12
     function isOnCurve(Point_Zp memory point) public view returns (bool) {
-        if (point.pointType == PointType.PointAtInfinity) return false;
         Zp memory l = fField.mul(point.y, point.y);
         Zp memory r = fField.sum(
             fField.mul(fField.mul(point.x, point.x), point.x),
@@ -149,4 +152,9 @@ contract Curve {
                 )
             );
     }
+
+    function miller(
+        Point_Zp memory p,
+        Point_Zp_12 memory q
+    ) public view returns (Point_Zp_12 memory) {}
 }

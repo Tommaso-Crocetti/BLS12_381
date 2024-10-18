@@ -22,11 +22,14 @@ contract PointZp {
     }
 
     function newPoint(
-        PointType pointType,
         Zp memory x,
         Zp memory y
     ) public pure returns (Point_Zp memory) {
-        return Point_Zp(pointType, x, y);
+        return Point_Zp(PointType.Affine, x, y);
+    }
+
+    function point_at_infinity() public view returns (Point_Zp memory) {
+        return Point_Zp(PointType.PointAtInfinity, f.zero(), f.zero());
     }
 
     function add(
@@ -38,28 +41,27 @@ contract PointZp {
         if (f.equals(self.x, other.x) && f.equals(self.y, other.y))
             return double(self);
         if (f.equals(self.x, other.x) && !f.equals(self.y, other.y))
-            return newPoint(PointType.PointAtInfinity, f.zero(), f.zero());
+            return point_at_infinity();
         Zp memory l = f.mul(
             f.sub(other.y, self.y),
             f.inverse(f.sub(other.x, self.x))
         );
         Zp memory x_n = f.sub(f.sub(f.mul(l, l), self.x), other.x);
         Zp memory y_n = f.sub(f.mul(f.sub(self.x, x_n), l), self.y);
-        return newPoint(PointType.Affine, x_n, y_n);
+        return newPoint(x_n, y_n);
     }
 
     function double(
         Point_Zp memory self
     ) public view returns (Point_Zp memory) {
-        if (f.equals(self.y, f.zero()))
-            return newPoint(PointType.PointAtInfinity, f.zero(), f.zero());
+        if (f.equals(self.y, f.zero())) return point_at_infinity();
         Zp memory l = f.mul(
             f.mul(f.three(), f.mul(self.x, self.x)),
             f.inverse(f.mul(f.two(), self.y))
         );
         Zp memory x_n = f.sub(f.sub(f.mul(l, l), self.x), self.x);
         Zp memory y_n = f.sub(f.mul(f.sub(self.x, x_n), l), self.y);
-        return newPoint(PointType.Affine, x_n, y_n);
+        return newPoint(x_n, y_n);
     }
 
     function negate(
@@ -69,18 +71,14 @@ contract PointZp {
             self.pointType != PointType.PointAtInfinity,
             "cannot negate point at infinity"
         );
-        return newPoint(PointType.Affine, self.x, f.sub(f.zero(), self.y));
+        return newPoint(self.x, f.sub(f.zero(), self.y));
     }
 
     function multiply(
         BigNumber memory k,
         Point_Zp memory self
     ) public view returns (Point_Zp memory) {
-        Point_Zp memory acc = newPoint(
-            PointType.PointAtInfinity,
-            f.zero(),
-            f.zero()
-        );
+        Point_Zp memory acc = point_at_infinity();
         if (!k.neg) return doubleAndAdd(k, self, acc);
         else
             return

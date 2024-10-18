@@ -6,5 +6,6 @@ require("@nomicfoundation/hardhat-ethers");
 require("@nomicfoundation/hardhat-chai-matchers");
 const config = {
     solidity: "0.8.27",
+    allowUnlimitedContractSize: true
 };
 exports.default = config;

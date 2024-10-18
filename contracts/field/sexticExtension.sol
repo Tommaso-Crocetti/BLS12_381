@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
 import "./quadraticExtension.sol";
 
 struct Zp_6 {
@@ -84,7 +83,7 @@ contract SexticExtension {
         return createElement(q.zero(), q.zero(), q.zero());
     }
 
-        function one() public view returns (Zp_6 memory) {
+    function one() public view returns (Zp_6 memory) {
         return createElement(q.one(), q.zero(), q.zero());
     }
 
@@ -99,5 +98,4 @@ contract SexticExtension {
     function four() public view returns (Zp_6 memory) {
         return createElement(q.four(), q.zero(), q.zero());
     }
-
 }
