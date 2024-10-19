@@ -24,6 +24,10 @@ contract SexticExtension {
         return Zp_6(a, b, c);
     }
 
+    function fromZp(Zp memory value) public view returns (Zp_6 memory) {
+        return Zp_6(q.fromZp(), q.zero(), q.zero());
+    }
+
     function sum(
         Zp_6 memory x,
         Zp_6 memory y

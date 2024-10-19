@@ -153,8 +153,146 @@ contract Curve {
             );
     }
 
+    function doubleEval(
+        Point_Zp_2 memory r,
+        Point_Zp memory p
+    ) public view returns (Zp_12 memory) {
+        Point_Zp_12 memory r_twist = untwist(r);
+        Zp_12 memory slope = tField.mul(
+            tField.mul(tField.mul(tField.three(), r_twist.x), r_twist.x),
+            tField.inverse(tField.mul(tField.two(), r_twist.y))
+        );
+        Zp_12 memory v = tField.sub(r_twist.y, tField.mul(slope, r_twist.x));
+        Zp_12 memory t0 = tField.fromZp(p.y);
+        Zp_12 memory t1 = tField.mul(tField.fromZp(p.x), slope);
+        return tField.sub(tField.sub(t0, t1), v);
+    }
+
+    function addEval(
+        Point_Zp_2 memory r,
+        Point_Zp_2 memory q,
+        Point_Zp memory p
+    ) public view returns (Zp_12 memory) {
+        Point_Zp_12 memory r_twist = untwist(r);
+        Point_Zp_12 memory q_twist = untwist(q);
+        if (
+            tField.equals(r_twist.x, q_twist.x) &&
+            !tField.equals(r_twist.y, q_twist.y)
+        ) {
+            return tField.sub(tField.fromZp(p.x), r_twist.x);
+        } else {
+            return _addEval(r_twist, q_twist, p);
+        }
+    }
+
+    function _addEval(
+        Point_Zp_12 memory r,
+        Point_Zp_12 memory q,
+        Point_Zp memory p
+    ) public view returns (Zp_12 memory) {
+        Zp_12 memory slope = tField.mul(
+            tField.sub(q.y, r.y),
+            tField.inverse(tField.sub(q.x, r.x))
+        );
+        Zp_12 memory v = tField.mul(
+            tField.sub(tField.mul(q.y, r.x), tField.mul(r.y, q.x)),
+            tField.inverse(tField.sub(r.x, q.x))
+        );
+        Zp_12 memory t0 = tField.fromZp(p.y);
+        Zp_12 memory t1 = tField.mul(tField.fromZp(p.x), slope);
+        return tField.sub(tField.sub(t0, t1), v);
+    }
+
+    function getBits(
+        BigNumber memory value
+    ) public view returns (bool[] memory) {
+        uint256 index = 0;
+
+        bool[] memory bits = new bool[](64);
+        while (BigNumbers.gt(value, BigNumbers.zero())) {
+            // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
+            bits[index] = (BigNumbers.isOdd(value));
+            // Shifta a destra di un bit
+            value = BigNumbers.shr(value, 1);
+            index++;
+        }
+
+        bool[] memory reversedBits = new bool[](index - 1);
+
+        // Copiamo gli elementi nell'ordine inverso, escludendo il primo elemento
+        for (uint256 i = 0; i < index - 1; i++) {
+            reversedBits[i] = bits[index - i - 2]; // -2 per escludere il primo elemento
+        }
+
+        return reversedBits;
+    }
+
     function miller(
         Point_Zp memory p,
-        Point_Zp_12 memory q
-    ) public view returns (Point_Zp_12 memory) {}
+        Point_Zp_2 memory q
+    ) public view returns (Zp_12 memory) {
+        return
+            miller_iterate(
+                p,
+                q,
+                q,
+                getBits(BigNumbers.init__("0xd201000000010000", false))
+            );
+    }
+
+    function miller_iterate(
+        Point_Zp memory p,
+        Point_Zp_2 memory q,
+        Point_Zp_2 memory r,
+        bool[] memory bits
+    ) public view returns (Zp_12 memory) {
+        Point_Zp_2 memory double_r;
+        Zp_12 memory acc = tField.one();
+        for (uint256 i = 0; i < bits.length; i++) {
+            acc = tField.mul(tField.mul(acc, acc), doubleEval(r, p));
+            r = pZp_2.double(r);
+            if (bits[i]) {
+                acc = tField.mul(acc, addEval(r, q, p));
+                r = pZp_2.add(r, q);
+            }
+        }
+        return acc;
+    }
+
+    function exp(
+        Zp_12 memory value,
+        BigNumber memory e,
+        Zp_12 memory result
+    ) public view returns (Zp_12 memory) {
+        Zp_12 memory acc = exp(value, BigNumbers.shr(e, 1), result);
+        if (BigNumbers.lt(e, BigNumbers.one())) return value;
+        if (BigNumbers.isOdd(e)) return tField.mul(tField.mul(acc, acc), value);
+        return tField.mul(acc, acc);
+    }
+
+    function pairing(
+        Point_Zp memory p,
+        Point_Zp_2 memory q
+    ) public view returns (Zp_12 memory) {
+        if (
+            p.pointType == PointType.PointAtInfinity ||
+            q.pointType == PointType.PointAtInfinity
+        ) return tField.zero();
+        if (
+            isOnCurve(p) &&
+            isOnCurveTwist(q) &&
+            Subgroup_0Check(p) &&
+            Subgroup_1Check(q)
+        ) {
+            return
+                exp(
+                    miller(p, q),
+                    BigNumbers.init__(
+                        "0xf686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79",
+                        false
+                    ),
+                    tField.one()
+                );
+        }
+    }
 }

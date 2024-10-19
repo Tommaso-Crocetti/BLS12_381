@@ -22,6 +22,10 @@ contract TwelveExtension {
         return Zp_12(x, y);
     }
 
+    function fromZp(Zp memory value) public view returns (Zp_12 memory) {
+        return Zp_12(s.fromZp(value), s.zero());
+    }
+
     function sum(
         Zp_12 memory x,
         Zp_12 memory y

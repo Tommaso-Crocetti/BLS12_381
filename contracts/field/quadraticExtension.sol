@@ -24,6 +24,10 @@ contract QuadraticExtension {
         return Zp_2(a, b);
     }
 
+    function fromZp(Zp memory value) public view returns (Zp_2 memory) {
+        return Zp_2(value, f.zero());
+    }
+
     /// @notice Aggiunge due Zp_2i in Zp[i]
     function sum(
         Zp_2 memory x,
