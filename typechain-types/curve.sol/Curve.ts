@@ -101,11 +101,21 @@ export interface CurveInterface extends Interface {
     nameOrSignature:
       | "Subgroup_0Check"
       | "Subgroup_1Check"
+      | "_addEval"
+      | "addEval"
+      | "doubleEval"
+      | "exp"
+      | "getBits"
       | "get_g0"
+      | "get_p"
       | "isOnCurve"
       | "isOnCurveTwist"
       | "isOnCurve_12"
       | "miller"
+      | "miller_iterate"
+      | "pairing"
+      | "test1"
+      | "test2"
       | "untwist"
   ): FunctionFragment;
 
@@ -117,7 +127,28 @@ export interface CurveInterface extends Interface {
     functionFragment: "Subgroup_1Check",
     values: [Point_Zp_2Struct]
   ): string;
+  encodeFunctionData(
+    functionFragment: "_addEval",
+    values: [Point_Zp_12Struct, Point_Zp_12Struct, Point_ZpStruct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "addEval",
+    values: [Point_Zp_2Struct, Point_Zp_2Struct, Point_ZpStruct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "doubleEval",
+    values: [Point_Zp_2Struct, Point_ZpStruct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "exp",
+    values: [Zp_12Struct, BigNumberStruct, Zp_12Struct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "getBits",
+    values: [BigNumberStruct]
+  ): string;
   encodeFunctionData(functionFragment: "get_g0", values?: undefined): string;
+  encodeFunctionData(functionFragment: "get_p", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "isOnCurve",
     values: [Point_ZpStruct]
@@ -132,8 +163,18 @@ export interface CurveInterface extends Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "miller",
-    values: [Point_ZpStruct, Point_Zp_12Struct]
+    values: [Point_ZpStruct, Point_Zp_2Struct]
   ): string;
+  encodeFunctionData(
+    functionFragment: "miller_iterate",
+    values: [Point_ZpStruct, Point_Zp_2Struct, Point_Zp_2Struct, boolean[]]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "pairing",
+    values: [Point_ZpStruct, Point_Zp_2Struct]
+  ): string;
+  encodeFunctionData(functionFragment: "test1", values?: undefined): string;
+  encodeFunctionData(functionFragment: "test2", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "untwist",
     values: [Point_Zp_2Struct]
@@ -147,7 +188,13 @@ export interface CurveInterface extends Interface {
     functionFragment: "Subgroup_1Check",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "_addEval", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "addEval", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "doubleEval", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "exp", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "getBits", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "get_g0", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "get_p", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "isOnCurve", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "isOnCurveTwist",
@@ -158,6 +205,13 @@ export interface CurveInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "miller", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "miller_iterate",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "pairing", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "test1", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "test2", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "untwist", data: BytesLike): Result;
 }
 
@@ -216,7 +270,35 @@ export interface Curve extends BaseContract {
     "view"
   >;
 
+  _addEval: TypedContractMethod<
+    [r: Point_Zp_12Struct, q: Point_Zp_12Struct, p: Point_ZpStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
+  addEval: TypedContractMethod<
+    [r: Point_Zp_2Struct, q: Point_Zp_2Struct, p: Point_ZpStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
+  doubleEval: TypedContractMethod<
+    [r: Point_Zp_2Struct, p: Point_ZpStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
+  exp: TypedContractMethod<
+    [value: Zp_12Struct, e: BigNumberStruct, result: Zp_12Struct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
+  getBits: TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
+
   get_g0: TypedContractMethod<[], [Point_ZpStructOutput], "view">;
+
+  get_p: TypedContractMethod<[], [BigNumberStructOutput], "view">;
 
   isOnCurve: TypedContractMethod<[point: Point_ZpStruct], [boolean], "view">;
 
@@ -233,10 +315,31 @@ export interface Curve extends BaseContract {
   >;
 
   miller: TypedContractMethod<
-    [p: Point_ZpStruct, q: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
+    [p: Point_ZpStruct, q: Point_Zp_2Struct],
+    [Zp_12StructOutput],
     "view"
   >;
+
+  miller_iterate: TypedContractMethod<
+    [
+      p: Point_ZpStruct,
+      q: Point_Zp_2Struct,
+      r: Point_Zp_2Struct,
+      bits: boolean[]
+    ],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
+  pairing: TypedContractMethod<
+    [p: Point_ZpStruct, q: Point_Zp_2Struct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
+  test1: TypedContractMethod<[], [ZpStructOutput], "view">;
+
+  test2: TypedContractMethod<[], [ZpStructOutput], "view">;
 
   untwist: TypedContractMethod<
     [point: Point_Zp_2Struct],
@@ -255,8 +358,42 @@ export interface Curve extends BaseContract {
     nameOrSignature: "Subgroup_1Check"
   ): TypedContractMethod<[point: Point_Zp_2Struct], [boolean], "view">;
   getFunction(
+    nameOrSignature: "_addEval"
+  ): TypedContractMethod<
+    [r: Point_Zp_12Struct, q: Point_Zp_12Struct, p: Point_ZpStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "addEval"
+  ): TypedContractMethod<
+    [r: Point_Zp_2Struct, q: Point_Zp_2Struct, p: Point_ZpStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "doubleEval"
+  ): TypedContractMethod<
+    [r: Point_Zp_2Struct, p: Point_ZpStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "exp"
+  ): TypedContractMethod<
+    [value: Zp_12Struct, e: BigNumberStruct, result: Zp_12Struct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "getBits"
+  ): TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
+  getFunction(
     nameOrSignature: "get_g0"
   ): TypedContractMethod<[], [Point_ZpStructOutput], "view">;
+  getFunction(
+    nameOrSignature: "get_p"
+  ): TypedContractMethod<[], [BigNumberStructOutput], "view">;
   getFunction(
     nameOrSignature: "isOnCurve"
   ): TypedContractMethod<[point: Point_ZpStruct], [boolean], "view">;
@@ -269,10 +406,35 @@ export interface Curve extends BaseContract {
   getFunction(
     nameOrSignature: "miller"
   ): TypedContractMethod<
-    [p: Point_ZpStruct, q: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
+    [p: Point_ZpStruct, q: Point_Zp_2Struct],
+    [Zp_12StructOutput],
     "view"
   >;
+  getFunction(
+    nameOrSignature: "miller_iterate"
+  ): TypedContractMethod<
+    [
+      p: Point_ZpStruct,
+      q: Point_Zp_2Struct,
+      r: Point_Zp_2Struct,
+      bits: boolean[]
+    ],
+    [Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "pairing"
+  ): TypedContractMethod<
+    [p: Point_ZpStruct, q: Point_Zp_2Struct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "test1"
+  ): TypedContractMethod<[], [ZpStructOutput], "view">;
+  getFunction(
+    nameOrSignature: "test2"
+  ): TypedContractMethod<[], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "untwist"
   ): TypedContractMethod<

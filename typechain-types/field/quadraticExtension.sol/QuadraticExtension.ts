@@ -52,6 +52,7 @@ export interface QuadraticExtensionInterface extends Interface {
       | "div"
       | "equals"
       | "four"
+      | "fromZp"
       | "inverse"
       | "mul"
       | "mul_nonres"
@@ -76,6 +77,7 @@ export interface QuadraticExtensionInterface extends Interface {
     values: [Zp_2Struct, Zp_2Struct]
   ): string;
   encodeFunctionData(functionFragment: "four", values?: undefined): string;
+  encodeFunctionData(functionFragment: "fromZp", values: [ZpStruct]): string;
   encodeFunctionData(functionFragment: "inverse", values: [Zp_2Struct]): string;
   encodeFunctionData(
     functionFragment: "mul",
@@ -105,6 +107,7 @@ export interface QuadraticExtensionInterface extends Interface {
   decodeFunctionResult(functionFragment: "div", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "fromZp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "inverse", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul_nonres", data: BytesLike): Result;
@@ -179,6 +182,8 @@ export interface QuadraticExtension extends BaseContract {
 
   four: TypedContractMethod<[], [Zp_2StructOutput], "view">;
 
+  fromZp: TypedContractMethod<[value: ZpStruct], [Zp_2StructOutput], "view">;
+
   inverse: TypedContractMethod<[x: Zp_2Struct], [Zp_2StructOutput], "view">;
 
   mul: TypedContractMethod<
@@ -233,6 +238,9 @@ export interface QuadraticExtension extends BaseContract {
   getFunction(
     nameOrSignature: "four"
   ): TypedContractMethod<[], [Zp_2StructOutput], "view">;
+  getFunction(
+    nameOrSignature: "fromZp"
+  ): TypedContractMethod<[value: ZpStruct], [Zp_2StructOutput], "view">;
   getFunction(
     nameOrSignature: "inverse"
   ): TypedContractMethod<[x: Zp_2Struct], [Zp_2StructOutput], "view">;

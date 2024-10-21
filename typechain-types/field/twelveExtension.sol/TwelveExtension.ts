@@ -66,6 +66,7 @@ export interface TwelveExtensionInterface extends Interface {
       | "createElement"
       | "equals"
       | "four"
+      | "fromZp"
       | "inverse"
       | "mul"
       | "one"
@@ -85,6 +86,7 @@ export interface TwelveExtensionInterface extends Interface {
     values: [Zp_12Struct, Zp_12Struct]
   ): string;
   encodeFunctionData(functionFragment: "four", values?: undefined): string;
+  encodeFunctionData(functionFragment: "fromZp", values: [ZpStruct]): string;
   encodeFunctionData(
     functionFragment: "inverse",
     values: [Zp_12Struct]
@@ -112,6 +114,7 @@ export interface TwelveExtensionInterface extends Interface {
   ): Result;
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "fromZp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "inverse", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "one", data: BytesLike): Result;
@@ -179,6 +182,8 @@ export interface TwelveExtension extends BaseContract {
 
   four: TypedContractMethod<[], [Zp_12StructOutput], "view">;
 
+  fromZp: TypedContractMethod<[value: ZpStruct], [Zp_12StructOutput], "view">;
+
   inverse: TypedContractMethod<[x: Zp_12Struct], [Zp_12StructOutput], "view">;
 
   mul: TypedContractMethod<
@@ -224,6 +229,9 @@ export interface TwelveExtension extends BaseContract {
   getFunction(
     nameOrSignature: "four"
   ): TypedContractMethod<[], [Zp_12StructOutput], "view">;
+  getFunction(
+    nameOrSignature: "fromZp"
+  ): TypedContractMethod<[value: ZpStruct], [Zp_12StructOutput], "view">;
   getFunction(
     nameOrSignature: "inverse"
   ): TypedContractMethod<[x: Zp_12Struct], [Zp_12StructOutput], "view">;

@@ -60,6 +60,7 @@ export interface SexticExtensionInterface extends Interface {
       | "div"
       | "equals"
       | "four"
+      | "fromZp"
       | "inverse"
       | "mul"
       | "mul_nonres"
@@ -84,6 +85,7 @@ export interface SexticExtensionInterface extends Interface {
     values: [Zp_6Struct, Zp_6Struct]
   ): string;
   encodeFunctionData(functionFragment: "four", values?: undefined): string;
+  encodeFunctionData(functionFragment: "fromZp", values: [ZpStruct]): string;
   encodeFunctionData(functionFragment: "inverse", values: [Zp_6Struct]): string;
   encodeFunctionData(
     functionFragment: "mul",
@@ -113,6 +115,7 @@ export interface SexticExtensionInterface extends Interface {
   decodeFunctionResult(functionFragment: "div", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "fromZp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "inverse", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mul_nonres", data: BytesLike): Result;
@@ -187,6 +190,8 @@ export interface SexticExtension extends BaseContract {
 
   four: TypedContractMethod<[], [Zp_6StructOutput], "view">;
 
+  fromZp: TypedContractMethod<[value: ZpStruct], [Zp_6StructOutput], "view">;
+
   inverse: TypedContractMethod<[x: Zp_6Struct], [Zp_6StructOutput], "view">;
 
   mul: TypedContractMethod<
@@ -241,6 +246,9 @@ export interface SexticExtension extends BaseContract {
   getFunction(
     nameOrSignature: "four"
   ): TypedContractMethod<[], [Zp_6StructOutput], "view">;
+  getFunction(
+    nameOrSignature: "fromZp"
+  ): TypedContractMethod<[value: ZpStruct], [Zp_6StructOutput], "view">;
   getFunction(
     nameOrSignature: "inverse"
   ): TypedContractMethod<[x: Zp_6Struct], [Zp_6StructOutput], "view">;

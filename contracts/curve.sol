@@ -11,12 +11,12 @@ import "./point/pointZp_12.sol";
 contract Curve {
     BigNumber private prime =
         BigNumbers.init__(
-            "0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab",
+            hex"1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab",
             false
         );
     BigNumber private order =
         BigNumbers.init__(
-            "0x73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
+            hex"73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
             false
         );
     BigFiniteField private fField = new BigFiniteField(prime);
@@ -30,13 +30,13 @@ contract Curve {
         pZp.newPoint(
             fField.createElement(
                 BigNumbers.init__(
-                    "0x17f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb",
+                    hex"17f1d3a73197d7942695638c4fa9ac0fc3688c4f9774b905a14e3a3f171bac586c55e83ff97a1aeffb3af00adb22c6bb",
                     false
                 )
             ),
             fField.createElement(
                 BigNumbers.init__(
-                    "0x08b3f481e3aaa0f1a09e30ed741d8ae4fcf5e095d5d00af600db18cb2c04b3edd03cc744a2888ae40caa232946c5e7e1",
+                    hex"08b3f481e3aaa0f1a09e30ed741d8ae4fcf5e095d5d00af600db18cb2c04b3edd03cc744a2888ae40caa232946c5e7e1",
                     false
                 )
             )
@@ -47,13 +47,13 @@ contract Curve {
             qField.createElement(
                 fField.createElement(
                     BigNumbers.init__(
-                        "0x13e02b6052719f607dacd3a088274f65596bd0d09920b61ab5da61bbdc7f5049334cf11213945d57e5ac7d055d042b7e",
+                        hex"13e02b6052719f607dacd3a088274f65596bd0d09920b61ab5da61bbdc7f5049334cf11213945d57e5ac7d055d042b7e",
                         false
                     )
                 ),
                 fField.createElement(
                     BigNumbers.init__(
-                        "0x024aa2b2f08f0a91260805272dc51051c6e47ad4fa403b02b4510b647ae3d1770bac0326a805bbefd48056c8c121bdb8",
+                        hex"024aa2b2f08f0a91260805272dc51051c6e47ad4fa403b02b4510b647ae3d1770bac0326a805bbefd48056c8c121bdb8",
                         false
                     )
                 )
@@ -61,18 +61,22 @@ contract Curve {
             qField.createElement(
                 fField.createElement(
                     BigNumbers.init__(
-                        "0x0606c4a02ea734cc32acd2b02bc28b99cb3e287e85a763af267492ab572e99ab3f370d275cec1da1aaa9075ff05f79be",
+                        hex"0606c4a02ea734cc32acd2b02bc28b99cb3e287e85a763af267492ab572e99ab3f370d275cec1da1aaa9075ff05f79be",
                         false
                     )
                 ),
                 fField.createElement(
                     BigNumbers.init__(
-                        "0x0ce5d527727d6e118cc9cdc6da2e351aadfd9baa8cbdd3a76d429a695160d12c923ac9cc3baca289e193548608b82801",
+                        hex"0ce5d527727d6e118cc9cdc6da2e351aadfd9baa8cbdd3a76d429a695160d12c923ac9cc3baca289e193548608b82801",
                         false
                     )
                 )
             )
         );
+
+    function get_p() public view returns (BigNumber memory) {
+        return prime;
+    }
 
     function get_g0() public view returns (Point_Zp memory) {
         return g0;
@@ -88,6 +92,15 @@ contract Curve {
             fField.mul_nonres(fField.four())
         );
         return fField.equals(l, r);
+    }
+
+    function test1() public view returns (Zp memory) {
+        return fField.mul(g0.y, g0.y);
+    }
+
+    function test2() public view returns (Zp memory) {
+        return
+            fField.sum(fField.mul(fField.mul(g0.x, g0.x), g0.x), fField.four());
     }
 
     function isOnCurveTwist(
@@ -246,7 +259,6 @@ contract Curve {
         Point_Zp_2 memory r,
         bool[] memory bits
     ) public view returns (Zp_12 memory) {
-        Point_Zp_2 memory double_r;
         Zp_12 memory acc = tField.one();
         for (uint256 i = 0; i < bits.length; i++) {
             acc = tField.mul(tField.mul(acc, acc), doubleEval(r, p));
@@ -264,16 +276,19 @@ contract Curve {
         BigNumber memory e,
         Zp_12 memory result
     ) public view returns (Zp_12 memory) {
-        Zp_12 memory acc = exp(value, BigNumbers.shr(e, 1), result);
         if (BigNumbers.lt(e, BigNumbers.one())) return value;
-        if (BigNumbers.isOdd(e)) return tField.mul(tField.mul(acc, acc), value);
-        return tField.mul(acc, acc);
+        else {
+            Zp_12 memory acc = exp(value, BigNumbers.shr(e, 1), result);
+            if (BigNumbers.isOdd(e))
+                return tField.mul(tField.mul(acc, acc), value);
+            return tField.mul(acc, acc);
+        }
     }
 
     function pairing(
         Point_Zp memory p,
         Point_Zp_2 memory q
-    ) public view returns (Zp_12 memory) {
+    ) public view returns (Zp_12 memory result) {
         if (
             p.pointType == PointType.PointAtInfinity ||
             q.pointType == PointType.PointAtInfinity
