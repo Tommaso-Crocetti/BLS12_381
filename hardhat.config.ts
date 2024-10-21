@@ -8,7 +8,7 @@ const config: HardhatUserConfig = {
   solidity: "0.8.27",
   networks: {
     hardhat: {
-      allowUnlimitedContractSize: true
+      allowUnlimitedContractSize: true,
     }
   }
 };

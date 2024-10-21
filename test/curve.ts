@@ -30,8 +30,16 @@ function toZpStruct(output: ZpStructOutput): ZpStruct {
     return { value: toBigNumber(output.value) }; // Restituisce un oggetto con la proprietà value
 }
 
+function toZp_2Struct(output: Zp_2StructOutput): Zp_2Struct {
+    return { a: toZpStruct(output.a), b: toZpStruct(output.b) }; // Restituisce un oggetto con la proprietà value
+}
+
 function toPoint_ZpStruct(input: Point_ZpStructOutput): Point_ZpStruct {
     return {pointType: input.pointType, x: toZpStruct(input.x), y: toZpStruct(input.y)};
+}
+
+function toPoint_Zp_2Struct(input: Point_Zp_2StructOutput): Point_Zp_2Struct {
+    return {pointType: input.pointType, x: toZp_2Struct(input.x), y: toZp_2Struct(input.y)};
 }
 
 describe("Curve Contract", function () {
@@ -47,7 +55,6 @@ describe("Curve Contract", function () {
                 BigNumbers: await bigNumbers.getAddress()
               }
         }) as BigFiniteField__factory;
-        //const prime = toBigNumber(await bigNumbers.init(7, false));
         bigFiniteField = await bigFiniteFieldFactory.deploy(toBigNumber(await bigNumbers.init__("0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab", false)));
         const pointZpFactory: PointZp__factory = await ethers.getContractFactory("PointZp", {
             libraries: {
@@ -70,4 +77,18 @@ describe("Curve Contract", function () {
         const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
         expect(await curve.isOnCurve(g0)).to.equal(true);
     });
+
+    it("should have g_1 in the curve", async function() {
+        const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
+        expect(await curve.isOnCurveTwist(g1)).to.equal(true);
+    });
+
+    /*
+    it("should have g_0 in the right subgroup", async function() {
+        const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
+        expect(await curve.Subgroup_0Check(g0, {
+            gasLimit: ethers.parseUnits("100000000", "wei")
+        })).to.equal(true);
+    });
+    */
 });

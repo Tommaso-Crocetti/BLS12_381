@@ -380,8 +380,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\curve.sol": {
-      "lastModificationDate": 1729517661366,
-      "contentHash": "494f9c4179de1bdf18ba1d3fa053d348",
+      "lastModificationDate": 1729518484847,
+      "contentHash": "1591dbf81699728fb53986d377cd8fa0",
       "sourceName": "contracts/curve.sol",
       "solcConfig": {
         "version": "0.8.27",

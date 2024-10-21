@@ -107,6 +107,7 @@ export interface CurveInterface extends Interface {
       | "exp"
       | "getBits"
       | "get_g0"
+      | "get_g1"
       | "get_p"
       | "isOnCurve"
       | "isOnCurveTwist"
@@ -114,8 +115,6 @@ export interface CurveInterface extends Interface {
       | "miller"
       | "miller_iterate"
       | "pairing"
-      | "test1"
-      | "test2"
       | "untwist"
   ): FunctionFragment;
 
@@ -148,6 +147,7 @@ export interface CurveInterface extends Interface {
     values: [BigNumberStruct]
   ): string;
   encodeFunctionData(functionFragment: "get_g0", values?: undefined): string;
+  encodeFunctionData(functionFragment: "get_g1", values?: undefined): string;
   encodeFunctionData(functionFragment: "get_p", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "isOnCurve",
@@ -173,8 +173,6 @@ export interface CurveInterface extends Interface {
     functionFragment: "pairing",
     values: [Point_ZpStruct, Point_Zp_2Struct]
   ): string;
-  encodeFunctionData(functionFragment: "test1", values?: undefined): string;
-  encodeFunctionData(functionFragment: "test2", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "untwist",
     values: [Point_Zp_2Struct]
@@ -194,6 +192,7 @@ export interface CurveInterface extends Interface {
   decodeFunctionResult(functionFragment: "exp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "getBits", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "get_g0", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "get_g1", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "get_p", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "isOnCurve", data: BytesLike): Result;
   decodeFunctionResult(
@@ -210,8 +209,6 @@ export interface CurveInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "pairing", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "test1", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "test2", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "untwist", data: BytesLike): Result;
 }
 
@@ -298,6 +295,8 @@ export interface Curve extends BaseContract {
 
   get_g0: TypedContractMethod<[], [Point_ZpStructOutput], "view">;
 
+  get_g1: TypedContractMethod<[], [Point_Zp_2StructOutput], "view">;
+
   get_p: TypedContractMethod<[], [BigNumberStructOutput], "view">;
 
   isOnCurve: TypedContractMethod<[point: Point_ZpStruct], [boolean], "view">;
@@ -336,10 +335,6 @@ export interface Curve extends BaseContract {
     [Zp_12StructOutput],
     "view"
   >;
-
-  test1: TypedContractMethod<[], [ZpStructOutput], "view">;
-
-  test2: TypedContractMethod<[], [ZpStructOutput], "view">;
 
   untwist: TypedContractMethod<
     [point: Point_Zp_2Struct],
@@ -392,6 +387,9 @@ export interface Curve extends BaseContract {
     nameOrSignature: "get_g0"
   ): TypedContractMethod<[], [Point_ZpStructOutput], "view">;
   getFunction(
+    nameOrSignature: "get_g1"
+  ): TypedContractMethod<[], [Point_Zp_2StructOutput], "view">;
+  getFunction(
     nameOrSignature: "get_p"
   ): TypedContractMethod<[], [BigNumberStructOutput], "view">;
   getFunction(
@@ -429,12 +427,6 @@ export interface Curve extends BaseContract {
     [Zp_12StructOutput],
     "view"
   >;
-  getFunction(
-    nameOrSignature: "test1"
-  ): TypedContractMethod<[], [ZpStructOutput], "view">;
-  getFunction(
-    nameOrSignature: "test2"
-  ): TypedContractMethod<[], [ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "untwist"
   ): TypedContractMethod<
