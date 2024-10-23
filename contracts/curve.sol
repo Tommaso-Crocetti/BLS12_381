@@ -47,13 +47,13 @@ contract Curve {
             qField.createElement(
                 fField.createElement(
                     BigNumbers.init__(
-                        hex"13e02b6052719f607dacd3a088274f65596bd0d09920b61ab5da61bbdc7f5049334cf11213945d57e5ac7d055d042b7e",
+                        hex"024aa2b2f08f0a91260805272dc51051c6e47ad4fa403b02b4510b647ae3d1770bac0326a805bbefd48056c8c121bdb8",
                         false
                     )
                 ),
                 fField.createElement(
                     BigNumbers.init__(
-                        hex"024aa2b2f08f0a91260805272dc51051c6e47ad4fa403b02b4510b647ae3d1770bac0326a805bbefd48056c8c121bdb8",
+                        hex"13e02b6052719f607dacd3a088274f65596bd0d09920b61ab5da61bbdc7f5049334cf11213945d57e5ac7d055d042b7e",
                         false
                     )
                 )
@@ -61,13 +61,13 @@ contract Curve {
             qField.createElement(
                 fField.createElement(
                     BigNumbers.init__(
-                        hex"0606c4a02ea734cc32acd2b02bc28b99cb3e287e85a763af267492ab572e99ab3f370d275cec1da1aaa9075ff05f79be",
+                        hex"0ce5d527727d6e118cc9cdc6da2e351aadfd9baa8cbdd3a76d429a695160d12c923ac9cc3baca289e193548608b82801",
                         false
                     )
                 ),
                 fField.createElement(
                     BigNumbers.init__(
-                        hex"0ce5d527727d6e118cc9cdc6da2e351aadfd9baa8cbdd3a76d429a695160d12c923ac9cc3baca289e193548608b82801",
+                        hex"0606c4a02ea734cc32acd2b02bc28b99cb3e287e85a763af267492ab572e99ab3f370d275cec1da1aaa9075ff05f79be",
                         false
                     )
                 )
@@ -85,8 +85,6 @@ contract Curve {
     function get_g1() public view returns (Point_Zp_2 memory) {
         return g1;
     }
-
-    //costruttore per passare parametro per inizializzare i vari valori per ora fissi?
 
     //verifcare correttezza, specialmente isOnCurve_12
     function isOnCurve(Point_Zp memory point) public view returns (bool) {
