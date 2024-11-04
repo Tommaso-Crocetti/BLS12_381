@@ -104,12 +104,44 @@ describe("Sextic Extension Contract", function () {
 
     it("should multiply elements in Zp_6 correctly", async function () {
         const mul = await sexticExtension.mul(toZp_6Struct(x), toZp_6Struct(y));
-        const resultA_A = await bigNumbers.init(1, false);
-        const resultB_A = await bigNumbers.init(6, false);
+        const resultA_A = await bigNumbers.init(3, false);
+        const resultB_A = await bigNumbers.init(5, false);
         const resultC_A = await bigNumbers.init(0, false);
-        const resultA_B = await bigNumbers.init(0, false);
-        const resultB_B = await bigNumbers.init(2, false);
+        const resultA_B = await bigNumbers.init(5, false);
+        const resultB_B = await bigNumbers.init(3, false);
         const resultC_B = await bigNumbers.init(5, false);
+        expect(mul.a.a.value.val).to.equal(resultA_A.val);
+        expect(mul.b.a.value.val).to.equal(resultB_A.val);
+        expect(mul.c.a.value.val).to.equal(resultC_A.val);
+        expect(mul.a.b.value.val).to.equal(resultA_B.val);
+        expect(mul.b.b.value.val).to.equal(resultB_B.val);
+        expect(mul.c.b.value.val).to.equal(resultC_B.val);
+    });
+
+    it("should calculate the inverse in Zp_6 correctly", async function () {
+        const inv = await sexticExtension.inverse(toZp_6Struct(y));
+        const resultA_A = await bigNumbers.init(6, false);
+        const resultB_A = await bigNumbers.init(3, false);
+        const resultC_A = await bigNumbers.init(1, false);
+        const resultA_B = await bigNumbers.init(1, false);
+        const resultB_B = await bigNumbers.init(3, false);
+        const resultC_B = await bigNumbers.init(3, false);
+        expect(inv.a.a.value.val).to.equal(resultA_A.val);
+        expect(inv.b.a.value.val).to.equal(resultB_A.val);
+        expect(inv.c.a.value.val).to.equal(resultC_A.val);
+        expect(inv.a.b.value.val).to.equal(resultA_B.val);
+        expect(inv.b.b.value.val).to.equal(resultB_B.val);
+        expect(inv.c.b.value.val).to.equal(resultC_B.val);
+    });
+
+    it("should divide elements in Zp_6 correctly", async function () {
+        const mul = await sexticExtension.div(toZp_6Struct(x), toZp_6Struct(y));
+        const resultA_A = await bigNumbers.init(1, false);
+        const resultB_A = await bigNumbers.init(0, false);
+        const resultC_A = await bigNumbers.init(5, false);
+        const resultA_B = await bigNumbers.init(2, false);
+        const resultB_B = await bigNumbers.init(4, false);
+        const resultC_B = await bigNumbers.init(0, false);
         expect(mul.a.a.value.val).to.equal(resultA_A.val);
         expect(mul.b.a.value.val).to.equal(resultB_A.val);
         expect(mul.c.a.value.val).to.equal(resultC_A.val);

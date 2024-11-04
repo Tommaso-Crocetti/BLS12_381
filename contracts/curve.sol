@@ -86,7 +86,6 @@ contract Curve {
         return g1;
     }
 
-    //verifcare correttezza, specialmente isOnCurve_12
     function isOnCurve(Point_Zp memory point) public view returns (bool) {
         Zp memory l = fField.mul(point.y, point.y);
         Zp memory r = fField.sum(
@@ -118,7 +117,6 @@ contract Curve {
         return tField.equals(l, r);
     }
 
-    //verificare correttezza, dovrebbe usare factor clearing
     function Subgroup_0Check(Point_Zp memory point) public view returns (bool) {
         return pZp.multiply(order, point).pointType == PointType.Affine;
     }

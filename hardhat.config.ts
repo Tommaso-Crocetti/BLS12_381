@@ -9,8 +9,14 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       allowUnlimitedContractSize: true,
+      blockGasLimit: 100000000429720, // whatever you want here
+      //gasPrice: 0,
+      accounts: {
+        accountsBalance: "10000000000000000000000000000000"
+      }
     }
-  }
+  },
+  
 };
 
 export default config;

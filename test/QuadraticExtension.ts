@@ -42,7 +42,7 @@ describe("Quadratic Extension Contract", function () {
         const a: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueA));
         const b: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueB));
         x = await quadraticExtension.createElement(toZpStruct(a), toZpStruct(b));
-        const valueC: BigNumberStructOutput = await bigNumbers.init(4, false);
+        const valueC: BigNumberStructOutput = await bigNumbers.init(1, false);
         const valueD: BigNumberStructOutput = await bigNumbers.init(2, false);
         const c: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueC));
         const d: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(valueD));
@@ -56,7 +56,7 @@ describe("Quadratic Extension Contract", function () {
 
     it("should add elements correctly", async function () {
         const sum: Zp_2StructOutput = await quadraticExtension.sum(toZp_2Struct(x), toZp_2Struct(y));
-        const resultA = await bigNumbers.init(0, false);
+        const resultA = await bigNumbers.init(4, false);
         const resultB = await bigNumbers.init(0, false);
         expect(sum.a.value.val).to.equal(resultA.val);
         expect(sum.b.value.val).to.equal(resultB.val);
@@ -64,7 +64,7 @@ describe("Quadratic Extension Contract", function () {
 
     it("should substract elements correctly", async function () {
         const diff: Zp_2StructOutput = await quadraticExtension.sub(toZp_2Struct(x), toZp_2Struct(y));
-        const resultA = await bigNumbers.init(6, false);
+        const resultA = await bigNumbers.init(2, false);
         const resultB = await bigNumbers.init(3, false);
         expect(diff.a.value.val).to.equal(resultA.val);
         expect(diff.b.value.val).to.equal(resultB.val);
@@ -72,24 +72,24 @@ describe("Quadratic Extension Contract", function () {
 
     it("should multiply elements correctly", async function () {
         const mul: Zp_2StructOutput = await quadraticExtension.mul(toZp_2Struct(x), toZp_2Struct(y));
-        const resultA = await bigNumbers.init(2, false);
-        const resultB = await bigNumbers.init(5, false);
+        const resultA = await bigNumbers.init(0, false);
+        const resultB = await bigNumbers.init(4, false);
         expect(mul.a.value.val).to.equal(resultA.val);
         expect(mul.b.value.val).to.equal(resultB.val);
     });
 
     it("should calculate the inverse correctly", async function () {
-        const inv: Zp_2StructOutput = await quadraticExtension.inverse(toZp_2Struct(y));
-        const resultA = await bigNumbers.init(3, false);
-        const resultB = await bigNumbers.init(2, false);
+        const inv: Zp_2StructOutput = await quadraticExtension.inverse(toZp_2Struct(x));
+        const resultA = await bigNumbers.init(4, false);
+        const resultB = await bigNumbers.init(5, false);
         expect(inv.a.value.val).to.equal(resultA.val);
         expect(inv.b.value.val).to.equal(resultB.val);
     });
 
     it("should divide elements correctly", async function () {
         const div: Zp_2StructOutput = await quadraticExtension.div(toZp_2Struct(x), toZp_2Struct(y));
-        const resultA = await bigNumbers.init(6, false);
-        const resultB = await bigNumbers.init(0, false);
+        const resultA = await bigNumbers.init(4, false);
+        const resultB = await bigNumbers.init(4, false);
         expect(div.a.value.val).to.equal(resultA.val);
         expect(div.b.value.val).to.equal(resultB.val);
     });

@@ -72,7 +72,7 @@ contract QuadraticExtension {
     }
 
     function mul_nonres(Zp_2 memory x) public view returns (Zp_2 memory) {
-        return createElement(f.sum(x.a, x.b), f.sub(x.a, x.b));
+        return createElement(f.sub(x.a, x.b), f.sum(x.a, x.b));
     }
 
     /// @notice Verifica l'uguaglianza di due Zp_2i

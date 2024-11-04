@@ -58,6 +58,13 @@ contract TwelveExtension {
         return createElement(s.div(x.a, d), s.div(s.sub(s.zero(), x.b), d));
     }
 
+    function div(
+        Zp_12 memory x,
+        Zp_12 memory y
+    ) public view returns (Zp_12 memory) {
+        return mul(x, inverse(y));
+    }
+
     function equals(Zp_12 memory x, Zp_12 memory y) public view returns (bool) {
         return (s.equals(x.a, y.a) && s.equals(x.b, y.b));
     }
@@ -66,7 +73,6 @@ contract TwelveExtension {
         return createElement(s.zero(), s.zero());
     }
 
-    
     function one() public view returns (Zp_12 memory) {
         return createElement(s.one(), s.zero());
     }
@@ -82,7 +88,4 @@ contract TwelveExtension {
     function four() public view returns (Zp_12 memory) {
         return createElement(s.four(), s.zero());
     }
-
-    
-
 }

@@ -64,6 +64,7 @@ export interface TwelveExtensionInterface extends Interface {
   getFunction(
     nameOrSignature:
       | "createElement"
+      | "div"
       | "equals"
       | "four"
       | "fromZp"
@@ -80,6 +81,10 @@ export interface TwelveExtensionInterface extends Interface {
   encodeFunctionData(
     functionFragment: "createElement",
     values: [Zp_6Struct, Zp_6Struct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "div",
+    values: [Zp_12Struct, Zp_12Struct]
   ): string;
   encodeFunctionData(
     functionFragment: "equals",
@@ -112,6 +117,7 @@ export interface TwelveExtensionInterface extends Interface {
     functionFragment: "createElement",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "div", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "fromZp", data: BytesLike): Result;
@@ -174,6 +180,12 @@ export interface TwelveExtension extends BaseContract {
     "view"
   >;
 
+  div: TypedContractMethod<
+    [x: Zp_12Struct, y: Zp_12Struct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
   equals: TypedContractMethod<
     [x: Zp_12Struct, y: Zp_12Struct],
     [boolean],
@@ -220,6 +232,13 @@ export interface TwelveExtension extends BaseContract {
     nameOrSignature: "createElement"
   ): TypedContractMethod<
     [x: Zp_6Struct, y: Zp_6Struct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "div"
+  ): TypedContractMethod<
+    [x: Zp_12Struct, y: Zp_12Struct],
     [Zp_12StructOutput],
     "view"
   >;
