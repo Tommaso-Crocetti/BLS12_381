@@ -285,10 +285,7 @@ contract Curve {
             p.pointType == PointType.PointAtInfinity ||
             q.pointType == PointType.PointAtInfinity
         ) return tField.zero();
-        if (
-            isOnCurve(p) &&
-            isOnCurveTwist(q) &&
-        ) {
+        if (isOnCurve(p) && isOnCurveTwist(q)) {
             return
                 exp(
                     miller(p, q),
