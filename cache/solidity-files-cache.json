@@ -150,8 +150,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp.sol": {
-      "lastModificationDate": 1729160006185,
-      "contentHash": "b17b4bcf888bf9d730d22bbed338eb5c",
+      "lastModificationDate": 1730755427267,
+      "contentHash": "5be84197eb35b4c511754e5cdb544ed9",
       "sourceName": "contracts/point/pointZp.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -188,8 +188,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_2.sol": {
-      "lastModificationDate": 1729001021277,
-      "contentHash": "799c7bec0f5688e3fdc1e19b1b4e9314",
+      "lastModificationDate": 1730755126684,
+      "contentHash": "4cd0f038486995a336288ee3a36fbba2",
       "sourceName": "contracts/point/pointZp_2.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -303,8 +303,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\twelveExtension.sol": {
-      "lastModificationDate": 1730715916696,
-      "contentHash": "1bd3d3d61bbc8d60b0cc54d8efc973bc",
+      "lastModificationDate": 1730739563913,
+      "contentHash": "d1d080cdac83579fd2ce8633d435b970",
       "sourceName": "contracts/field/twelveExtension.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -341,8 +341,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_12.sol": {
-      "lastModificationDate": 1729001027667,
-      "contentHash": "a7a10320fdfcfc0e9546319b8b78b354",
+      "lastModificationDate": 1730755216403,
+      "contentHash": "1cade7f1aa72846bd990a62076e26955",
       "sourceName": "contracts/point/pointZp_12.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -380,8 +380,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\curve.sol": {
-      "lastModificationDate": 1729852148213,
-      "contentHash": "d758389fa0ccef7c3dd632333be22d42",
+      "lastModificationDate": 1730746090991,
+      "contentHash": "6f50671e3df561d3eb134063674c2f1d",
       "sourceName": "contracts/curve.sol",
       "solcConfig": {
         "version": "0.8.27",

@@ -177,6 +177,7 @@ contract Curve {
         Point_Zp_2 memory q,
         Point_Zp memory p
     ) public view returns (Zp_12 memory) {
+        require(!qField.equals(r.x, q.x) && !qField.equals(r.y, q.y));
         Point_Zp_12 memory r_twist = untwist(r);
         Point_Zp_12 memory q_twist = untwist(q);
         if (
@@ -287,8 +288,6 @@ contract Curve {
         if (
             isOnCurve(p) &&
             isOnCurveTwist(q) &&
-            Subgroup_0Check(p) &&
-            Subgroup_1Check(q)
         ) {
             return
                 exp(

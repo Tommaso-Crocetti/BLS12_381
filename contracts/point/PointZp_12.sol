@@ -93,7 +93,31 @@ contract PointZp_12 {
         Point_Zp_12 memory acc
     ) private view returns (Point_Zp_12 memory) {
         if (BigNumbers.cmp(k, BigNumbers.zero(), false) == 0) return acc;
-        if (BigNumbers.isOdd(k)) return doubleAndAdd(BigNumbers.shr(k, 1), double(self), add(acc, self));
+        if (BigNumbers.isOdd(k))
+            return
+                doubleAndAdd(
+                    BigNumbers.shr(k, 1),
+                    double(self),
+                    add(acc, self)
+                );
         return doubleAndAdd(BigNumbers.shr(k, 1), double(self), acc);
+    }
+
+    function compare(
+        Point_Zp_12 memory a,
+        Point_Zp_12 memory b
+    ) public view returns (bool) {
+        if (
+            a.pointType == PointType.PointAtInfinity &&
+            b.pointType == PointType.PointAtInfinity
+        ) {
+            return true;
+        }
+        if (
+            a.pointType == PointType.Affine && b.pointType == PointType.Affine
+        ) {
+            return t.equals(a.x, a.y) && t.equals(a.y, b.y);
+        }
+        return false;
     }
 }

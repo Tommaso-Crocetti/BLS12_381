@@ -1,16 +1,20 @@
 {
-  "name": "hardhat-project",
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@typechain/ethers-v6": "^0.5.1",
-    "@typechain/hardhat": "^9.1.0",
-    "@types/chai": "^4.3.20",
-    "@types/mocha": "^10.0.8",
-    "@types/node": "^22.7.4",
-    "chai": "^4.5.0",
-    "hardhat": "^2.22.13",
-    "ts-node": "^10.9.2",
-    "typechain": "^8.3.2",
-    "typescript": "^5.6.2"
-  }
+    "name": "hardhat-project",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+        "@typechain/ethers-v6": "^0.5.1",
+        "@typechain/hardhat": "^9.1.0",
+        "@types/chai": "^4.3.20",
+        "@types/mocha": "^10.0.8",
+        "@types/node": "^22.7.4",
+        "chai": "^4.5.0",
+        "hardhat": "^2.22.13",
+        "ts-node": "^10.9.2",
+        "typechain": "^8.3.2",
+        "typescript": "^5.6.2"
+    },
+    "scripts": {
+        "start": "SET NODE_ENV=dev && node server.ts",
+        "test": "mocha --timeout 1000000"
+    }
 }

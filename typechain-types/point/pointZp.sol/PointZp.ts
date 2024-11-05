@@ -54,6 +54,7 @@ export interface PointZpInterface extends Interface {
   getFunction(
     nameOrSignature:
       | "add"
+      | "compare"
       | "double"
       | "multiply"
       | "negate"
@@ -63,6 +64,10 @@ export interface PointZpInterface extends Interface {
 
   encodeFunctionData(
     functionFragment: "add",
+    values: [Point_ZpStruct, Point_ZpStruct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "compare",
     values: [Point_ZpStruct, Point_ZpStruct]
   ): string;
   encodeFunctionData(
@@ -87,6 +92,7 @@ export interface PointZpInterface extends Interface {
   ): string;
 
   decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "compare", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "double", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "multiply", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "negate", data: BytesLike): Result;
@@ -146,6 +152,12 @@ export interface PointZp extends BaseContract {
     "view"
   >;
 
+  compare: TypedContractMethod<
+    [a: Point_ZpStruct, b: Point_ZpStruct],
+    [boolean],
+    "view"
+  >;
+
   double: TypedContractMethod<
     [self: Point_ZpStruct],
     [Point_ZpStructOutput],
@@ -181,6 +193,13 @@ export interface PointZp extends BaseContract {
   ): TypedContractMethod<
     [self: Point_ZpStruct, other: Point_ZpStruct],
     [Point_ZpStructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "compare"
+  ): TypedContractMethod<
+    [a: Point_ZpStruct, b: Point_ZpStruct],
+    [boolean],
     "view"
   >;
   getFunction(

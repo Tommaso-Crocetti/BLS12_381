@@ -52,6 +52,7 @@ contract TwelveExtension {
     }
 
     function inverse(Zp_12 memory x) public view returns (Zp_12 memory) {
+        require(!equals(x, zero()));
         Zp_6 memory t0 = s.mul_nonres(s.mul(x.b, x.b));
         Zp_6 memory t1 = s.mul(x.a, x.a);
         Zp_6 memory d = s.sub(t1, t0);

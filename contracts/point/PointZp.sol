@@ -104,4 +104,22 @@ contract PointZp {
                 );
         return doubleAndAdd(BigNumbers.shr(k, 1), double(self), acc);
     }
+
+    function compare(
+        Point_Zp memory a,
+        Point_Zp memory b
+    ) public view returns (bool) {
+        if (
+            a.pointType == PointType.PointAtInfinity &&
+            b.pointType == PointType.PointAtInfinity
+        ) {
+            return true;
+        }
+        if (
+            a.pointType == PointType.Affine && b.pointType == PointType.Affine
+        ) {
+            return f.equals(a.x, b.x) && f.equals(a.y, b.y);
+        }
+        return false;
+    }
 }
