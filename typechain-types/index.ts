@@ -16,8 +16,6 @@ export type { Curve } from "./curve.sol/Curve";
 export { Curve__factory } from "./factories/curve.sol/Curve__factory";
 export type { BigFiniteField } from "./field/bigFiniteField.sol/BigFiniteField";
 export { BigFiniteField__factory } from "./factories/field/bigFiniteField.sol/BigFiniteField__factory";
-export type { FiniteField } from "./field/finiteField.sol/FiniteField";
-export { FiniteField__factory } from "./factories/field/finiteField.sol/FiniteField__factory";
 export type { QuadraticExtension } from "./field/quadraticExtension.sol/QuadraticExtension";
 export { QuadraticExtension__factory } from "./factories/field/quadraticExtension.sol/QuadraticExtension__factory";
 export type { SexticExtension } from "./field/sexticExtension.sol/SexticExtension";

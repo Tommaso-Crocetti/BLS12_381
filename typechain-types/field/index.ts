@@ -3,8 +3,6 @@
 /* eslint-disable */
 import type * as bigFiniteFieldSol from "./bigFiniteField.sol";
 export type { bigFiniteFieldSol };
-import type * as finiteFieldSol from "./finiteField.sol";
-export type { finiteFieldSol };
 import type * as quadraticExtensionSol from "./quadraticExtension.sol";
 export type { quadraticExtensionSol };
 import type * as sexticExtensionSol from "./sexticExtension.sol";

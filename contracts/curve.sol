@@ -14,10 +14,10 @@ contract Curve {
             hex"1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab",
             false
         );
+
     BigNumber private order =
         BigNumbers.init__(
-            hex"73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",
-            false
+            hex"73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",            false
         );
     BigFiniteField private fField = new BigFiniteField(prime);
     QuadraticExtension private qField = new QuadraticExtension(fField);
@@ -74,8 +74,12 @@ contract Curve {
             )
         );
 
-    function get_p() public view returns (BigNumber memory) {
+    function get_prime() public view returns (BigNumber memory) {
         return prime;
+    }
+
+    function get_order() public view returns (BigNumber memory){
+        return order;
     }
 
     function get_g0() public view returns (Point_Zp memory) {
@@ -208,12 +212,12 @@ contract Curve {
         return tField.sub(tField.sub(t0, t1), v);
     }
 
-    function getBits(
+    function get_millerBits(
         BigNumber memory value
     ) public view returns (bool[] memory) {
         uint256 index = 0;
 
-        bool[] memory bits = new bool[](64);
+        bool[] memory bits = new bool[](value.bitlen);
         while (BigNumbers.gt(value, BigNumbers.zero())) {
             // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
             bits[index] = (BigNumbers.isOdd(value));
@@ -224,9 +228,33 @@ contract Curve {
 
         bool[] memory reversedBits = new bool[](index - 1);
 
-        // Copiamo gli elementi nell'ordine inverso, escludendo il primo elemento
+        // Copiamo gli elementi nell'ordine inverso, escludendo quello più significativo
         for (uint256 i = 0; i < index - 1; i++) {
             reversedBits[i] = bits[index - i - 2]; // -2 per escludere il primo elemento
+        }
+
+        return reversedBits;
+    }
+
+    function getBits(
+        BigNumber memory value
+    ) public view returns (bool[] memory) {
+        uint256 index = 0;
+
+        bool[] memory bits = new bool[](value.bitlen);
+        while (BigNumbers.gt(value, BigNumbers.zero())) {
+            // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
+            bits[index] = (BigNumbers.isOdd(value));
+            // Shifta a destra di un bit
+            value = BigNumbers.shr(value, 1);
+            index++;
+        }
+
+        bool[] memory reversedBits = new bool[](index);
+
+        // Copiamo gli elementi nell'ordine inverso
+        for (uint256 i = 0; i < index; i++) {
+            reversedBits[i] = bits[index - i - 1]; 
         }
 
         return reversedBits;
@@ -241,7 +269,7 @@ contract Curve {
                 p,
                 q,
                 q,
-                getBits(BigNumbers.init__(hex"d201000000010000", false))
+                get_millerBits(BigNumbers.init__(hex"d201000000010000", false))
             );
     }
 
@@ -253,48 +281,62 @@ contract Curve {
     ) public view returns (Zp_12 memory) {
         Zp_12 memory acc = tField.one();
         for (uint256 i = 0; i < bits.length; i++) {
-            acc = tField.mul(tField.mul(acc, acc), doubleEval(r, p));
+            tField.mul(acc, acc);
+            tField.mul(acc, doubleEval(r, p));
             r = pZp_2.double(r);
             if (bits[i]) {
-                acc = tField.mul(acc, addEval(r, q, p));
+                tField.mul(acc, addEval(r, q, p));
                 r = pZp_2.add(r, q);
             }
         }
         return acc;
     }
 
-    function exp(
-        Zp_12 memory value,
-        BigNumber memory e,
-        Zp_12 memory result
-    ) public view returns (Zp_12 memory) {
-        if (BigNumbers.lt(e, BigNumbers.one())) return value;
-        else {
-            Zp_12 memory acc = exp(value, BigNumbers.shr(e, 1), result);
-            if (BigNumbers.isOdd(e))
-                return tField.mul(tField.mul(acc, acc), value);
-            return tField.mul(acc, acc);
+    function exp(Zp_12 memory value, BigNumber memory e) public view returns (Zp_12 memory) {
+        if (BigNumbers.isZero(e)) {
+            return tField.one();
         }
+        Zp_12 memory result = tField.zero();
+        Zp_12 memory current = value;
+        bool[] memory bits = getBits(e);
+        if (bits[0]) {
+            result = current;
+        }
+        for (uint i = 1; i < bits.length; i++) {
+            current = tField.mul(current, current);
+            if (bits[i]) {
+                result = tField.sum(result, current);
+            }
+        }
+        return result;
+    }
+
+    function try_pairing(Zp_12 memory value) public view returns (Zp_12 memory) {
+        BigNumber memory e0 = BigNumbers.add(BigNumbers.pow(prime, 2), BigNumbers.one());
+        BigNumber memory e1 = BigNumbers.sub(BigNumbers.pow(prime, 6), BigNumbers.one());
+        BigNumber memory e2 = BigNumbers.init__(hex"000f686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79", false);
+        Zp_12 memory t0 = exp(value, e0);
+        Zp_12 memory t1 = exp(value, e1);
+        Zp_12 memory t2 = exp(value, e2);
+        return tField.mul(tField.mul(t0, t1), t2);
     }
 
     function pairing(
         Point_Zp memory p,
         Point_Zp_2 memory q
-    ) public view returns (Zp_12 memory result) {
+    ) public view returns (Zp_12 memory) {
         if (
             p.pointType == PointType.PointAtInfinity ||
             q.pointType == PointType.PointAtInfinity
         ) return tField.zero();
-        if (isOnCurve(p) && isOnCurveTwist(q)) {
-            return
-                exp(
-                    miller(p, q),
-                    BigNumbers.init__(
-                        hex"000f686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79",
-                        false
-                    ),
-                    tField.one()
-                );
-        }
+        require (isOnCurve(p) && isOnCurveTwist(q));
+        Zp_12 memory result = miller(p,q);
+        BigNumber memory e0 = BigNumbers.add(BigNumbers.pow(prime, 2), BigNumbers.one());
+        BigNumber memory e1 = BigNumbers.sub(BigNumbers.pow(prime, 6), BigNumbers.one());
+        BigNumber memory e2 = BigNumbers.init__(hex"000f686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79", false);
+        Zp_12 memory t0 = exp(result, e0);
+        Zp_12 memory t1 = exp(result, e1);
+        Zp_12 memory t2 = exp(result, e2);
+        return tField.mul(tField.mul(t0, t1), t2);
     }
 }

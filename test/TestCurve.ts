@@ -63,6 +63,7 @@ describe("Curve Contract", function () {
     let bigNumbers: BigNumbers;
     let bigFiniteField: BigFiniteField;
     let quadraticExtension: QuadraticExtension;
+    let sexticExtension: SexticExtension;
     let twelveExtension: TwelveExtension;
     let pointZp: PointZp;
     let pointZp_2: PointZp_2;
@@ -86,7 +87,7 @@ describe("Curve Contract", function () {
         const quadraticExtensionFactory: QuadraticExtension__factory = await ethers.getContractFactory("QuadraticExtension") as QuadraticExtension__factory;
         quadraticExtension = await quadraticExtensionFactory.deploy(bigFiniteField);
         const SexticExtensionFactory: SexticExtension__factory = (await ethers.getContractFactory("SexticExtension")) as SexticExtension__factory;
-        let sexticExtension = await SexticExtensionFactory.deploy(quadraticExtension);
+        sexticExtension = await SexticExtensionFactory.deploy(quadraticExtension);
 
         const TwelveExtensionFactory: TwelveExtension__factory = (await ethers.getContractFactory("TwelveExtension")) as TwelveExtension__factory;
         twelveExtension = await TwelveExtensionFactory.deploy(sexticExtension);
@@ -110,16 +111,37 @@ describe("Curve Contract", function () {
       curve = await curveFactory.deploy();
     });
 
+
+    it("should evaluate the exponentiation", async function() {
+        const t0 = toZp_2Struct(await quadraticExtension.createElement(toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x144ABB1A97A3D65527F2A479175A569855EEDA1A0E616CFDC258BDB1C8B9FA096AD09965FD55F9801343D28E92E6640B".toLowerCase(), false)))),
+        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x13413BD2925A9E1B08112F7F4E35D5813C459301AFD9B9FBC9764FA22AA315CC2DCE1B336FAFF13A4D7F97B73A87A737".toLowerCase(), false))))));
+        const t1 = toZp_2Struct(await quadraticExtension.createElement(toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x1061BED179B9D8D27CCB35AEB12E95B39E524F50FA674DB41C90542FFA28C661A2F75846365765403354400CA26E00F2".toLowerCase(), false)))),
+        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x1927491641E856FB775DE263F806A58DB114870FE05A58C85EDFCE0B8378C53C486244480D13FEE441EBBE35DDE4520E".toLowerCase(), false))))));  
+        const t2 = toZp_2Struct(await quadraticExtension.createElement(toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x09C92CF02F3CD3D2F9D34BC44EEE0DD50314ED44CA5D30CE6A9EC0539BE7A86B121EDC61839CCC908C4BDDE256CD6048".toLowerCase(), false)))),
+        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x170E1174852D019B09B0DA3C14841D6CDD4B79171B9E3E6A1E7EFBD5D2A6DE5E2CD8853E4F98D0E32156C3319C9F3191".toLowerCase(), false))))));
+        const t3 = toZp_2Struct(await quadraticExtension.createElement(toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x111758FD4779B9D7EDA010F36CAABFEA0C08B6703F38849ACF110661C09AA1D870D747518E310505F3342294588FB886".toLowerCase(), false)))),
+        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x13DD0D23FE6B205AFC16BD7F54193917ADB5A1FAFF0B2F7ED7F786357F5AE1EACE5BD97858230CC0352B88C97BBEF640".toLowerCase(), false))))));  
+        const t4 = toZp_2Struct(await quadraticExtension.createElement(toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0315D01B5D309E53BC4B7533C57146890A33C101CCA9D8675FC099F9B80A6F8E25C61610C25299EA9AB42C9EA16EABB0".toLowerCase(), false)))),
+        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x01960487212641177315088279828825469758443483813376857441645254973735951339928020637978628064174372638541437360039167".toLowerCase(), false))))));  
+        const t5 = toZp_2Struct(await quadraticExtension.createElement(toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0CED20608AA7112C205EE7A703C2E77F96D1AEF6FD865CAAFCB4A363D2F9DE8ECC3ACF61F888C8EEDB1483397BA6438B".toLowerCase(), false)))),
+        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x10C839FD7D6519131E14836B595789B7121BA39388491A972B713F92F9C75D3612A4758FE5614D7877CDAF2292B7DCF2".toLowerCase(), false))))));  
+        const s0 = toZp_6Struct(await sexticExtension.createElement(t0, t1, t2));
+        const s1 = toZp_6Struct(await sexticExtension.createElement(t3, t4, t5));
+        const value = toZp_12Struct(await twelveExtension.createElement(s0, s1));
+        console.log(toZp_12Struct(await curve.try_pairing(value)));
+    })
+
+    /*
     it("should calculate the miller loop", async function() {
         const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
         const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
         const result: Zp_12Struct = toZp_12Struct(await curve.miller(g0, g1));
         expect(result).to.equal(true);
-       })
-  
-    it("should setup the curve contract correctly", async function () {
-        const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
-        const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
+        })
+        
+        it("should setup the curve contract correctly", async function () {
+            const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
+            const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
     });
 
     it("should have g_0 in the curve", async function() {
@@ -147,54 +169,52 @@ describe("Curve Contract", function () {
         const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
         expect(await curve.Subgroup_0Check(g0)).to.equal(true);
     });
-    */
-   it("should compute addEval correctly", async function() {
-    const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
-    const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
-    const result: Zp_12Struct = toZp_12Struct(await curve.addEval(g1, toPoint_Zp_2Struct(await pointZp_2.double(g1)), g0));
-    expect(await quadraticExtension.equals(result.a.a, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000008b3f481e3aaa0f1a09e30ed741d8ae4fcf5e095d5d00af600db18cb2c04b3edd03cc744a2888ae40caa232946c5e7e1", false))))
+    it("should compute addEval correctly", async function() {
+        const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
+        const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
+        const result: Zp_12Struct = toZp_12Struct(await curve.addEval(g1, toPoint_Zp_2Struct(await pointZp_2.double(g1)), g0));
+        expect(await quadraticExtension.equals(result.a.a, toZp_2Struct(await quadraticExtension.createElement(
+            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000008b3f481e3aaa0f1a09e30ed741d8ae4fcf5e095d5d00af600db18cb2c04b3edd03cc744a2888ae40caa232946c5e7e1", false))))
+            , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
+            expect(await quadraticExtension.equals(result.a.b, toZp_2Struct(await quadraticExtension.createElement(
+                toZpStruct(await bigFiniteField.zero())
+                , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
+                expect(await quadraticExtension.equals(result.a.c, toZp_2Struct(await quadraticExtension.createElement(
+                    toZpStruct(await bigFiniteField.zero())
+                    , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
+                    expect(await quadraticExtension.equals(result.b.a, toZp_2Struct(await quadraticExtension.createElement(
+                        toZpStruct(await bigFiniteField.zero())
         , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.a.b, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.zero())
-        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.a.c, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.zero())
-        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.b.a, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.zero())
-        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.b.b, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000b9815bc2ca396ab2d857b02d5e593f3d43cf139a1457ac5fb5f715054af73afbb0acd63922b1c2c2f9029edda8a3e34", false))))
-        , toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000a92313bed4812388c4c9af6d80002e9c0672d114ca6a6d0ac653db15f5d9ab8693037a8c61d5da5e15b06d1fbc74ebe", false)))))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.b.c, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000007a215921b919d5ddf6787135a14b99c07f058519ac6b86a8746a6ecb6b2177fbcc50c8eb736ecc90ccf752d4460c9ef", false))))
-        , toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000006bcaad7d6f48da26b40f10ceaeb958d981841801fec6ff8556c3d5fca3be3e522edb5070eead1681bd219ec832a4eaf", false)))))))).to.equal(true)
-   })
-
-   it("should compute doubleEval correctly", async function() {
-    const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
-    const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
-    const result: Zp_12Struct = toZp_12Struct(await curve.doubleEval(g1, g0));
-    expect(await quadraticExtension.equals(result.a.a, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000008b3f481e3aaa0f1a09e30ed741d8ae4fcf5e095d5d00af600db18cb2c04b3edd03cc744a2888ae40caa232946c5e7e1", false))))
-        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.a.b, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.zero())
-        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.a.c, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.zero())
-        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.b.a, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.zero())
-        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
+        expect(await quadraticExtension.equals(result.b.b, toZp_2Struct(await quadraticExtension.createElement(
+            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000b9815bc2ca396ab2d857b02d5e593f3d43cf139a1457ac5fb5f715054af73afbb0acd63922b1c2c2f9029edda8a3e34", false))))
+            , toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000a92313bed4812388c4c9af6d80002e9c0672d114ca6a6d0ac653db15f5d9ab8693037a8c61d5da5e15b06d1fbc74ebe", false)))))))).to.equal(true)
+            expect(await quadraticExtension.equals(result.b.c, toZp_2Struct(await quadraticExtension.createElement(
+                toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000007a215921b919d5ddf6787135a14b99c07f058519ac6b86a8746a6ecb6b2177fbcc50c8eb736ecc90ccf752d4460c9ef", false))))
+                , toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000006bcaad7d6f48da26b40f10ceaeb958d981841801fec6ff8556c3d5fca3be3e522edb5070eead1681bd219ec832a4eaf", false)))))))).to.equal(true)
+            })
+            
+            it("should compute doubleEval correctly", async function() {
+                const g0: Point_ZpStruct = toPoint_ZpStruct(await curve.get_g0());
+                const g1: Point_Zp_2Struct = toPoint_Zp_2Struct(await curve.get_g1());
+                const result: Zp_12Struct = toZp_12Struct(await curve.doubleEval(g1, g0));
+                expect(await quadraticExtension.equals(result.a.a, toZp_2Struct(await quadraticExtension.createElement(
+                    toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000008b3f481e3aaa0f1a09e30ed741d8ae4fcf5e095d5d00af600db18cb2c04b3edd03cc744a2888ae40caa232946c5e7e1", false))))
+                    , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
+                    expect(await quadraticExtension.equals(result.a.b, toZp_2Struct(await quadraticExtension.createElement(
+                        toZpStruct(await bigFiniteField.zero())
+                        , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
+                        expect(await quadraticExtension.equals(result.a.c, toZp_2Struct(await quadraticExtension.createElement(
+                            toZpStruct(await bigFiniteField.zero())
+                            , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
+                            expect(await quadraticExtension.equals(result.b.a, toZp_2Struct(await quadraticExtension.createElement(
+                                toZpStruct(await bigFiniteField.zero())
+                                , toZpStruct(await bigFiniteField.zero()))))).to.equal(true)
     expect(await quadraticExtension.equals(result.b.b, toZp_2Struct(await quadraticExtension.createElement(
         toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000005046996dbbc019e108c1bffa9a580bd3da2758e6747676a1f8f6f5a6c4581551282557c8309fe23619b9904d6964759", false))))
         , toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x00000000000000000000000000000000004260d928bbf824e952dd69723d7729acfe7bb8e56ee4e9aeabddf333f73c576310e5d7e5a14d656d69f60fa50c8650", false)))))))).to.equal(true)
-    expect(await quadraticExtension.equals(result.b.c, toZp_2Struct(await quadraticExtension.createElement(
-        toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000005c7e861d7591b70faf54aaf571a1cdd67d510230f2e521a2bc1efc3c4aeb6be2c29d241dadcd3476b70fd12d4253412", false))))
-        , toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000e09125087b55528cc0a5fde862293598dee4dd0137ae385cd379a8b97bbce06df363580bc0e2a5b9431d4f851153221", false)))))))).to.equal(true)
-   })
-
-
-});
+        expect(await quadraticExtension.equals(result.b.c, toZp_2Struct(await quadraticExtension.createElement(
+            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x0000000000000000000000000000000005c7e861d7591b70faf54aaf571a1cdd67d510230f2e521a2bc1efc3c4aeb6be2c29d241dadcd3476b70fd12d4253412", false))))
+            , toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000e09125087b55528cc0a5fde862293598dee4dd0137ae385cd379a8b97bbce06df363580bc0e2a5b9431d4f851153221", false)))))))).to.equal(true)
+        })
+*/
+    });

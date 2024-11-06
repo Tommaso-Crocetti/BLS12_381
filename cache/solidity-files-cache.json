@@ -73,46 +73,8 @@
         "BigNumbers"
       ]
     },
-    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\finiteField.sol": {
-      "lastModificationDate": 1728554928894,
-      "contentHash": "2205754a99d218f6a5947436cab1a206",
-      "sourceName": "contracts/field/finiteField.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../BigNumber.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "FiniteField"
-      ]
-    },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\bigFiniteField.sol": {
-      "lastModificationDate": 1729357554329,
+      "lastModificationDate": 1730813532959,
       "contentHash": "435ca698790c7ee8495afa2d61da9c68",
       "sourceName": "contracts/field/bigFiniteField.sol",
       "solcConfig": {
@@ -227,7 +189,7 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\quadraticExtension.sol": {
-      "lastModificationDate": 1730579937648,
+      "lastModificationDate": 1730813532960,
       "contentHash": "387c6938529d5efd7efaf0ee84b555ca",
       "sourceName": "contracts/field/quadraticExtension.sol",
       "solcConfig": {
@@ -303,8 +265,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\twelveExtension.sol": {
-      "lastModificationDate": 1730739563913,
-      "contentHash": "d1d080cdac83579fd2ce8633d435b970",
+      "lastModificationDate": 1730814439321,
+      "contentHash": "70cd0baf026bc212e83d70ddad19bbd4",
       "sourceName": "contracts/field/twelveExtension.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -380,8 +342,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\curve.sol": {
-      "lastModificationDate": 1730746090991,
-      "contentHash": "6f50671e3df561d3eb134063674c2f1d",
+      "lastModificationDate": 1730910358459,
+      "contentHash": "9a10c5db4f548244f3c9c7b6d08a92fe",
       "sourceName": "contracts/curve.sol",
       "solcConfig": {
         "version": "0.8.27",

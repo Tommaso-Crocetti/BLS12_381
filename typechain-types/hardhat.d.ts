@@ -26,10 +26,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.BigFiniteField__factory>;
     getContractFactory(
-      name: "FiniteField",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.FiniteField__factory>;
-    getContractFactory(
       name: "QuadraticExtension",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.QuadraticExtension__factory>;
@@ -70,11 +66,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.BigFiniteField>;
     getContractAt(
-      name: "FiniteField",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.FiniteField>;
-    getContractAt(
       name: "QuadraticExtension",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -118,10 +109,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.BigFiniteField>;
     deployContract(
-      name: "FiniteField",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.FiniteField>;
-    deployContract(
       name: "QuadraticExtension",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.QuadraticExtension>;
@@ -161,11 +148,6 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.BigFiniteField>;
-    deployContract(
-      name: "FiniteField",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.FiniteField>;
     deployContract(
       name: "QuadraticExtension",
       args: any[],
