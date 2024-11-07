@@ -25,7 +25,6 @@ contract BigFiniteField {
     /// @dev Assicura che il numero sia positivo e che la rappresentazione in bit sia corretta
     /// @param bn Il BigNumber da verificare
     modifier verify(BigNumber memory bn) {
-        require(bn.neg == false, "Il numero non puo' essere negativo.");
         uint msword;
         bytes memory val = bn.val;
         assembly {
