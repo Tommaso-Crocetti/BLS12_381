@@ -38,8 +38,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\BigNumber.sol": {
-      "lastModificationDate": 1729357554326,
-      "contentHash": "d2291ce03710982ad93ba61e091886ae",
+      "lastModificationDate": 1731068062367,
+      "contentHash": "58df9bae400ef8e50bd10125588ba56a",
       "sourceName": "contracts/BigNumber.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -74,8 +74,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\bigFiniteField.sol": {
-      "lastModificationDate": 1730981516014,
-      "contentHash": "e06e0d5fd91fe10a493dd20f85324b7b",
+      "lastModificationDate": 1731061830354,
+      "contentHash": "67ebbcdc9a8a1536dc26fb24c857b1a9",
       "sourceName": "contracts/field/bigFiniteField.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -112,8 +112,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp.sol": {
-      "lastModificationDate": 1730981293709,
-      "contentHash": "ae3190f97a5010d0ed24325d3d07702d",
+      "lastModificationDate": 1731068554390,
+      "contentHash": "be546ee2189308336e24112f0cf62255",
       "sourceName": "contracts/point/pointZp.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -150,8 +150,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_2.sol": {
-      "lastModificationDate": 1730981293713,
-      "contentHash": "736953204568abd0b417f1e6bf94171b",
+      "lastModificationDate": 1731076574644,
+      "contentHash": "39eb7b58ca143e114984801e6f4dd800",
       "sourceName": "contracts/point/pointZp_2.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -178,7 +178,6 @@
         }
       },
       "imports": [
-        "./pointZp.sol",
         "../field/quadraticExtension.sol"
       ],
       "versionPragmas": [
@@ -303,8 +302,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_12.sol": {
-      "lastModificationDate": 1730981293712,
-      "contentHash": "113859511ba29c34eac7b456d041cce0",
+      "lastModificationDate": 1731079293166,
+      "contentHash": "8bd53073573e4918878bb3da8b9cf516",
       "sourceName": "contracts/point/pointZp_12.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -331,7 +330,6 @@
         }
       },
       "imports": [
-        "./pointZp.sol",
         "../field/twelveExtension.sol"
       ],
       "versionPragmas": [
@@ -342,8 +340,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\curve.sol": {
-      "lastModificationDate": 1730911312881,
-      "contentHash": "3d7f12062e97d3f7583d094d3a5e96ba",
+      "lastModificationDate": 1731079650011,
+      "contentHash": "5bb1fb143d9e247c4abc87a4c1357bc0",
       "sourceName": "contracts/curve.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -374,6 +372,7 @@
         "./BigNumber.sol",
         "./field/bigFiniteField.sol",
         "./field/sexticExtension.sol",
+        "./point/pointZp.sol",
         "./point/pointZp_2.sol",
         "./point/pointZp_12.sol"
       ],

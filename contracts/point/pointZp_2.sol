@@ -1,12 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./pointZp.sol";
 import "../field/quadraticExtension.sol";
+
+/// @title Enum PointType - Tipo di punto nel campo Zp
+/// @dev Rappresenta il tipo di punto che può essere un punto affine o un punto all'infinito
+enum PointType_2 {
+    Affine, // Punto affine con coordinate (x, y)
+    PointAtInfinity // Punto all'infinito (utilizzato per la curva ellittica)
+}
 
 /// @title Struct Point_Zp_2 - Struttura di un punto nel campo Zp_2
 struct Point_Zp_2 {
-    PointType pointType; // Tipo del punto (Affine o all'infinito)
+    PointType_2 pointType; // Tipo del punto (Affine o all'infinito)
     Zp_2 x;
     Zp_2 y;
 }
@@ -23,16 +29,20 @@ contract PointZp_2 {
     }
 
     /// @notice Crea un nuovo punto affine o un punto all'infinito dato il tipo di punto, e le coordinate x e y
-    /// @param pointType Il tipo di punto (Affine o PointAtInfinity)
     /// @param x Coordinata x del punto affine nel campo quadratico esteso
     /// @param y Coordinata y del punto affine nel campo quadratico esteso
     /// @return Il nuovo punto nel campo Zp_2
     function newPoint(
-        PointType pointType,
         Zp_2 memory x,
         Zp_2 memory y
     ) public pure returns (Point_Zp_2 memory) {
-        return Point_Zp_2(pointType, x, y);
+        return Point_Zp_2(PointType_2.Affine, x, y);
+    }
+
+    /// @notice Restituisce il punto all'infinito nel campo Zp
+    /// @return Un punto all'infinito nel campo Zp_2 (x = 0, y = 0)
+    function point_at_infinity() public view returns (Point_Zp_2 memory) {
+        return Point_Zp_2(PointType_2.PointAtInfinity, q.zero(), q.zero());
     }
 
     /// @notice Somma due punti nel campo quadratico esteso Zp_2
@@ -43,19 +53,19 @@ contract PointZp_2 {
         Point_Zp_2 memory self,
         Point_Zp_2 memory other
     ) public view returns (Point_Zp_2 memory) {
-        if (self.pointType == PointType.PointAtInfinity) return other;
-        if (other.pointType == PointType.PointAtInfinity) return self;
+        if (self.pointType == PointType_2.PointAtInfinity) return other;
+        if (other.pointType == PointType_2.PointAtInfinity) return self;
         if (q.equals(self.x, other.x) && q.equals(self.y, other.y))
             return double(self);
         if (q.equals(self.x, other.x) && !q.equals(self.y, other.y))
-            return newPoint(PointType.PointAtInfinity, q.zero(), q.zero());
+            return newPoint(q.zero(), q.zero());
         Zp_2 memory l = q.mul(
             q.sub(other.y, self.y),
             q.inverse(q.sub(other.x, self.x))
         );
         Zp_2 memory x_n = q.sub(q.sub(q.mul(l, l), self.x), other.x);
         Zp_2 memory y_n = q.sub(q.mul(q.sub(self.x, x_n), l), self.y);
-        return newPoint(PointType.Affine, x_n, y_n);
+        return newPoint(x_n, y_n);
     }
 
     /// @notice Raddoppia un punto nel campo quadratico esteso Zp_2
@@ -65,27 +75,38 @@ contract PointZp_2 {
         Point_Zp_2 memory self
     ) public view returns (Point_Zp_2 memory) {
         if (q.equals(self.y, q.zero()))
-            return newPoint(PointType.PointAtInfinity, q.zero(), q.zero());
+            return point_at_infinity();
         Zp_2 memory l = q.mul(
             q.mul(q.three(), q.mul(self.x, self.x)),
             q.inverse(q.mul(q.two(), self.y))
         );
         Zp_2 memory x_n = q.sub(q.sub(q.mul(l, l), self.x), self.x);
         Zp_2 memory y_n = q.sub(q.mul(q.sub(self.x, x_n), l), self.y);
-        return newPoint(PointType.Affine, x_n, y_n);
+        return newPoint(x_n, y_n);
     }
 
-    /// @notice Calcola il punto negato di un punto nel campo quadratico esteso Zp_2
-    /// @param self Il punto da negare
-    /// @return Il punto negato (inverte la coordinata y)
-    function negate(
-        Point_Zp_2 memory self
-    ) public view returns (Point_Zp_2 memory) {
-        require(
-            self.pointType != PointType.PointAtInfinity,
-            "cannot negate point at infinity"
-        );
-        return newPoint(PointType.Affine, self.x, q.sub(q.zero(), self.y));
+        function getBits(
+        BigNumber memory value
+    ) public view returns (bool[] memory) {
+        uint256 index = 0;
+
+        bool[] memory bits = new bool[](value.bitlen);
+        while (BigNumbers.gt(value, BigNumbers.zero())) {
+            // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
+            bits[index] = (BigNumbers.isOdd(value));
+            // Shifta a destra di un bit
+            value = BigNumbers.shr(value, 1);
+            index++;
+        }
+
+        bool[] memory reversedBits = new bool[](index);
+
+        // Copiamo gli elementi nell'ordine inverso
+        for (uint256 i = 0; i < index; i++) {
+            reversedBits[i] = bits[index - i - 1]; 
+        }
+
+        return reversedBits;
     }
 
     /// @notice Moltiplica un punto per un numero intero k nel campo quadratico esteso Zp_2
@@ -96,40 +117,20 @@ contract PointZp_2 {
         BigNumber memory k,
         Point_Zp_2 memory self
     ) public view returns (Point_Zp_2 memory) {
-        Point_Zp_2 memory acc = newPoint(
-            PointType.PointAtInfinity,
-            q.zero(),
-            q.zero()
-        );
-        if (!k.neg) return doubleAndAdd(k, self, acc);
-        else
-            return
-                doubleAndAdd(
-                    BigNumbers.mul(k, BigNumbers.init(1, true)),
-                    negate(self),
-                    acc
-                );
-    }
-
-    /// @notice Algoritmo di raddoppio e somma (per moltiplicazione scalare)
-    /// @param k Numero intero da moltiplicare
-    /// @param self Il punto da moltiplicare
-    /// @param acc L'accumulatore dei risultati intermedi
-    /// @return Il punto risultante dalla moltiplicazione scalare
-    function doubleAndAdd(
-        BigNumber memory k,
-        Point_Zp_2 memory self,
-        Point_Zp_2 memory acc
-    ) private view returns (Point_Zp_2 memory) {
-        if (BigNumbers.cmp(k, BigNumbers.zero(), false) == 0) return acc;
-        if (BigNumbers.isOdd(k))
-            return
-                doubleAndAdd(
-                    BigNumbers.shr(k, 1),
-                    double(self),
-                    add(acc, self)
-                );
-        return doubleAndAdd(BigNumbers.shr(k, 1), double(self), acc);
+        require(k.neg == false);
+        Point_Zp_2 memory result = point_at_infinity();
+        Point_Zp_2 memory current = self;
+        bool[] memory bits = getBits(k);
+        if (bits[0]) {
+            result = current;
+        }
+        for (uint i = 1; i < bits.length; i++) {
+            current = double(current);
+            if (bits[i]) {
+                result = add(result, current);
+            }
+        }
+        return result;
     }
 
     /// @notice Confronta due punti nel campo quadratico esteso Zp_2 per verificarne l'uguaglianza
@@ -141,13 +142,13 @@ contract PointZp_2 {
         Point_Zp_2 memory b
     ) public view returns (bool) {
         if (
-            a.pointType == PointType.PointAtInfinity &&
-            b.pointType == PointType.PointAtInfinity
+            a.pointType == PointType_2.PointAtInfinity &&
+            b.pointType == PointType_2.PointAtInfinity
         ) {
             return true;
         }
         if (
-            a.pointType == PointType.Affine && b.pointType == PointType.Affine
+            a.pointType == PointType_2.Affine && b.pointType == PointType_2.Affine
         ) {
             return q.equals(a.x, b.x) && q.equals(a.y, b.y);
         }

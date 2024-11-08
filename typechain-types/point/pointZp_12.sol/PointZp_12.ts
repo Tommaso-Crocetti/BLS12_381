@@ -74,46 +74,28 @@ export type Point_Zp_12StructOutput = [
 
 export interface PointZp_12Interface extends Interface {
   getFunction(
-    nameOrSignature:
-      | "add"
-      | "compare"
-      | "double"
-      | "multiply"
-      | "negate"
-      | "newPoint"
+    nameOrSignature: "compare" | "newPoint" | "point_at_infinity"
   ): FunctionFragment;
 
-  encodeFunctionData(
-    functionFragment: "add",
-    values: [Point_Zp_12Struct, Point_Zp_12Struct]
-  ): string;
   encodeFunctionData(
     functionFragment: "compare",
     values: [Point_Zp_12Struct, Point_Zp_12Struct]
   ): string;
   encodeFunctionData(
-    functionFragment: "double",
-    values: [Point_Zp_12Struct]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "multiply",
-    values: [BigNumberStruct, Point_Zp_12Struct]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "negate",
-    values: [Point_Zp_12Struct]
-  ): string;
-  encodeFunctionData(
     functionFragment: "newPoint",
-    values: [BigNumberish, Zp_12Struct, Zp_12Struct]
+    values: [Zp_12Struct, Zp_12Struct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "point_at_infinity",
+    values?: undefined
   ): string;
 
-  decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "compare", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "double", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "multiply", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "negate", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "newPoint", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "point_at_infinity",
+    data: BytesLike
+  ): Result;
 }
 
 export interface PointZp_12 extends BaseContract {
@@ -159,53 +141,24 @@ export interface PointZp_12 extends BaseContract {
     event?: TCEvent
   ): Promise<this>;
 
-  add: TypedContractMethod<
-    [self: Point_Zp_12Struct, other: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
-
   compare: TypedContractMethod<
     [a: Point_Zp_12Struct, b: Point_Zp_12Struct],
     [boolean],
     "view"
   >;
 
-  double: TypedContractMethod<
-    [self: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
-
-  multiply: TypedContractMethod<
-    [k: BigNumberStruct, self: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
-
-  negate: TypedContractMethod<
-    [self: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
-
   newPoint: TypedContractMethod<
-    [pointType: BigNumberish, x: Zp_12Struct, y: Zp_12Struct],
+    [x: Zp_12Struct, y: Zp_12Struct],
     [Point_Zp_12StructOutput],
     "view"
   >;
+
+  point_at_infinity: TypedContractMethod<[], [Point_Zp_12StructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
   ): T;
 
-  getFunction(
-    nameOrSignature: "add"
-  ): TypedContractMethod<
-    [self: Point_Zp_12Struct, other: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
   getFunction(
     nameOrSignature: "compare"
   ): TypedContractMethod<
@@ -214,33 +167,15 @@ export interface PointZp_12 extends BaseContract {
     "view"
   >;
   getFunction(
-    nameOrSignature: "double"
-  ): TypedContractMethod<
-    [self: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
-  getFunction(
-    nameOrSignature: "multiply"
-  ): TypedContractMethod<
-    [k: BigNumberStruct, self: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
-  getFunction(
-    nameOrSignature: "negate"
-  ): TypedContractMethod<
-    [self: Point_Zp_12Struct],
-    [Point_Zp_12StructOutput],
-    "view"
-  >;
-  getFunction(
     nameOrSignature: "newPoint"
   ): TypedContractMethod<
-    [pointType: BigNumberish, x: Zp_12Struct, y: Zp_12Struct],
+    [x: Zp_12Struct, y: Zp_12Struct],
     [Point_Zp_12StructOutput],
     "view"
   >;
+  getFunction(
+    nameOrSignature: "point_at_infinity"
+  ): TypedContractMethod<[], [Point_Zp_12StructOutput], "view">;
 
   filters: {};
 }

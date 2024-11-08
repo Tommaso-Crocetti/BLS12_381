@@ -63,9 +63,10 @@ export interface PointZp_2Interface extends Interface {
       | "add"
       | "compare"
       | "double"
+      | "getBits"
       | "multiply"
-      | "negate"
       | "newPoint"
+      | "point_at_infinity"
   ): FunctionFragment;
 
   encodeFunctionData(
@@ -81,24 +82,32 @@ export interface PointZp_2Interface extends Interface {
     values: [Point_Zp_2Struct]
   ): string;
   encodeFunctionData(
+    functionFragment: "getBits",
+    values: [BigNumberStruct]
+  ): string;
+  encodeFunctionData(
     functionFragment: "multiply",
     values: [BigNumberStruct, Point_Zp_2Struct]
   ): string;
   encodeFunctionData(
-    functionFragment: "negate",
-    values: [Point_Zp_2Struct]
+    functionFragment: "newPoint",
+    values: [Zp_2Struct, Zp_2Struct]
   ): string;
   encodeFunctionData(
-    functionFragment: "newPoint",
-    values: [BigNumberish, Zp_2Struct, Zp_2Struct]
+    functionFragment: "point_at_infinity",
+    values?: undefined
   ): string;
 
   decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "compare", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "double", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "getBits", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "multiply", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "negate", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "newPoint", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "point_at_infinity",
+    data: BytesLike
+  ): Result;
 }
 
 export interface PointZp_2 extends BaseContract {
@@ -162,23 +171,21 @@ export interface PointZp_2 extends BaseContract {
     "view"
   >;
 
+  getBits: TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
+
   multiply: TypedContractMethod<
     [k: BigNumberStruct, self: Point_Zp_2Struct],
     [Point_Zp_2StructOutput],
     "view"
   >;
 
-  negate: TypedContractMethod<
-    [self: Point_Zp_2Struct],
+  newPoint: TypedContractMethod<
+    [x: Zp_2Struct, y: Zp_2Struct],
     [Point_Zp_2StructOutput],
     "view"
   >;
 
-  newPoint: TypedContractMethod<
-    [pointType: BigNumberish, x: Zp_2Struct, y: Zp_2Struct],
-    [Point_Zp_2StructOutput],
-    "view"
-  >;
+  point_at_infinity: TypedContractMethod<[], [Point_Zp_2StructOutput], "view">;
 
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
@@ -206,6 +213,9 @@ export interface PointZp_2 extends BaseContract {
     "view"
   >;
   getFunction(
+    nameOrSignature: "getBits"
+  ): TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
+  getFunction(
     nameOrSignature: "multiply"
   ): TypedContractMethod<
     [k: BigNumberStruct, self: Point_Zp_2Struct],
@@ -213,19 +223,15 @@ export interface PointZp_2 extends BaseContract {
     "view"
   >;
   getFunction(
-    nameOrSignature: "negate"
+    nameOrSignature: "newPoint"
   ): TypedContractMethod<
-    [self: Point_Zp_2Struct],
+    [x: Zp_2Struct, y: Zp_2Struct],
     [Point_Zp_2StructOutput],
     "view"
   >;
   getFunction(
-    nameOrSignature: "newPoint"
-  ): TypedContractMethod<
-    [pointType: BigNumberish, x: Zp_2Struct, y: Zp_2Struct],
-    [Point_Zp_2StructOutput],
-    "view"
-  >;
+    nameOrSignature: "point_at_infinity"
+  ): TypedContractMethod<[], [Point_Zp_2StructOutput], "view">;
 
   filters: {};
 }

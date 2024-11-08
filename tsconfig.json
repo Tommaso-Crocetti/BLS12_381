@@ -7,6 +7,6 @@
       "outDir": "dist",
       "resolveJsonModule": true
     },
-    "include": ["./scripts", "./test", "./typechain-types", "test/TestCurve.ts"],
+    "include": ["./scripts", "./test", "./typechain-types", "test/TestCurve.ts", "test/Field_BigFiniteField.ts", "test/Field_QuadraticExtension.ts", "test/Field_SexticExtension.ts", "test/Field_TwelveExtension.ts", "test/Point_Zp.ts"],
     "files": ["./hardhat.config.ts"]
   }

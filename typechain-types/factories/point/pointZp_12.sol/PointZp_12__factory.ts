@@ -36,2518 +36,7 @@ const _abi = [
       {
         components: [
           {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "self",
-        type: "tuple",
-      },
-      {
-        components: [
-          {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "other",
-        type: "tuple",
-      },
-    ],
-    name: "add",
-    outputs: [
-      {
-        components: [
-          {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "",
-        type: "tuple",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        components: [
-          {
-            internalType: "enum PointType",
+            internalType: "enum PointType_12",
             name: "pointType",
             type: "uint8",
           },
@@ -3381,7 +870,7 @@ const _abi = [
       {
         components: [
           {
-            internalType: "enum PointType",
+            internalType: "enum PointType_12",
             name: "pointType",
             type: "uint8",
           },
@@ -4229,5064 +1718,6 @@ const _abi = [
       {
         components: [
           {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "self",
-        type: "tuple",
-      },
-    ],
-    name: "double",
-    outputs: [
-      {
-        components: [
-          {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "",
-        type: "tuple",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        components: [
-          {
-            internalType: "bytes",
-            name: "val",
-            type: "bytes",
-          },
-          {
-            internalType: "bool",
-            name: "neg",
-            type: "bool",
-          },
-          {
-            internalType: "uint256",
-            name: "bitlen",
-            type: "uint256",
-          },
-        ],
-        internalType: "struct BigNumber",
-        name: "k",
-        type: "tuple",
-      },
-      {
-        components: [
-          {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "self",
-        type: "tuple",
-      },
-    ],
-    name: "multiply",
-    outputs: [
-      {
-        components: [
-          {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "",
-        type: "tuple",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        components: [
-          {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "self",
-        type: "tuple",
-      },
-    ],
-    name: "negate",
-    outputs: [
-      {
-        components: [
-          {
-            internalType: "enum PointType",
-            name: "pointType",
-            type: "uint8",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "x",
-            type: "tuple",
-          },
-          {
-            components: [
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "a",
-                type: "tuple",
-              },
-              {
-                components: [
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "a",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "b",
-                    type: "tuple",
-                  },
-                  {
-                    components: [
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "a",
-                        type: "tuple",
-                      },
-                      {
-                        components: [
-                          {
-                            components: [
-                              {
-                                internalType: "bytes",
-                                name: "val",
-                                type: "bytes",
-                              },
-                              {
-                                internalType: "bool",
-                                name: "neg",
-                                type: "bool",
-                              },
-                              {
-                                internalType: "uint256",
-                                name: "bitlen",
-                                type: "uint256",
-                              },
-                            ],
-                            internalType: "struct BigNumber",
-                            name: "value",
-                            type: "tuple",
-                          },
-                        ],
-                        internalType: "struct Zp",
-                        name: "b",
-                        type: "tuple",
-                      },
-                    ],
-                    internalType: "struct Zp_2",
-                    name: "c",
-                    type: "tuple",
-                  },
-                ],
-                internalType: "struct Zp_6",
-                name: "b",
-                type: "tuple",
-              },
-            ],
-            internalType: "struct Zp_12",
-            name: "y",
-            type: "tuple",
-          },
-        ],
-        internalType: "struct Point_Zp_12",
-        name: "",
-        type: "tuple",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "enum PointType",
-        name: "pointType",
-        type: "uint8",
-      },
-      {
-        components: [
-          {
             components: [
               {
                 components: [
@@ -10112,7 +2543,7 @@ const _abi = [
       {
         components: [
           {
-            internalType: "enum PointType",
+            internalType: "enum PointType_12",
             name: "pointType",
             type: "uint8",
           },
@@ -10947,52 +3378,868 @@ const _abi = [
     stateMutability: "pure",
     type: "function",
   },
+  {
+    inputs: [],
+    name: "point_at_infinity",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "enum PointType_12",
+            name: "pointType",
+            type: "uint8",
+          },
+          {
+            components: [
+              {
+                components: [
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "a",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "b",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "c",
+                    type: "tuple",
+                  },
+                ],
+                internalType: "struct Zp_6",
+                name: "a",
+                type: "tuple",
+              },
+              {
+                components: [
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "a",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "b",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "c",
+                    type: "tuple",
+                  },
+                ],
+                internalType: "struct Zp_6",
+                name: "b",
+                type: "tuple",
+              },
+            ],
+            internalType: "struct Zp_12",
+            name: "x",
+            type: "tuple",
+          },
+          {
+            components: [
+              {
+                components: [
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "a",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "b",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "c",
+                    type: "tuple",
+                  },
+                ],
+                internalType: "struct Zp_6",
+                name: "a",
+                type: "tuple",
+              },
+              {
+                components: [
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "a",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "b",
+                    type: "tuple",
+                  },
+                  {
+                    components: [
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "a",
+                        type: "tuple",
+                      },
+                      {
+                        components: [
+                          {
+                            components: [
+                              {
+                                internalType: "bytes",
+                                name: "val",
+                                type: "bytes",
+                              },
+                              {
+                                internalType: "bool",
+                                name: "neg",
+                                type: "bool",
+                              },
+                              {
+                                internalType: "uint256",
+                                name: "bitlen",
+                                type: "uint256",
+                              },
+                            ],
+                            internalType: "struct BigNumber",
+                            name: "value",
+                            type: "tuple",
+                          },
+                        ],
+                        internalType: "struct Zp",
+                        name: "b",
+                        type: "tuple",
+                      },
+                    ],
+                    internalType: "struct Zp_2",
+                    name: "c",
+                    type: "tuple",
+                  },
+                ],
+                internalType: "struct Zp_6",
+                name: "b",
+                type: "tuple",
+              },
+            ],
+            internalType: "struct Zp_12",
+            name: "y",
+            type: "tuple",
+          },
+        ],
+        internalType: "struct Point_Zp_12",
+        name: "",
+        type: "tuple",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
 ] as const;
 
 const _bytecode =
-  "0x608060405234801561001057600080fd5b50604051613482380380613482833981810160405281019061003291906100ed565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061011a565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006100a88261007d565b9050919050565b60006100ba8261009d565b9050919050565b6100ca816100af565b81146100d557600080fd5b50565b6000815190506100e7816100c1565b92915050565b60006020828403121561010357610102610078565b5b6000610111848285016100d8565b91505092915050565b613359806101296000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80631d763e26146100675780634156f514146100975780635bd69fb6146100c7578063998e9b38146100f7578063adbe3ee314610127578063dec70b2914610157575b600080fd5b610081600480360381019061007c9190612633565b610187565b60405161008e9190612989565b60405180910390f35b6100b160048036038101906100ac9190612a47565b6101c5565b6040516100be9190612989565b60405180910390f35b6100e160048036038101906100dc9190612abf565b610cb7565b6040516100ee9190612989565b60405180910390f35b610111600480360381019061010c9190612a47565b610f2b565b60405161011e9190612b46565b60405180910390f35b610141600480360381019061013c9190612b61565b611160565b60405161014e9190612989565b60405180910390f35b610171600480360381019061016c9190612b61565b611c22565b60405161017e9190612989565b60405180910390f35b61018f6120a2565b60405180606001604052808560018111156101ad576101ac6126be565b5b81526020018481526020018381525090509392505050565b6101cd6120a2565b6001808111156101e0576101df6126be565b5b836000015160018111156101f7576101f66126be565b5b0361020457819050610cb1565b600180811115610217576102166126be565b5b8260000151600181111561022e5761022d6126be565b5b0361023b57829050610cb1565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846020015184602001516040518363ffffffff1660e01b815260040161029e929190612bee565b602060405180830381865afa1580156102bb573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102df9190612c3a565b801561038b575060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846040015184604001516040518363ffffffff1660e01b8152600401610349929190612bee565b602060405180830381865afa158015610366573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061038a9190612c3a565b5b156103a05761039983611160565b9050610cb1565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846020015184602001516040518363ffffffff1660e01b8152600401610403929190612bee565b602060405180830381865afa158015610420573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104449190612c3a565b80156104f1575060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846040015184604001516040518363ffffffff1660e01b81526004016104ae929190612bee565b602060405180830381865afa1580156104cb573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104ef9190612c3a565b155b1561062f57610628600160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610566573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061058f9190612f8c565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa1580156105fa573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906106239190612f8c565b610187565b9050610cb1565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c28866040015188604001516040518363ffffffff1660e01b81526004016106d1929190612bee565b600060405180830381865afa1580156106ee573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906107179190612f8c565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f670079560008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2889602001518b602001516040518363ffffffff1660e01b81526004016107b6929190612bee565b600060405180830381865afa1580156107d3573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906107fc9190612f8c565b6040518263ffffffff1660e01b81526004016108189190612fd5565b600060405180830381865afa158015610835573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061085e9190612f8c565b6040518363ffffffff1660e01b815260040161087b929190612bee565b600060405180830381865afa158015610898573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906108c19190612f8c565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2860008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2860008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6987886040518363ffffffff1660e01b8152600401610999929190612bee565b600060405180830381865afa1580156109b6573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906109df9190612f8c565b89602001516040518363ffffffff1660e01b8152600401610a01929190612bee565b600060405180830381865afa158015610a1e573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610a479190612f8c565b86602001516040518363ffffffff1660e01b8152600401610a69929190612bee565b600060405180830381865afa158015610a86573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610aaf9190612f8c565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2860008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c288b60200151886040518363ffffffff1660e01b8152600401610b8b929190612bee565b600060405180830381865afa158015610ba8573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610bd19190612f8c565b876040518363ffffffff1660e01b8152600401610bef929190612bee565b600060405180830381865afa158015610c0c573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610c359190612f8c565b88604001516040518363ffffffff1660e01b8152600401610c57929190612bee565b600060405180830381865afa158015610c74573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610c9d9190612f8c565b9050610cab60008383610187565b93505050505b92915050565b610cbf6120a2565b6000610df3600160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610d31573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610d5a9190612f8c565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015610dc5573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610dee9190612f8c565b610187565b90508360200151610e1157610e09848483611de2565b915050610f25565b610f2173__$7db5d2dbc3ae63372df6c39d501ad0f72a$__63b1d74ee98673__$7db5d2dbc3ae63372df6c39d501ad0f72a$__6340957f726001806040518363ffffffff1660e01b8152600401610e6992919061304b565b600060405180830381865af4158015610e86573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610eaf9190613074565b6040518363ffffffff1660e01b8152600401610ecc929190613175565b600060405180830381865af4158015610ee9573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190610f129190613074565b610f1b85611c22565b83611de2565b9150505b92915050565b6000600180811115610f4057610f3f6126be565b5b83600001516001811115610f5757610f566126be565b5b148015610f8b5750600180811115610f7257610f716126be565b5b82600001516001811115610f8957610f886126be565b5b145b15610f99576001905061115a565b60006001811115610fad57610fac6126be565b5b83600001516001811115610fc457610fc36126be565b5b148015610ff9575060006001811115610fe057610fdf6126be565b5b82600001516001811115610ff757610ff66126be565b5b145b156111555760008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846020015184602001516040518363ffffffff1660e01b8152600401611061929190612bee565b602060405180830381865afa15801561107e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906110a29190612c3a565b801561114e575060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846040015184604001516040518363ffffffff1660e01b815260040161110c929190612bee565b602060405180830381865afa158015611129573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061114d9190612c3a565b5b905061115a565b600090505b92915050565b6111686120a2565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8836040015160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015611214573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061123d9190612f8c565b6040518363ffffffff1660e01b815260040161125a929190612bee565b602060405180830381865afa158015611277573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061129b9190612c3a565b156113d9576113d2600160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015611310573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906113399190612f8c565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa1580156113a4573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906113cd9190612f8c565b610187565b9050611c1d565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166345caa1176040518163ffffffff1660e01b8152600401600060405180830381865afa1580156114bf573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906114e89190612f8c565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6989602001518a602001516040518363ffffffff1660e01b815260040161154b929190612bee565b600060405180830381865afa158015611568573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906115919190612f8c565b6040518363ffffffff1660e01b81526004016115ae929190612bee565b600060405180830381865afa1580156115cb573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906115f49190612f8c565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f670079560008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16635fdf05d76040518163ffffffff1660e01b8152600401600060405180830381865afa1580156116d7573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906117009190612f8c565b8a604001516040518363ffffffff1660e01b8152600401611722929190612bee565b600060405180830381865afa15801561173f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906117689190612f8c565b6040518263ffffffff1660e01b81526004016117849190612fd5565b600060405180830381865afa1580156117a1573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906117ca9190612f8c565b6040518363ffffffff1660e01b81526004016117e7929190612bee565b600060405180830381865afa158015611804573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061182d9190612f8c565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2860008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2860008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6987886040518363ffffffff1660e01b8152600401611905929190612bee565b600060405180830381865afa158015611922573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061194b9190612f8c565b88602001516040518363ffffffff1660e01b815260040161196d929190612bee565b600060405180830381865afa15801561198a573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906119b39190612f8c565b86602001516040518363ffffffff1660e01b81526004016119d5929190612bee565b600060405180830381865afa1580156119f2573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611a1b9190612f8c565b905060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2860008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377839c6960008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c288a60200151886040518363ffffffff1660e01b8152600401611af7929190612bee565b600060405180830381865afa158015611b14573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611b3d9190612f8c565b876040518363ffffffff1660e01b8152600401611b5b929190612bee565b600060405180830381865afa158015611b78573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611ba19190612f8c565b87604001516040518363ffffffff1660e01b8152600401611bc3929190612bee565b600060405180830381865afa158015611be0573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611c099190612f8c565b9050611c1760008383610187565b93505050505b919050565b611c2a6120a2565b600180811115611c3d57611c3c6126be565b5b82600001516001811115611c5457611c536126be565b5b03611c94576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401611c8b90613209565b60405180910390fd5b611ddb6000836020015160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636bc90c2860008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa158015611d45573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611d6e9190612f8c565b87604001516040518363ffffffff1660e01b8152600401611d90929190612bee565b600060405180830381865afa158015611dad573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611dd69190612f8c565b610187565b9050919050565b611dea6120a2565b600073__$7db5d2dbc3ae63372df6c39d501ad0f72a$__63bc39804e8673__$7db5d2dbc3ae63372df6c39d501ad0f72a$__63bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865af4158015611e50573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611e799190613074565b60006040518463ffffffff1660e01b8152600401611e9993929190613229565b602060405180830381865af4158015611eb6573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190611eda91906132a4565b03611ee75781905061209b565b73__$7db5d2dbc3ae63372df6c39d501ad0f72a$__63ee4a4e4e856040518263ffffffff1660e01b8152600401611f1e91906132d1565b602060405180830381865af4158015611f3b573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190611f5f9190612c3a565b1561200657611fff73__$7db5d2dbc3ae63372df6c39d501ad0f72a$__636efac6c78660016040518363ffffffff1660e01b8152600401611fa19291906132f3565b600060405180830381865af4158015611fbe573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f82011682018060405250810190611fe79190613074565b611ff085611160565b611ffa85876101c5565b611de2565b905061209b565b61209873__$7db5d2dbc3ae63372df6c39d501ad0f72a$__636efac6c78660016040518363ffffffff1660e01b81526004016120439291906132f3565b600060405180830381865af4158015612060573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906120899190613074565b61209285611160565b84611de2565b90505b9392505050565b6040518060600160405280600060018111156120c1576120c06126be565b5b81526020016120ce6120e1565b81526020016120db6120e1565b81525090565b60405180604001604052806120f4612107565b8152602001612101612107565b81525090565b604051806060016040528061211a61213a565b815260200161212761213a565b815260200161213461213a565b81525090565b604051806040016040528061214d612160565b815260200161215a612160565b81525090565b6040518060200160405280612173612179565b81525090565b604051806060016040528060608152602001600015158152602001600081525090565b6000604051905090565b600080fd5b600080fd5b600281106121bd57600080fd5b50565b6000813590506121cf816121b0565b92915050565b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b612223826121da565b810181811067ffffffffffffffff82111715612242576122416121eb565b5b80604052505050565b600061225561219c565b9050612261828261221a565b919050565b600080fd5b600080fd5b600080fd5b600067ffffffffffffffff8211156122905761228f6121eb565b5b612299826121da565b9050602081019050919050565b82818337600083830152505050565b60006122c86122c384612275565b61224b565b9050828152602081018484840111156122e4576122e3612270565b5b6122ef8482856122a6565b509392505050565b600082601f83011261230c5761230b61226b565b5b813561231c8482602086016122b5565b91505092915050565b60008115159050919050565b61233a81612325565b811461234557600080fd5b50565b60008135905061235781612331565b92915050565b6000819050919050565b6123708161235d565b811461237b57600080fd5b50565b60008135905061238d81612367565b92915050565b6000606082840312156123a9576123a86121d5565b5b6123b3606061224b565b9050600082013567ffffffffffffffff8111156123d3576123d2612266565b5b6123df848285016122f7565b60008301525060206123f384828501612348565b60208301525060406124078482850161237e565b60408301525092915050565b600060208284031215612429576124286121d5565b5b612433602061224b565b9050600082013567ffffffffffffffff81111561245357612452612266565b5b61245f84828501612393565b60008301525092915050565b600060408284031215612481576124806121d5565b5b61248b604061224b565b9050600082013567ffffffffffffffff8111156124ab576124aa612266565b5b6124b784828501612413565b600083015250602082013567ffffffffffffffff8111156124db576124da612266565b5b6124e784828501612413565b60208301525092915050565b600060608284031215612509576125086121d5565b5b612513606061224b565b9050600082013567ffffffffffffffff81111561253357612532612266565b5b61253f8482850161246b565b600083015250602082013567ffffffffffffffff81111561256357612562612266565b5b61256f8482850161246b565b602083015250604082013567ffffffffffffffff81111561259357612592612266565b5b61259f8482850161246b565b60408301525092915050565b6000604082840312156125c1576125c06121d5565b5b6125cb604061224b565b9050600082013567ffffffffffffffff8111156125eb576125ea612266565b5b6125f7848285016124f3565b600083015250602082013567ffffffffffffffff81111561261b5761261a612266565b5b612627848285016124f3565b60208301525092915050565b60008060006060848603121561264c5761264b6121a6565b5b600061265a868287016121c0565b935050602084013567ffffffffffffffff81111561267b5761267a6121ab565b5b612687868287016125ab565b925050604084013567ffffffffffffffff8111156126a8576126a76121ab565b5b6126b4868287016125ab565b9150509250925092565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b600281106126fe576126fd6126be565b5b50565b600081905061270f826126ed565b919050565b600061271f82612701565b9050919050565b61272f81612714565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b8381101561276f578082015181840152602081019050612754565b60008484015250505050565b600061278682612735565b6127908185612740565b93506127a0818560208601612751565b6127a9816121da565b840191505092915050565b6127bd81612325565b82525050565b6127cc8161235d565b82525050565b600060608301600083015184820360008601526127ef828261277b565b915050602083015161280460208601826127b4565b50604083015161281760408601826127c3565b508091505092915050565b6000602083016000830151848203600086015261283f82826127d2565b9150508091505092915050565b600060408301600083015184820360008601526128698282612822565b915050602083015184820360208601526128838282612822565b9150508091505092915050565b600060608301600083015184820360008601526128ad828261284c565b915050602083015184820360208601526128c7828261284c565b915050604083015184820360408601526128e1828261284c565b9150508091505092915050565b6000604083016000830151848203600086015261290b8282612890565b915050602083015184820360208601526129258282612890565b9150508091505092915050565b600060608301600083015161294a6000860182612726565b506020830151848203602086015261296282826128ee565b9150506040830151848203604086015261297c82826128ee565b9150508091505092915050565b600060208201905081810360008301526129a38184612932565b905092915050565b6000606082840312156129c1576129c06121d5565b5b6129cb606061224b565b905060006129db848285016121c0565b600083015250602082013567ffffffffffffffff8111156129ff576129fe612266565b5b612a0b848285016125ab565b602083015250604082013567ffffffffffffffff811115612a2f57612a2e612266565b5b612a3b848285016125ab565b60408301525092915050565b60008060408385031215612a5e57612a5d6121a6565b5b600083013567ffffffffffffffff811115612a7c57612a7b6121ab565b5b612a88858286016129ab565b925050602083013567ffffffffffffffff811115612aa957612aa86121ab565b5b612ab5858286016129ab565b9150509250929050565b60008060408385031215612ad657612ad56121a6565b5b600083013567ffffffffffffffff811115612af457612af36121ab565b5b612b0085828601612393565b925050602083013567ffffffffffffffff811115612b2157612b206121ab565b5b612b2d858286016129ab565b9150509250929050565b612b4081612325565b82525050565b6000602082019050612b5b6000830184612b37565b92915050565b600060208284031215612b7757612b766121a6565b5b600082013567ffffffffffffffff811115612b9557612b946121ab565b5b612ba1848285016129ab565b91505092915050565b60006040830160008301518482036000860152612bc78282612890565b91505060208301518482036020860152612be18282612890565b9150508091505092915050565b60006040820190508181036000830152612c088185612baa565b90508181036020830152612c1c8184612baa565b90509392505050565b600081519050612c3481612331565b92915050565b600060208284031215612c5057612c4f6121a6565b5b6000612c5e84828501612c25565b91505092915050565b6000612c7a612c7584612275565b61224b565b905082815260208101848484011115612c9657612c95612270565b5b612ca1848285612751565b509392505050565b600082601f830112612cbe57612cbd61226b565b5b8151612cce848260208601612c67565b91505092915050565b600081519050612ce681612367565b92915050565b600060608284031215612d0257612d016121d5565b5b612d0c606061224b565b9050600082015167ffffffffffffffff811115612d2c57612d2b612266565b5b612d3884828501612ca9565b6000830152506020612d4c84828501612c25565b6020830152506040612d6084828501612cd7565b60408301525092915050565b600060208284031215612d8257612d816121d5565b5b612d8c602061224b565b9050600082015167ffffffffffffffff811115612dac57612dab612266565b5b612db884828501612cec565b60008301525092915050565b600060408284031215612dda57612dd96121d5565b5b612de4604061224b565b9050600082015167ffffffffffffffff811115612e0457612e03612266565b5b612e1084828501612d6c565b600083015250602082015167ffffffffffffffff811115612e3457612e33612266565b5b612e4084828501612d6c565b60208301525092915050565b600060608284031215612e6257612e616121d5565b5b612e6c606061224b565b9050600082015167ffffffffffffffff811115612e8c57612e8b612266565b5b612e9884828501612dc4565b600083015250602082015167ffffffffffffffff811115612ebc57612ebb612266565b5b612ec884828501612dc4565b602083015250604082015167ffffffffffffffff811115612eec57612eeb612266565b5b612ef884828501612dc4565b60408301525092915050565b600060408284031215612f1a57612f196121d5565b5b612f24604061224b565b9050600082015167ffffffffffffffff811115612f4457612f43612266565b5b612f5084828501612e4c565b600083015250602082015167ffffffffffffffff811115612f7457612f73612266565b5b612f8084828501612e4c565b60208301525092915050565b600060208284031215612fa257612fa16121a6565b5b600082015167ffffffffffffffff811115612fc057612fbf6121ab565b5b612fcc84828501612f04565b91505092915050565b60006020820190508181036000830152612fef8184612baa565b905092915050565b6000819050919050565b6000819050919050565b600061302661302161301c84612ff7565b613001565b61235d565b9050919050565b6130368161300b565b82525050565b61304581612325565b82525050565b6000604082019050613060600083018561302d565b61306d602083018461303c565b9392505050565b60006020828403121561308a576130896121a6565b5b600082015167ffffffffffffffff8111156130a8576130a76121ab565b5b6130b484828501612cec565b91505092915050565b600082825260208201905092915050565b60006130d982612735565b6130e381856130bd565b93506130f3818560208601612751565b6130fc816121da565b840191505092915050565b61311081612325565b82525050565b61311f8161235d565b82525050565b6000606083016000830151848203600086015261314282826130ce565b91505060208301516131576020860182613107565b50604083015161316a6040860182613116565b508091505092915050565b6000604082019050818103600083015261318f8185613125565b905081810360208301526131a38184613125565b90509392505050565b600082825260208201905092915050565b7f63616e6e6f74206e656761746520706f696e7420617420696e66696e69747900600082015250565b60006131f3601f836131ac565b91506131fe826131bd565b602082019050919050565b60006020820190508181036000830152613222816131e6565b9050919050565b600060608201905081810360008301526132438186613125565b905081810360208301526132578185613125565b9050613266604083018461303c565b949350505050565b6000819050919050565b6132818161326e565b811461328c57600080fd5b50565b60008151905061329e81613278565b92915050565b6000602082840312156132ba576132b96121a6565b5b60006132c88482850161328f565b91505092915050565b600060208201905081810360008301526132eb8184613125565b905092915050565b6000604082019050818103600083015261330d8185613125565b905061331c602083018461302d565b939250505056fea264697066735822122081c2a58bd47221a933a2890952e2dc90dea46680fbf2b1f51369946c2f7274ff64736f6c634300081b0033";
+  "0x608060405234801561001057600080fd5b50604051611454380380611454833981810160405281019061003291906100ed565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061011a565b600080fd5b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006100a88261007d565b9050919050565b60006100ba8261009d565b9050919050565b6100ca816100af565b81146100d557600080fd5b50565b6000815190506100e7816100c1565b92915050565b60006020828403121561010357610102610078565b5b6000610111848285016100d8565b91505092915050565b61132b806101296000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063292310eb146100465780638a954d1214610064578063998e9b3814610094575b600080fd5b61004e6100c4565b60405161005b9190610882565b60405180910390f35b61007e60048036038101906100799190610cef565b610224565b60405161008b9190610882565b60405180910390f35b6100ae60048036038101906100a99190610e28565b610261565b6040516100bb9190610eaf565b60405180910390f35b6100cc610496565b60405180606001604052806001808111156100ea576100e9610590565b5b815260200160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa15801561015a573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906101839190611204565b815260200160008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bc1b392d6040518163ffffffff1660e01b8152600401600060405180830381865afa1580156101f3573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525081019061021c9190611204565b815250905090565b61022c610496565b604051806060016040528060018081111561024a57610249610590565b5b815260200184815260200183815250905092915050565b600060018081111561027657610275610590565b5b8360000151600181111561028d5761028c610590565b5b1480156102c157506001808111156102a8576102a7610590565b5b826000015160018111156102bf576102be610590565b5b145b156102cf5760019050610490565b600060018111156102e3576102e2610590565b5b836000015160018111156102fa576102f9610590565b5b14801561032f57506000600181111561031657610315610590565b5b8260000151600181111561032d5761032c610590565b5b145b1561048b5760008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846020015184602001516040518363ffffffff1660e01b8152600401610397929190611291565b602060405180830381865afa1580156103b4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103d891906112c8565b8015610484575060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16639eea8ce8846040015184604001516040518363ffffffff1660e01b8152600401610442929190611291565b602060405180830381865afa15801561045f573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061048391906112c8565b5b9050610490565b600090505b92915050565b6040518060600160405280600060018111156104b5576104b4610590565b5b81526020016104c26104d5565b81526020016104cf6104d5565b81525090565b60405180604001604052806104e86104fb565b81526020016104f56104fb565b81525090565b604051806060016040528061050e61052e565b815260200161051b61052e565b815260200161052861052e565b81525090565b6040518060400160405280610541610554565b815260200161054e610554565b81525090565b604051806020016040528061056761056d565b81525090565b604051806060016040528060608152602001600015158152602001600081525090565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b600281106105d0576105cf610590565b5b50565b60008190506105e1826105bf565b919050565b60006105f1826105d3565b9050919050565b610601816105e6565b82525050565b600081519050919050565b600082825260208201905092915050565b60005b83811015610641578082015181840152602081019050610626565b60008484015250505050565b6000601f19601f8301169050919050565b600061066982610607565b6106738185610612565b9350610683818560208601610623565b61068c8161064d565b840191505092915050565b60008115159050919050565b6106ac81610697565b82525050565b6000819050919050565b6106c5816106b2565b82525050565b600060608301600083015184820360008601526106e8828261065e565b91505060208301516106fd60208601826106a3565b50604083015161071060408601826106bc565b508091505092915050565b6000602083016000830151848203600086015261073882826106cb565b9150508091505092915050565b60006040830160008301518482036000860152610762828261071b565b9150506020830151848203602086015261077c828261071b565b9150508091505092915050565b600060608301600083015184820360008601526107a68282610745565b915050602083015184820360208601526107c08282610745565b915050604083015184820360408601526107da8282610745565b9150508091505092915050565b600060408301600083015184820360008601526108048282610789565b9150506020830151848203602086015261081e8282610789565b9150508091505092915050565b600060608301600083015161084360008601826105f8565b506020830151848203602086015261085b82826107e7565b9150506040830151848203604086015261087582826107e7565b9150508091505092915050565b6000602082019050818103600083015261089c818461082b565b905092915050565b6000604051905090565b600080fd5b600080fd5b600080fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6108f58261064d565b810181811067ffffffffffffffff82111715610914576109136108bd565b5b80604052505050565b60006109276108a4565b905061093382826108ec565b919050565b600080fd5b600080fd5b600080fd5b600067ffffffffffffffff821115610962576109616108bd565b5b61096b8261064d565b9050602081019050919050565b82818337600083830152505050565b600061099a61099584610947565b61091d565b9050828152602081018484840111156109b6576109b5610942565b5b6109c1848285610978565b509392505050565b600082601f8301126109de576109dd61093d565b5b81356109ee848260208601610987565b91505092915050565b610a0081610697565b8114610a0b57600080fd5b50565b600081359050610a1d816109f7565b92915050565b610a2c816106b2565b8114610a3757600080fd5b50565b600081359050610a4981610a23565b92915050565b600060608284031215610a6557610a646108b8565b5b610a6f606061091d565b9050600082013567ffffffffffffffff811115610a8f57610a8e610938565b5b610a9b848285016109c9565b6000830152506020610aaf84828501610a0e565b6020830152506040610ac384828501610a3a565b60408301525092915050565b600060208284031215610ae557610ae46108b8565b5b610aef602061091d565b9050600082013567ffffffffffffffff811115610b0f57610b0e610938565b5b610b1b84828501610a4f565b60008301525092915050565b600060408284031215610b3d57610b3c6108b8565b5b610b47604061091d565b9050600082013567ffffffffffffffff811115610b6757610b66610938565b5b610b7384828501610acf565b600083015250602082013567ffffffffffffffff811115610b9757610b96610938565b5b610ba384828501610acf565b60208301525092915050565b600060608284031215610bc557610bc46108b8565b5b610bcf606061091d565b9050600082013567ffffffffffffffff811115610bef57610bee610938565b5b610bfb84828501610b27565b600083015250602082013567ffffffffffffffff811115610c1f57610c1e610938565b5b610c2b84828501610b27565b602083015250604082013567ffffffffffffffff811115610c4f57610c4e610938565b5b610c5b84828501610b27565b60408301525092915050565b600060408284031215610c7d57610c7c6108b8565b5b610c87604061091d565b9050600082013567ffffffffffffffff811115610ca757610ca6610938565b5b610cb384828501610baf565b600083015250602082013567ffffffffffffffff811115610cd757610cd6610938565b5b610ce384828501610baf565b60208301525092915050565b60008060408385031215610d0657610d056108ae565b5b600083013567ffffffffffffffff811115610d2457610d236108b3565b5b610d3085828601610c67565b925050602083013567ffffffffffffffff811115610d5157610d506108b3565b5b610d5d85828601610c67565b9150509250929050565b60028110610d7457600080fd5b50565b600081359050610d8681610d67565b92915050565b600060608284031215610da257610da16108b8565b5b610dac606061091d565b90506000610dbc84828501610d77565b600083015250602082013567ffffffffffffffff811115610de057610ddf610938565b5b610dec84828501610c67565b602083015250604082013567ffffffffffffffff811115610e1057610e0f610938565b5b610e1c84828501610c67565b60408301525092915050565b60008060408385031215610e3f57610e3e6108ae565b5b600083013567ffffffffffffffff811115610e5d57610e5c6108b3565b5b610e6985828601610d8c565b925050602083013567ffffffffffffffff811115610e8a57610e896108b3565b5b610e9685828601610d8c565b9150509250929050565b610ea981610697565b82525050565b6000602082019050610ec46000830184610ea0565b92915050565b6000610edd610ed884610947565b61091d565b905082815260208101848484011115610ef957610ef8610942565b5b610f04848285610623565b509392505050565b600082601f830112610f2157610f2061093d565b5b8151610f31848260208601610eca565b91505092915050565b600081519050610f49816109f7565b92915050565b600081519050610f5e81610a23565b92915050565b600060608284031215610f7a57610f796108b8565b5b610f84606061091d565b9050600082015167ffffffffffffffff811115610fa457610fa3610938565b5b610fb084828501610f0c565b6000830152506020610fc484828501610f3a565b6020830152506040610fd884828501610f4f565b60408301525092915050565b600060208284031215610ffa57610ff96108b8565b5b611004602061091d565b9050600082015167ffffffffffffffff81111561102457611023610938565b5b61103084828501610f64565b60008301525092915050565b600060408284031215611052576110516108b8565b5b61105c604061091d565b9050600082015167ffffffffffffffff81111561107c5761107b610938565b5b61108884828501610fe4565b600083015250602082015167ffffffffffffffff8111156110ac576110ab610938565b5b6110b884828501610fe4565b60208301525092915050565b6000606082840312156110da576110d96108b8565b5b6110e4606061091d565b9050600082015167ffffffffffffffff81111561110457611103610938565b5b6111108482850161103c565b600083015250602082015167ffffffffffffffff81111561113457611133610938565b5b6111408482850161103c565b602083015250604082015167ffffffffffffffff81111561116457611163610938565b5b6111708482850161103c565b60408301525092915050565b600060408284031215611192576111916108b8565b5b61119c604061091d565b9050600082015167ffffffffffffffff8111156111bc576111bb610938565b5b6111c8848285016110c4565b600083015250602082015167ffffffffffffffff8111156111ec576111eb610938565b5b6111f8848285016110c4565b60208301525092915050565b60006020828403121561121a576112196108ae565b5b600082015167ffffffffffffffff811115611238576112376108b3565b5b6112448482850161117c565b91505092915050565b6000604083016000830151848203600086015261126a8282610789565b915050602083015184820360208601526112848282610789565b9150508091505092915050565b600060408201905081810360008301526112ab818561124d565b905081810360208301526112bf818461124d565b90509392505050565b6000602082840312156112de576112dd6108ae565b5b60006112ec84828501610f3a565b9150509291505056fea264697066735822122084c20693cc5365c8431ae63e023d5fd09a2dc29cbe475aa6d63e31f46bea253364736f6c634300081b0033";
 
 type PointZp_12ConstructorParams =
-  | [linkLibraryAddresses: PointZp_12LibraryAddresses, signer?: Signer]
+  | [signer?: Signer]
   | ConstructorParameters<typeof ContractFactory>;
 
 const isSuperArgs = (
   xs: PointZp_12ConstructorParams
-): xs is ConstructorParameters<typeof ContractFactory> => {
-  return (
-    typeof xs[0] === "string" ||
-    (Array.isArray as (arg: any) => arg is readonly any[])(xs[0]) ||
-    "_isInterface" in xs[0]
-  );
-};
+): xs is ConstructorParameters<typeof ContractFactory> => xs.length > 1;
 
 export class PointZp_12__factory extends ContractFactory {
   constructor(...args: PointZp_12ConstructorParams) {
     if (isSuperArgs(args)) {
       super(...args);
     } else {
-      const [linkLibraryAddresses, signer] = args;
-      super(
-        _abi,
-        PointZp_12__factory.linkBytecode(linkLibraryAddresses),
-        signer
-      );
+      super(_abi, _bytecode, args[0]);
     }
-  }
-
-  static linkBytecode(
-    linkLibraryAddresses: PointZp_12LibraryAddresses
-  ): string {
-    let linkedBytecode = _bytecode;
-
-    linkedBytecode = linkedBytecode.replace(
-      new RegExp("__\\$7db5d2dbc3ae63372df6c39d501ad0f72a\\$__", "g"),
-      linkLibraryAddresses["contracts/BigNumber.sol:BigNumbers"]
-        .replace(/^0x/, "")
-        .toLowerCase()
-    );
-
-    return linkedBytecode;
   }
 
   override getDeployTransaction(
@@ -11023,8 +4270,4 @@ export class PointZp_12__factory extends ContractFactory {
   static connect(address: string, runner?: ContractRunner | null): PointZp_12 {
     return new Contract(address, _abi, runner) as unknown as PointZp_12;
   }
-}
-
-export interface PointZp_12LibraryAddresses {
-  ["contracts/BigNumber.sol:BigNumbers"]: string;
 }

@@ -56,8 +56,8 @@ export interface PointZpInterface extends Interface {
       | "add"
       | "compare"
       | "double"
+      | "getBits"
       | "multiply"
-      | "negate"
       | "newPoint"
       | "point_at_infinity"
   ): FunctionFragment;
@@ -75,12 +75,12 @@ export interface PointZpInterface extends Interface {
     values: [Point_ZpStruct]
   ): string;
   encodeFunctionData(
-    functionFragment: "multiply",
-    values: [BigNumberStruct, Point_ZpStruct]
+    functionFragment: "getBits",
+    values: [BigNumberStruct]
   ): string;
   encodeFunctionData(
-    functionFragment: "negate",
-    values: [Point_ZpStruct]
+    functionFragment: "multiply",
+    values: [BigNumberStruct, Point_ZpStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "newPoint",
@@ -94,8 +94,8 @@ export interface PointZpInterface extends Interface {
   decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "compare", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "double", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "getBits", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "multiply", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "negate", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "newPoint", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "point_at_infinity",
@@ -164,14 +164,10 @@ export interface PointZp extends BaseContract {
     "view"
   >;
 
+  getBits: TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
+
   multiply: TypedContractMethod<
     [k: BigNumberStruct, self: Point_ZpStruct],
-    [Point_ZpStructOutput],
-    "view"
-  >;
-
-  negate: TypedContractMethod<
-    [self: Point_ZpStruct],
     [Point_ZpStructOutput],
     "view"
   >;
@@ -210,16 +206,12 @@ export interface PointZp extends BaseContract {
     "view"
   >;
   getFunction(
+    nameOrSignature: "getBits"
+  ): TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
+  getFunction(
     nameOrSignature: "multiply"
   ): TypedContractMethod<
     [k: BigNumberStruct, self: Point_ZpStruct],
-    [Point_ZpStructOutput],
-    "view"
-  >;
-  getFunction(
-    nameOrSignature: "negate"
-  ): TypedContractMethod<
-    [self: Point_ZpStruct],
     [Point_ZpStructOutput],
     "view"
   >;

@@ -20,6 +20,7 @@ library BigNumbers {
     /// @notice the value for number 2 of a BigNumber instance.
     bytes constant  TWO = hex"0000000000000000000000000000000000000000000000000000000000000002";
 
+
     // ***************** BEGIN EXPOSED MANAGEMENT FUNCTIONS ******************
     /** @notice verify a BN instance
      *  @dev checks if the BN is in the correct format. operations should only be carried out on

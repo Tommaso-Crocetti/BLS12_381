@@ -3,6 +3,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import '@typechain/hardhat'
 import '@nomicfoundation/hardhat-ethers'
 import '@nomicfoundation/hardhat-chai-matchers'
+import "hardhat-gas-reporter"
 
 const config: HardhatUserConfig = {
   solidity: "0.8.27",
@@ -19,6 +20,16 @@ const config: HardhatUserConfig = {
   mocha: {
     timeout: 100000000
   },
+  gasReporter: {
+    reportPureAndViewMethods: true,
+    outputFile: 'Test_gas.txt',
+    currency: 'EUR',
+    L1: "polygon",
+    coinmarketcap: "abc123...",
+    enabled: true
+  }
+  // Example
+
   
 };
 

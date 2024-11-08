@@ -5,6 +5,7 @@ import "hardhat/console.sol";
 import "./BigNumber.sol";
 import "./field/bigFiniteField.sol";
 import "./field/sexticExtension.sol";
+import "./point/pointZp.sol";
 import "./point/pointZp_2.sol";
 import "./point/pointZp_12.sol";
 
@@ -43,7 +44,6 @@ contract Curve {
         );
     Point_Zp_2 private g1 =
         pZp_2.newPoint(
-            PointType.Affine,
             qField.createElement(
                 fField.createElement(
                     BigNumbers.init__(
@@ -102,7 +102,7 @@ contract Curve {
     function isOnCurveTwist(
         Point_Zp_2 memory point
     ) public view returns (bool) {
-        if (point.pointType == PointType.PointAtInfinity) return false;
+        if (point.pointType == PointType_2.PointAtInfinity) return false;
         Zp_2 memory l = qField.mul(point.y, point.y);
         Zp_2 memory r = qField.sum(
             qField.mul(qField.mul(point.x, point.x), point.x),
@@ -112,7 +112,7 @@ contract Curve {
     }
 
     function isOnCurve_12(Point_Zp_12 memory point) public view returns (bool) {
-        if (point.pointType == PointType.PointAtInfinity) return false;
+        if (point.pointType == PointType_12.PointAtInfinity) return false;
         Zp_12 memory l = tField.mul(point.y, point.y);
         Zp_12 memory r = tField.sum(
             tField.mul(tField.mul(point.x, point.x), point.x),
@@ -128,7 +128,7 @@ contract Curve {
     function Subgroup_1Check(
         Point_Zp_2 memory point
     ) public view returns (bool) {
-        return pZp_2.multiply(order, point).pointType == PointType.Affine;
+        return pZp_2.multiply(order, point).pointType == PointType_2.Affine;
     }
 
     function untwist(
@@ -149,7 +149,6 @@ contract Curve {
         );
         return
             pZp_12.newPoint(
-                PointType.Affine,
                 tField.mul(
                     x,
                     tField.inverse(tField.createElement(a, sField.zero()))
@@ -236,30 +235,6 @@ contract Curve {
         return reversedBits;
     }
 
-    function getBits(
-        BigNumber memory value
-    ) public view returns (bool[] memory) {
-        uint256 index = 0;
-
-        bool[] memory bits = new bool[](value.bitlen);
-        while (BigNumbers.gt(value, BigNumbers.zero())) {
-            // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
-            bits[index] = (BigNumbers.isOdd(value));
-            // Shifta a destra di un bit
-            value = BigNumbers.shr(value, 1);
-            index++;
-        }
-
-        bool[] memory reversedBits = new bool[](index);
-
-        // Copiamo gli elementi nell'ordine inverso
-        for (uint256 i = 0; i < index; i++) {
-            reversedBits[i] = bits[index - i - 1]; 
-        }
-
-        return reversedBits;
-    }
-
     function miller(
         Point_Zp memory p,
         Point_Zp_2 memory q
@@ -298,7 +273,7 @@ contract Curve {
         }
         Zp_12 memory result = tField.zero();
         Zp_12 memory current = value;
-        bool[] memory bits = getBits(e);
+        bool[] memory bits = pZp.getBits(e);
         if (bits[0]) {
             result = current;
         }
@@ -327,7 +302,7 @@ contract Curve {
     ) public view returns (Zp_12 memory) {
         if (
             p.pointType == PointType.PointAtInfinity ||
-            q.pointType == PointType.PointAtInfinity
+            q.pointType == PointType_2.PointAtInfinity
         ) return tField.zero();
         require (isOnCurve(p) && isOnCurveTwist(q));
         Zp_12 memory result = miller(p,q);

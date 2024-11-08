@@ -85,17 +85,28 @@ contract PointZp {
         return newPoint(x_n, y_n);
     }
 
-    /// @notice Calcola il punto negato di un punto nel campo Zp
-    /// @param self Il punto da negare
-    /// @return Il punto negato (inverte la coordinata y)
-    function negate(
-        Point_Zp memory self
-    ) public view returns (Point_Zp memory) {
-        require(
-            self.pointType != PointType.PointAtInfinity,
-            "cannot negate point at infinity"
-        );
-        return newPoint(self.x, f.sub(f.zero(), self.y));
+    function getBits(
+        BigNumber memory value
+    ) public view returns (bool[] memory) {
+        uint256 index = 0;
+
+        bool[] memory bits = new bool[](value.bitlen);
+        while (BigNumbers.gt(value, BigNumbers.zero())) {
+            // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
+            bits[index] = (BigNumbers.isOdd(value));
+            // Shifta a destra di un bit
+            value = BigNumbers.shr(value, 1);
+            index++;
+        }
+
+        bool[] memory reversedBits = new bool[](index);
+
+        // Copiamo gli elementi nell'ordine inverso
+        for (uint256 i = 0; i < index; i++) {
+            reversedBits[i] = bits[index - i - 1]; 
+        }
+
+        return reversedBits;
     }
 
     /// @notice Moltiplica un punto per un numero intero k nel campo Zp
@@ -106,36 +117,20 @@ contract PointZp {
         BigNumber memory k,
         Point_Zp memory self
     ) public view returns (Point_Zp memory) {
-        Point_Zp memory acc = point_at_infinity();
-        if (!k.neg) return doubleAndAdd(k, self, acc);
-        else
-            return
-                doubleAndAdd(
-                    BigNumbers.mul(k, BigNumbers.init(1, true)),
-                    negate(self),
-                    acc
-                );
-    }
-
-    /// @notice Algoritmo di raddoppio e somma (per moltiplicazione scalare)
-    /// @param k Numero intero da moltiplicare
-    /// @param self Il punto da moltiplicare
-    /// @param acc L'accumulatore dei risultati intermedi
-    /// @return Il punto risultante dalla moltiplicazione scalare
-    function doubleAndAdd(
-        BigNumber memory k,
-        Point_Zp memory self,
-        Point_Zp memory acc
-    ) private view returns (Point_Zp memory) {
-        if (BigNumbers.cmp(k, BigNumbers.zero(), false) == 0) return acc;
-        if (BigNumbers.isOdd(k))
-            return
-                doubleAndAdd(
-                    BigNumbers.shr(k, 1),
-                    double(self),
-                    add(acc, self)
-                );
-        return doubleAndAdd(BigNumbers.shr(k, 1), double(self), acc);
+        require(k.neg == false);
+        Point_Zp memory result = point_at_infinity();
+        Point_Zp memory current = self;
+        bool[] memory bits = getBits(k);
+        if (bits[0]) {
+            result = current;
+        }
+        for (uint i = 1; i < bits.length; i++) {
+            current = double(current);
+            if (bits[i]) {
+                result = add(result, current);
+            }
+        }
+        return result;
     }
 
     /// @notice Confronta due punti nel campo Zp per verificarne l'uguaglianza
