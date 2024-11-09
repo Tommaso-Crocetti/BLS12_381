@@ -66,6 +66,7 @@ export interface TwelveExtensionInterface extends Interface {
       | "createElement"
       | "div"
       | "equals"
+      | "exp"
       | "four"
       | "fromZp"
       | "inverse"
@@ -89,6 +90,10 @@ export interface TwelveExtensionInterface extends Interface {
   encodeFunctionData(
     functionFragment: "equals",
     values: [Zp_12Struct, Zp_12Struct]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "exp",
+    values: [Zp_12Struct, BigNumberStruct]
   ): string;
   encodeFunctionData(functionFragment: "four", values?: undefined): string;
   encodeFunctionData(functionFragment: "fromZp", values: [ZpStruct]): string;
@@ -119,6 +124,7 @@ export interface TwelveExtensionInterface extends Interface {
   ): Result;
   decodeFunctionResult(functionFragment: "div", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "equals", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "exp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "four", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "fromZp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "inverse", data: BytesLike): Result;
@@ -192,6 +198,12 @@ export interface TwelveExtension extends BaseContract {
     "view"
   >;
 
+  exp: TypedContractMethod<
+    [value: Zp_12Struct, e: BigNumberStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
+
   four: TypedContractMethod<[], [Zp_12StructOutput], "view">;
 
   fromZp: TypedContractMethod<[value: ZpStruct], [Zp_12StructOutput], "view">;
@@ -245,6 +257,13 @@ export interface TwelveExtension extends BaseContract {
   getFunction(
     nameOrSignature: "equals"
   ): TypedContractMethod<[x: Zp_12Struct, y: Zp_12Struct], [boolean], "view">;
+  getFunction(
+    nameOrSignature: "exp"
+  ): TypedContractMethod<
+    [value: Zp_12Struct, e: BigNumberStruct],
+    [Zp_12StructOutput],
+    "view"
+  >;
   getFunction(
     nameOrSignature: "four"
   ): TypedContractMethod<[], [Zp_12StructOutput], "view">;

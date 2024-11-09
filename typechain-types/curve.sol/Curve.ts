@@ -104,10 +104,8 @@ export interface CurveInterface extends Interface {
       | "_addEval"
       | "addEval"
       | "doubleEval"
-      | "exp"
       | "get_g0"
       | "get_g1"
-      | "get_millerBits"
       | "get_order"
       | "get_prime"
       | "isOnCurve"
@@ -118,6 +116,7 @@ export interface CurveInterface extends Interface {
       | "pairing"
       | "try_pairing"
       | "untwist"
+      | "verify"
   ): FunctionFragment;
 
   encodeFunctionData(
@@ -140,16 +139,8 @@ export interface CurveInterface extends Interface {
     functionFragment: "doubleEval",
     values: [Point_Zp_2Struct, Point_ZpStruct]
   ): string;
-  encodeFunctionData(
-    functionFragment: "exp",
-    values: [Zp_12Struct, BigNumberStruct]
-  ): string;
   encodeFunctionData(functionFragment: "get_g0", values?: undefined): string;
   encodeFunctionData(functionFragment: "get_g1", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "get_millerBits",
-    values: [BigNumberStruct]
-  ): string;
   encodeFunctionData(functionFragment: "get_order", values?: undefined): string;
   encodeFunctionData(functionFragment: "get_prime", values?: undefined): string;
   encodeFunctionData(
@@ -184,6 +175,10 @@ export interface CurveInterface extends Interface {
     functionFragment: "untwist",
     values: [Point_Zp_2Struct]
   ): string;
+  encodeFunctionData(
+    functionFragment: "verify",
+    values: [Point_ZpStruct, Point_Zp_2Struct, Point_Zp_2Struct]
+  ): string;
 
   decodeFunctionResult(
     functionFragment: "Subgroup_0Check",
@@ -196,13 +191,8 @@ export interface CurveInterface extends Interface {
   decodeFunctionResult(functionFragment: "_addEval", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "addEval", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "doubleEval", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "exp", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "get_g0", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "get_g1", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "get_millerBits",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(functionFragment: "get_order", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "get_prime", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "isOnCurve", data: BytesLike): Result;
@@ -225,6 +215,7 @@ export interface CurveInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "untwist", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "verify", data: BytesLike): Result;
 }
 
 export interface Curve extends BaseContract {
@@ -300,21 +291,9 @@ export interface Curve extends BaseContract {
     "view"
   >;
 
-  exp: TypedContractMethod<
-    [value: Zp_12Struct, e: BigNumberStruct],
-    [Zp_12StructOutput],
-    "view"
-  >;
-
   get_g0: TypedContractMethod<[], [Point_ZpStructOutput], "view">;
 
   get_g1: TypedContractMethod<[], [Point_Zp_2StructOutput], "view">;
-
-  get_millerBits: TypedContractMethod<
-    [value: BigNumberStruct],
-    [boolean[]],
-    "view"
-  >;
 
   get_order: TypedContractMethod<[], [BigNumberStructOutput], "view">;
 
@@ -369,6 +348,12 @@ export interface Curve extends BaseContract {
     "view"
   >;
 
+  verify: TypedContractMethod<
+    [pk: Point_ZpStruct, hash: Point_Zp_2Struct, sig: Point_Zp_2Struct],
+    [boolean],
+    "view"
+  >;
+
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
   ): T;
@@ -401,21 +386,11 @@ export interface Curve extends BaseContract {
     "view"
   >;
   getFunction(
-    nameOrSignature: "exp"
-  ): TypedContractMethod<
-    [value: Zp_12Struct, e: BigNumberStruct],
-    [Zp_12StructOutput],
-    "view"
-  >;
-  getFunction(
     nameOrSignature: "get_g0"
   ): TypedContractMethod<[], [Point_ZpStructOutput], "view">;
   getFunction(
     nameOrSignature: "get_g1"
   ): TypedContractMethod<[], [Point_Zp_2StructOutput], "view">;
-  getFunction(
-    nameOrSignature: "get_millerBits"
-  ): TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
   getFunction(
     nameOrSignature: "get_order"
   ): TypedContractMethod<[], [BigNumberStructOutput], "view">;
@@ -465,6 +440,13 @@ export interface Curve extends BaseContract {
   ): TypedContractMethod<
     [point: Point_Zp_2Struct],
     [Point_Zp_12StructOutput],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "verify"
+  ): TypedContractMethod<
+    [pk: Point_ZpStruct, hash: Point_Zp_2Struct, sig: Point_Zp_2Struct],
+    [boolean],
     "view"
   >;
 

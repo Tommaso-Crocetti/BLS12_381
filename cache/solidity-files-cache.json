@@ -37,45 +37,9 @@
         "console"
       ]
     },
-    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\BigNumber.sol": {
-      "lastModificationDate": 1731068062367,
-      "contentHash": "58df9bae400ef8e50bd10125588ba56a",
-      "sourceName": "contracts/BigNumber.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.17"
-      ],
-      "artifacts": [
-        "BigNumbers"
-      ]
-    },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\bigFiniteField.sol": {
-      "lastModificationDate": 1731061830354,
-      "contentHash": "67ebbcdc9a8a1536dc26fb24c857b1a9",
+      "lastModificationDate": 1731151234789,
+      "contentHash": "89715636f626549f74d5ce666d2fd72b",
       "sourceName": "contracts/field/bigFiniteField.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -102,7 +66,7 @@
         }
       },
       "imports": [
-        "../BigNumber.sol"
+        "../lib/BigNumber.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
@@ -112,8 +76,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp.sol": {
-      "lastModificationDate": 1731068554390,
-      "contentHash": "be546ee2189308336e24112f0cf62255",
+      "lastModificationDate": 1731151212098,
+      "contentHash": "30b2b480d73e7cf0bac96dfd2798433b",
       "sourceName": "contracts/point/pointZp.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -140,6 +104,7 @@
         }
       },
       "imports": [
+        "../lib/GetBits.sol",
         "../field/bigFiniteField.sol"
       ],
       "versionPragmas": [
@@ -150,8 +115,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_2.sol": {
-      "lastModificationDate": 1731076574644,
-      "contentHash": "39eb7b58ca143e114984801e6f4dd800",
+      "lastModificationDate": 1731151196618,
+      "contentHash": "53baf19193b079cfaee0e207b037b74f",
       "sourceName": "contracts/point/pointZp_2.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -178,6 +143,7 @@
         }
       },
       "imports": [
+        "../lib/GetBits.sol",
         "../field/quadraticExtension.sol"
       ],
       "versionPragmas": [
@@ -264,8 +230,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\field\\twelveExtension.sol": {
-      "lastModificationDate": 1730946196922,
-      "contentHash": "1f9a0713253d9561105d6a6909d7da56",
+      "lastModificationDate": 1731151117286,
+      "contentHash": "58c0a96a48f646664e9666ddcd71ccee",
       "sourceName": "contracts/field/twelveExtension.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -292,6 +258,7 @@
         }
       },
       "imports": [
+        "../lib/GetBits.sol",
         "./sexticExtension.sol"
       ],
       "versionPragmas": [
@@ -340,8 +307,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\curve.sol": {
-      "lastModificationDate": 1731079650011,
-      "contentHash": "5bb1fb143d9e247c4abc87a4c1357bc0",
+      "lastModificationDate": 1731151339730,
+      "contentHash": "a716359ef924e8793431205389cf7b0f",
       "sourceName": "contracts/curve.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -368,8 +335,7 @@
         }
       },
       "imports": [
-        "hardhat/console.sol",
-        "./BigNumber.sol",
+        "./lib/BigNumber.sol",
         "./field/bigFiniteField.sol",
         "./field/sexticExtension.sol",
         "./point/pointZp.sol",
@@ -381,6 +347,80 @@
       ],
       "artifacts": [
         "Curve"
+      ]
+    },
+    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\lib\\BigNumber.sol": {
+      "lastModificationDate": 1731150915490,
+      "contentHash": "58df9bae400ef8e50bd10125588ba56a",
+      "sourceName": "contracts/lib/BigNumber.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "BigNumbers"
+      ]
+    },
+    "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\lib\\GetBits.sol": {
+      "lastModificationDate": 1731151124502,
+      "contentHash": "fd0cd20f9ecbc3ca3a5fe475ad65002c",
+      "sourceName": "contracts/lib/GetBits.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BigNumber.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "GetBits"
       ]
     }
   }

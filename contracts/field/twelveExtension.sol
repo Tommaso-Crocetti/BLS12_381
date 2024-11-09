@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "../lib/GetBits.sol";
 import "./sexticExtension.sol";
 
 /// @title Zp_12 - Struttura per rappresentare un elemento nel campo dodicesimo esteso
@@ -99,6 +100,26 @@ contract TwelveExtension {
     ) public view returns (Zp_12 memory) {
         return mul(x, inverse(y));
     }
+
+    function exp(Zp_12 memory value, BigNumber memory e) public view returns (Zp_12 memory) {
+        if (BigNumbers.isZero(e)) {
+            return one();
+        }
+        Zp_12 memory result = one();
+        Zp_12 memory current = value;
+        bool[] memory bits = GetBits.getBits(e);
+        if (bits[0]) {
+            result = mul(result, current);
+        }
+        for (uint i = 1; i < bits.length; i++) {
+            current = mul(current, current);
+            if (bits[i]) {
+                result = mul(result, current);
+            }
+        }
+        return result;
+    }
+
 
     /// @notice Confronta due elementi Zp_12 per verificarne l'uguaglianza
     /// @param x Primo elemento Zp_12

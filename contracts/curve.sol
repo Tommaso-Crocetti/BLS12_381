@@ -1,15 +1,25 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
-import "./BigNumber.sol";
+import "./lib/BigNumber.sol";
 import "./field/bigFiniteField.sol";
 import "./field/sexticExtension.sol";
 import "./point/pointZp.sol";
 import "./point/pointZp_2.sol";
 import "./point/pointZp_12.sol";
 
+/**
+ * @title Curve
+ * @dev Implementa il protocollo di firma BLS su BLS12-381.
+ * 
+ * Funzionalità principali:
+ * - Controllo dell'appartenenza dei punti alla curva in vari campi.
+ * - Verifica dell'appartenenza a sottogruppi specifici.
+ * - Operazioni di twist per trasformare punti in campi estesi.
+ * - Calcolo di pairing tra punti per la verifica di firme crittografiche.
+ */
 contract Curve {
+    BigNumber private X = BigNumbers.init__(hex"d201000000010000", false);
     BigNumber private prime =
         BigNumbers.init__(
             hex"1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab",
@@ -74,22 +84,34 @@ contract Curve {
             )
         );
 
+
+    /// @notice Restituisce il modulo primo p della curva ellittica
+    /// @return Il valore primo come BigNumber
     function get_prime() public view returns (BigNumber memory) {
         return prime;
     }
 
+    /// @notice Restituisce l'ordine dei sottogruppi della curva
+    /// @return L'ordine della curva come BigNumber
     function get_order() public view returns (BigNumber memory){
         return order;
     }
 
+    /// @notice Restituisce il generatore del gruppo G_0 in Zp
+    /// @return Il punto g0
     function get_g0() public view returns (Point_Zp memory) {
         return g0;
     }
 
+    /// @notice Restituisce il generatore del gruppo G_1
+    /// @return Il punto g1
     function get_g1() public view returns (Point_Zp_2 memory) {
         return g1;
     }
 
+    /// @notice Verifica se un punto si trova sulla curva in Zp
+    /// @param point Il punto da verificare
+    /// @return True se il punto è sulla curva, False altrimenti
     function isOnCurve(Point_Zp memory point) public view returns (bool) {
         Zp memory l = fField.mul(point.y, point.y);
         Zp memory r = fField.sum(
@@ -99,6 +121,9 @@ contract Curve {
         return fField.equals(l, r);
     }
 
+    /// @notice Verifica se un punto si trova sulla curva twisted in Zp_2
+    /// @param point Il punto twist da verificare
+    /// @return True se il punto è sulla curva twist, False altrimenti
     function isOnCurveTwist(
         Point_Zp_2 memory point
     ) public view returns (bool) {
@@ -111,6 +136,9 @@ contract Curve {
         return qField.equals(l, r);
     }
 
+    /// @notice Verifica se un punto si trova sulla curva in Zp_12
+    /// @param point Il punto da verificare nel campo esteso Zp_12
+    /// @return True se il punto è sulla curva, False altrimenti
     function isOnCurve_12(Point_Zp_12 memory point) public view returns (bool) {
         if (point.pointType == PointType_12.PointAtInfinity) return false;
         Zp_12 memory l = tField.mul(point.y, point.y);
@@ -121,16 +149,25 @@ contract Curve {
         return tField.equals(l, r);
     }
 
+    /// @notice Controlla se un punto su Zp appartiene al sottogruppo con l'ordine specificato
+    /// @param point Il punto da verificare
+    /// @return True se il punto appartiene al sottogruppo, False altrimenti
     function Subgroup_0Check(Point_Zp memory point) public view returns (bool) {
         return pZp.multiply(order, point).pointType == PointType.Affine;
     }
 
+    /// @notice Controlla se un punto su Zp_2 appartiene al sottogruppo con l'ordine specificato
+    /// @param point Il punto da verificare nel campo esteso Zp_2
+    /// @return True se il punto appartiene al sottogruppo, False altrimenti
     function Subgroup_1Check(
         Point_Zp_2 memory point
     ) public view returns (bool) {
         return pZp_2.multiply(order, point).pointType == PointType_2.Affine;
     }
 
+    /// @notice Converte un punto twist su Zp_2 in un punto corrispondente su Zp_12
+    /// @param point Il punto twist su Zp_2 da convertire
+    /// @return Il punto in Zp_12 risultante dalla conversione
     function untwist(
         Point_Zp_2 memory point
     ) public view returns (Point_Zp_12 memory) {
@@ -160,6 +197,10 @@ contract Curve {
             );
     }
 
+    /// @notice Calcola le rette l_r,r e v_2r necessarie per il miller loop
+    /// @param r Il punto twist nel campo Zp_2
+    /// @param p Il punto di partenza su Zp
+    /// @return Il valore della valutazione double in Zp_12
     function doubleEval(
         Point_Zp_2 memory r,
         Point_Zp memory p
@@ -175,6 +216,11 @@ contract Curve {
         return tField.sub(tField.sub(t0, t1), v);
     }
 
+    /// @notice Calcola le rette l_r,p e v_r+p necessarie per il miller loop
+    /// @param r Il primo punto twist su Zp_2
+    /// @param q Il secondo punto twist su Zp_2
+    /// @param p Il punto di partenza su Zp
+    /// @return Il valore della valutazione add in Zp_12
     function addEval(
         Point_Zp_2 memory r,
         Point_Zp_2 memory q,
@@ -193,6 +239,11 @@ contract Curve {
         }
     }
 
+    /// @notice Funzione helper per calcolare le rette l_r,p e v_r+p
+    /// @param r Il primo punto twist in Zp_12
+    /// @param q Il secondo punto twist in Zp_12
+    /// @param p Il punto di partenza in Zp
+    /// @return Il valore della valutazione add tra r e q
     function _addEval(
         Point_Zp_12 memory r,
         Point_Zp_12 memory q,
@@ -211,30 +262,10 @@ contract Curve {
         return tField.sub(tField.sub(t0, t1), v);
     }
 
-    function get_millerBits(
-        BigNumber memory value
-    ) public view returns (bool[] memory) {
-        uint256 index = 0;
-
-        bool[] memory bits = new bool[](value.bitlen);
-        while (BigNumbers.gt(value, BigNumbers.zero())) {
-            // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
-            bits[index] = (BigNumbers.isOdd(value));
-            // Shifta a destra di un bit
-            value = BigNumbers.shr(value, 1);
-            index++;
-        }
-
-        bool[] memory reversedBits = new bool[](index - 1);
-
-        // Copiamo gli elementi nell'ordine inverso, escludendo quello più significativo
-        for (uint256 i = 0; i < index - 1; i++) {
-            reversedBits[i] = bits[index - i - 2]; // -2 per escludere il primo elemento
-        }
-
-        return reversedBits;
-    }
-
+    /// @notice Esegue l'algoritmo di Miller per calcolare il pairing
+    /// @param p Il punto su Zp
+    /// @param q Il punto twist su Zp_2
+    /// @return Il risultato del pairing in Zp_12
     function miller(
         Point_Zp memory p,
         Point_Zp_2 memory q
@@ -244,10 +275,16 @@ contract Curve {
                 p,
                 q,
                 q,
-                get_millerBits(BigNumbers.init__(hex"d201000000010000", false))
+                GetBits.get_millerBits(X)
             );
     }
 
+    /// @notice Iterazione dell'algoritmo di Miller per calcolare il pairing
+    /// @param p Il punto su Zp
+    /// @param q Punto twist su Zp_2
+    /// @param r Punto twist iniziale
+    /// @param bits Array di bit per l'iterazione
+    /// @return Il risultato dell'iterazione dell'algoritmo di Miller in Zp_12
     function miller_iterate(
         Point_Zp memory p,
         Point_Zp_2 memory q,
@@ -267,35 +304,20 @@ contract Curve {
         return acc;
     }
 
-    function exp(Zp_12 memory value, BigNumber memory e) public view returns (Zp_12 memory) {
-        if (BigNumbers.isZero(e)) {
-            return tField.one();
-        }
-        Zp_12 memory result = tField.zero();
-        Zp_12 memory current = value;
-        bool[] memory bits = pZp.getBits(e);
-        if (bits[0]) {
-            result = current;
-        }
-        for (uint i = 1; i < bits.length; i++) {
-            current = tField.mul(current, current);
-            if (bits[i]) {
-                result = tField.sum(result, current);
-            }
-        }
-        return result;
-    }
-
     function try_pairing(Zp_12 memory value) public view returns (Zp_12 memory) {
         BigNumber memory e0 = BigNumbers.add(BigNumbers.pow(prime, 2), BigNumbers.one());
         BigNumber memory e1 = BigNumbers.sub(BigNumbers.pow(prime, 6), BigNumbers.one());
         BigNumber memory e2 = BigNumbers.init__(hex"000f686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79", false);
-        Zp_12 memory t0 = exp(value, e0);
-        Zp_12 memory t1 = exp(value, e1);
-        Zp_12 memory t2 = exp(value, e2);
+        Zp_12 memory t0 = tField.exp(value, e0);
+        Zp_12 memory t1 = tField.exp(value, e1);
+        Zp_12 memory t2 = tField.exp(value, e2);
         return tField.mul(tField.mul(t0, t1), t2);
     }
 
+    /// @notice Esegue un pairing tra i punti p e q
+    /// @param p Punto su Zp
+    /// @param q Punto twist su Zp_2
+    /// @return Il risultato del pairing in Zp_12
     function pairing(
         Point_Zp memory p,
         Point_Zp_2 memory q
@@ -309,9 +331,18 @@ contract Curve {
         BigNumber memory e0 = BigNumbers.add(BigNumbers.pow(prime, 2), BigNumbers.one());
         BigNumber memory e1 = BigNumbers.sub(BigNumbers.pow(prime, 6), BigNumbers.one());
         BigNumber memory e2 = BigNumbers.init__(hex"000f686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79", false);
-        Zp_12 memory t0 = exp(result, e0);
-        Zp_12 memory t1 = exp(result, e1);
-        Zp_12 memory t2 = exp(result, e2);
+        Zp_12 memory t0 = tField.exp(result, e0);
+        Zp_12 memory t1 = tField.exp(result, e1);
+        Zp_12 memory t2 = tField.exp(result, e2);
         return tField.mul(tField.mul(t0, t1), t2);
+    }
+
+    /// @notice Verifica la correttezza di una firma data
+    /// @param pk La chiave pubblica come punto su Zp
+    /// @param hash Hash del messaggio come punto twist su Zp_2
+    /// @param sig Firma del messaggio come punto twist su Zp_2
+    /// @return True se la firma è valida, False altrimenti
+    function verify(Point_Zp memory pk, Point_Zp_2 memory hash, Point_Zp_2 memory sig) public view returns (bool) {
+        return tField.equals(pairing(g0, sig), pairing(pk, hash));
     }
 }

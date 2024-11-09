@@ -38,6 +38,14 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TwelveExtension__factory>;
     getContractFactory(
+      name: "BigNumbers",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BigNumbers__factory>;
+    getContractFactory(
+      name: "GetBits",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.GetBits__factory>;
+    getContractFactory(
       name: "PointZp_12",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PointZp_12__factory>;
@@ -81,6 +89,16 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.TwelveExtension>;
     getContractAt(
+      name: "BigNumbers",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BigNumbers>;
+    getContractAt(
+      name: "GetBits",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.GetBits>;
+    getContractAt(
       name: "PointZp_12",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -121,6 +139,14 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TwelveExtension>;
     deployContract(
+      name: "BigNumbers",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BigNumbers>;
+    deployContract(
+      name: "GetBits",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.GetBits>;
+    deployContract(
       name: "PointZp_12",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.PointZp_12>;
@@ -163,6 +189,16 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.TwelveExtension>;
+    deployContract(
+      name: "BigNumbers",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.BigNumbers>;
+    deployContract(
+      name: "GetBits",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.GetBits>;
     deployContract(
       name: "PointZp_12",
       args: any[],

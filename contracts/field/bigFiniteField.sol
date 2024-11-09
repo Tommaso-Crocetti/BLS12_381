@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "../BigNumber.sol";
+import "../lib/BigNumber.sol";
 
 /// @title Zp - Struttura per rappresentare un elemento di un campo finito modulo p
 /// @dev Questa struttura contiene un singolo valore di tipo BigNumber
@@ -39,6 +39,7 @@ contract BigFiniteField {
             );
         _;
     }
+
 
     /// @notice Restituisce il modulo p del campo finito
     /// @return Il modulo del campo finito come BigNumber

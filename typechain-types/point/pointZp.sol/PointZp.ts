@@ -56,7 +56,6 @@ export interface PointZpInterface extends Interface {
       | "add"
       | "compare"
       | "double"
-      | "getBits"
       | "multiply"
       | "newPoint"
       | "point_at_infinity"
@@ -75,10 +74,6 @@ export interface PointZpInterface extends Interface {
     values: [Point_ZpStruct]
   ): string;
   encodeFunctionData(
-    functionFragment: "getBits",
-    values: [BigNumberStruct]
-  ): string;
-  encodeFunctionData(
     functionFragment: "multiply",
     values: [BigNumberStruct, Point_ZpStruct]
   ): string;
@@ -94,7 +89,6 @@ export interface PointZpInterface extends Interface {
   decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "compare", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "double", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "getBits", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "multiply", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "newPoint", data: BytesLike): Result;
   decodeFunctionResult(
@@ -164,8 +158,6 @@ export interface PointZp extends BaseContract {
     "view"
   >;
 
-  getBits: TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
-
   multiply: TypedContractMethod<
     [k: BigNumberStruct, self: Point_ZpStruct],
     [Point_ZpStructOutput],
@@ -205,9 +197,6 @@ export interface PointZp extends BaseContract {
     [Point_ZpStructOutput],
     "view"
   >;
-  getFunction(
-    nameOrSignature: "getBits"
-  ): TypedContractMethod<[value: BigNumberStruct], [boolean[]], "view">;
   getFunction(
     nameOrSignature: "multiply"
   ): TypedContractMethod<

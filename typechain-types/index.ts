@@ -7,6 +7,8 @@ import type * as curveSol from "./curve.sol";
 export type { curveSol };
 import type * as field from "./field";
 export type { field };
+import type * as lib from "./lib";
+export type { lib };
 import type * as point from "./point";
 export type { point };
 export * as factories from "./factories";
@@ -22,6 +24,8 @@ export type { SexticExtension } from "./field/sexticExtension.sol/SexticExtensio
 export { SexticExtension__factory } from "./factories/field/sexticExtension.sol/SexticExtension__factory";
 export type { TwelveExtension } from "./field/twelveExtension.sol/TwelveExtension";
 export { TwelveExtension__factory } from "./factories/field/twelveExtension.sol/TwelveExtension__factory";
+export type { GetBits } from "./lib/GetBits";
+export { GetBits__factory } from "./factories/lib/GetBits__factory";
 export type { PointZp_12 } from "./point/pointZp_12.sol/PointZp_12";
 export { PointZp_12__factory } from "./factories/point/pointZp_12.sol/PointZp_12__factory";
 export type { PointZp_2 } from "./point/pointZp_2.sol/PointZp_2";

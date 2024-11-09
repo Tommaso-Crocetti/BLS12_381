@@ -26,7 +26,7 @@ const config: HardhatUserConfig = {
     currency: 'EUR',
     L1: "polygon",
     coinmarketcap: "abc123...",
-    enabled: true
+    enabled: false
   }
   // Example
 

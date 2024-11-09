@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "../lib/GetBits.sol";
 import "../field/bigFiniteField.sol";
 
 /// @title Enum PointType - Tipo di punto nel campo Zp
@@ -85,30 +86,6 @@ contract PointZp {
         return newPoint(x_n, y_n);
     }
 
-    function getBits(
-        BigNumber memory value
-    ) public view returns (bool[] memory) {
-        uint256 index = 0;
-
-        bool[] memory bits = new bool[](value.bitlen);
-        while (BigNumbers.gt(value, BigNumbers.zero())) {
-            // Inserisce 'true' se l'ultimo bit è 1, altrimenti 'false'
-            bits[index] = (BigNumbers.isOdd(value));
-            // Shifta a destra di un bit
-            value = BigNumbers.shr(value, 1);
-            index++;
-        }
-
-        bool[] memory reversedBits = new bool[](index);
-
-        // Copiamo gli elementi nell'ordine inverso
-        for (uint256 i = 0; i < index; i++) {
-            reversedBits[i] = bits[index - i - 1]; 
-        }
-
-        return reversedBits;
-    }
-
     /// @notice Moltiplica un punto per un numero intero k nel campo Zp
     /// @param k Il numero intero da cui moltiplicare il punto
     /// @param self Il punto da moltiplicare
@@ -120,7 +97,7 @@ contract PointZp {
         require(k.neg == false);
         Point_Zp memory result = point_at_infinity();
         Point_Zp memory current = self;
-        bool[] memory bits = getBits(k);
+        bool[] memory bits = GetBits.getBits(k);
         if (bits[0]) {
             result = current;
         }
