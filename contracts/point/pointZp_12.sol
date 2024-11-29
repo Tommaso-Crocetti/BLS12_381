@@ -34,7 +34,7 @@ contract PointZp_12 {
         Zp_12 memory x,
         Zp_12 memory y
     ) public pure returns (Point_Zp_12 memory) {
-        return Point_Zp_12(PointType_12.PointAtInfinity, x, y);
+        return Point_Zp_12(PointType_12.Affine, x, y);
     }
 
     /// @notice Restituisce il punto all'infinito nel campo Zp

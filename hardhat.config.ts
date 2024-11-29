@@ -22,11 +22,11 @@ const config: HardhatUserConfig = {
   },
   gasReporter: {
     reportPureAndViewMethods: true,
-    outputFile: 'Test_gas.txt',
+    outputFile: 'Curve_Test_gas.txt',
     currency: 'EUR',
     L1: "polygon",
     coinmarketcap: "abc123...",
-    enabled: false
+    enabled: true
   }
   // Example
 

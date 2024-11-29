@@ -1,6 +1,6 @@
 import { ethers } from "hardhat";
 import { expect } from "chai";
-import { BigFiniteField, BigFiniteField__factory, BigNumbers, BigNumbers__factory } from "../typechain-types"; // Assicurati che il percorso sia corretto
+import { BigFiniteField, BigFiniteField__factory, BigNumbers, BigNumbers__factory, GetBits, GetBits__factory } from "../typechain-types"; // Assicurati che il percorso sia corretto
 import { QuadraticExtension, QuadraticExtension__factory } from "../typechain-types"
 import { SexticExtension, SexticExtension__factory } from "../typechain-types";
 import { TwelveExtension, TwelveExtension__factory } from "../typechain-types";
@@ -38,6 +38,7 @@ function toZp_12Struct(output: Zp_12StructOutput): Zp_12Struct {
 
 describe("Twelve Extension Contract", function () {
     let bigNumbers: BigNumbers;
+    let getBits: GetBits;
     let bigFiniteField: BigFiniteField;
     let quadraticExtension: QuadraticExtension;
     let sexticExtension: SexticExtension;
@@ -50,6 +51,12 @@ describe("Twelve Extension Contract", function () {
     beforeEach(async function () {
         const bigNumbersFactory: BigNumbers__factory = await ethers.getContractFactory("BigNumbers") as BigNumbers__factory;
         bigNumbers = await bigNumbersFactory.deploy();
+        const getBitsFactory: GetBits__factory = await ethers.getContractFactory("GetBits", {
+            libraries: {
+                BigNumbers: await bigNumbers.getAddress()
+            }
+        }) as GetBits__factory;
+        getBits = await getBitsFactory.deploy()
         const bigFiniteFieldFactory: BigFiniteField__factory = await ethers.getContractFactory("BigFiniteField", {
             libraries: {
                 BigNumbers: await bigNumbers.getAddress()
@@ -63,7 +70,12 @@ describe("Twelve Extension Contract", function () {
         const SexticExtensionFactory: SexticExtension__factory = (await ethers.getContractFactory("SexticExtension")) as SexticExtension__factory;
         sexticExtension = await SexticExtensionFactory.deploy(quadraticExtension);
 
-        const TwelveExtensionFactory: TwelveExtension__factory = (await ethers.getContractFactory("TwelveExtension")) as TwelveExtension__factory;
+        const TwelveExtensionFactory: TwelveExtension__factory = (await ethers.getContractFactory("TwelveExtension", {
+            libraries: {
+                BigNumbers: await bigNumbers.getAddress(),
+                GetBits: await getBits.getAddress()
+            }
+        })) as TwelveExtension__factory;
         twelveExtension = await TwelveExtensionFactory.deploy(sexticExtension);
 
         const a1: ZpStructOutput = await bigFiniteField.createElement(toBigNumber(await bigNumbers.init(3, false)));

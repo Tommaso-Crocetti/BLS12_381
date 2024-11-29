@@ -76,7 +76,7 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp.sol": {
-      "lastModificationDate": 1731151212098,
+      "lastModificationDate": 1731337825977,
       "contentHash": "30b2b480d73e7cf0bac96dfd2798433b",
       "sourceName": "contracts/point/pointZp.sol",
       "solcConfig": {
@@ -269,8 +269,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\point\\pointZp_12.sol": {
-      "lastModificationDate": 1731079293166,
-      "contentHash": "8bd53073573e4918878bb3da8b9cf516",
+      "lastModificationDate": 1731499120652,
+      "contentHash": "b2b39fda2e6806d006a43aeee88601ea",
       "sourceName": "contracts/point/pointZp_12.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -307,8 +307,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\curve.sol": {
-      "lastModificationDate": 1731151339730,
-      "contentHash": "a716359ef924e8793431205389cf7b0f",
+      "lastModificationDate": 1731620342748,
+      "contentHash": "8548befd4c752c69d7909156419197f9",
       "sourceName": "contracts/curve.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -386,8 +386,8 @@
       ]
     },
     "C:\\Users\\tomma\\Desktop\\Tesi\\BLS12_381\\contracts\\lib\\GetBits.sol": {
-      "lastModificationDate": 1731151124502,
-      "contentHash": "fd0cd20f9ecbc3ca3a5fe475ad65002c",
+      "lastModificationDate": 1731339895395,
+      "contentHash": "8006fb881e389ae50f8687466ddead3d",
       "sourceName": "contracts/lib/GetBits.sol",
       "solcConfig": {
         "version": "0.8.27",

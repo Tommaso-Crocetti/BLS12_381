@@ -21,7 +21,7 @@ library GetBits {
         return bits;
     }
 
-        function get_millerBits(
+    function get_millerBits(
         BigNumber memory value
     ) public view returns (bool[] memory) {
         bool[] memory bits = new bool[](value.bitlen);

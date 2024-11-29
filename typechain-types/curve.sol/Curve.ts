@@ -114,7 +114,6 @@ export interface CurveInterface extends Interface {
       | "miller"
       | "miller_iterate"
       | "pairing"
-      | "try_pairing"
       | "untwist"
       | "verify"
   ): FunctionFragment;
@@ -168,10 +167,6 @@ export interface CurveInterface extends Interface {
     values: [Point_ZpStruct, Point_Zp_2Struct]
   ): string;
   encodeFunctionData(
-    functionFragment: "try_pairing",
-    values: [Zp_12Struct]
-  ): string;
-  encodeFunctionData(
     functionFragment: "untwist",
     values: [Point_Zp_2Struct]
   ): string;
@@ -210,10 +205,6 @@ export interface CurveInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "pairing", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "try_pairing",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(functionFragment: "untwist", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "verify", data: BytesLike): Result;
 }
@@ -336,12 +327,6 @@ export interface Curve extends BaseContract {
     "view"
   >;
 
-  try_pairing: TypedContractMethod<
-    [value: Zp_12Struct],
-    [Zp_12StructOutput],
-    "view"
-  >;
-
   untwist: TypedContractMethod<
     [point: Point_Zp_2Struct],
     [Point_Zp_12StructOutput],
@@ -432,9 +417,6 @@ export interface Curve extends BaseContract {
     [Zp_12StructOutput],
     "view"
   >;
-  getFunction(
-    nameOrSignature: "try_pairing"
-  ): TypedContractMethod<[value: Zp_12Struct], [Zp_12StructOutput], "view">;
   getFunction(
     nameOrSignature: "untwist"
   ): TypedContractMethod<

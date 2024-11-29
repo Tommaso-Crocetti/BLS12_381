@@ -5,7 +5,7 @@
 
 import { ethers } from "hardhat";
 import { expect } from "chai";
-import { BigFiniteField, BigFiniteField__factory, BigNumbers, BigNumbers__factory, point } from "../typechain-types"; // Assicurati che il percorso sia corretto
+import { BigFiniteField, BigFiniteField__factory, BigNumbers, BigNumbers__factory, GetBits__factory, GetBits } from "../typechain-types"; // Assicurati che il percorso sia corretto
 import { BigNumberStruct, BigNumberStructOutput } from "../typechain-types/BigNumber.sol/BigNumbers";
 import { ZpStruct, ZpStructOutput } from "../typechain-types/field/BigFiniteField";
 import { PointZp, PointZp__factory } from "../typechain-types";
@@ -26,6 +26,7 @@ function toPoint_ZpStruct(input: Point_ZpStructOutput): Point_ZpStruct {
 
 describe("Point_Zp Contract", function () {
     let bigNumbers: BigNumbers;
+    let getBits: GetBits;
     let bigFiniteField: BigFiniteField;
     let pointZp: PointZp;
     let curve: Curve;
@@ -34,6 +35,12 @@ describe("Point_Zp Contract", function () {
     beforeEach(async function () {
         const bigNumbersFactory: BigNumbers__factory = await ethers.getContractFactory("BigNumbers") as BigNumbers__factory;
         bigNumbers = await bigNumbersFactory.deploy();
+        const getBitsFactory: GetBits__factory = await ethers.getContractFactory("GetBits", {
+            libraries: {
+                BigNumbers: await bigNumbers.getAddress()
+            }
+        }) as GetBits__factory;
+        getBits = await getBitsFactory.deploy();
         const bigFiniteFieldFactory: BigFiniteField__factory = await ethers.getContractFactory("BigFiniteField", {
             libraries: {
                 BigNumbers: await bigNumbers.getAddress()
@@ -42,18 +49,19 @@ describe("Point_Zp Contract", function () {
         bigFiniteField = await bigFiniteFieldFactory.deploy(toBigNumber(await bigNumbers.init__("0x1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab", false)));
         const pointZpFactory: PointZp__factory = await ethers.getContractFactory("PointZp", {
             libraries: {
-                BigNumbers: await bigNumbers.getAddress()
+                GetBits: await getBits.getAddress()
               }
         }) as PointZp__factory;
         pointZp = await pointZpFactory.deploy(bigFiniteField);
         const curveFactory: Curve__factory = await ethers.getContractFactory("Curve", {
             libraries: {
-                BigNumbers: await bigNumbers.getAddress()
+                BigNumbers: await bigNumbers.getAddress(),
+                GetBits: await getBits.getAddress()
             }
         }) as Curve__factory;
         curve = await curveFactory.deploy();
         a = toPoint_ZpStruct(await curve.get_g0());
-        b = toPoint_ZpStruct(await curve.get_g0());
+        b = toPoint_ZpStruct(await pointZp.multiply(toBigNumber(await bigNumbers.two()), toPoint_ZpStruct(await curve.get_g0())));
     });
 
     it("should create points correctly", async function() {
@@ -64,16 +72,18 @@ describe("Point_Zp Contract", function () {
     it("should add points correctly", async function() {
         const result = toPoint_ZpStruct(await pointZp.add(a, b));
         expect(await pointZp.compare(result, toPoint_ZpStruct(await pointZp.newPoint(
-            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000572cbea904d67468808c8eb50a9450c9721db309128012543902d0ac358a62ae28f75bb8f1c7c42c39a8c5529bf0f4e", false)))),
-            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x00000000000000000000000000000000166a9d8cabc673a322fda673779d8e3822ba3ecb8670e461f73bb9021d5fd76a4c56d9d4cd16bd1bba86881979749d28", false)))))))).to.equal(true);
+            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x09ECE308F9D1F0131765212DECA99697B112D61F9BE9A5F1F3780A51335B3FF981747A0B2CA2179B96D2C0C9024E5224".toLowerCase(), false)))),
+            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x032B80D3A6F5B09F8A84623389C5F80CA69A0CDDABC3097F9D9C27310FD43BE6E745256C634AF45CA3473B0590AE30D1".toLowerCase(), false)))))))).to.equal(true);
     })
 
     it("should double points correctly", async function() {
         const result = toPoint_ZpStruct(await pointZp.double(a));
-        expect(await pointZp.compare(result, toPoint_ZpStruct(await pointZp.newPoint(
-            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x000000000000000000000000000000000572cbea904d67468808c8eb50a9450c9721db309128012543902d0ac358a62ae28f75bb8f1c7c42c39a8c5529bf0f4e", false)))),
-            toZpStruct(await bigFiniteField.createElement(toBigNumber(await bigNumbers.init__("0x00000000000000000000000000000000166a9d8cabc673a322fda673779d8e3822ba3ecb8670e461f73bb9021d5fd76a4c56d9d4cd16bd1bba86881979749d28", false)))))))).to.equal(true);       
+        expect(await pointZp.compare(result, b)).to.equal(true);
     })
 
-    
+    it("should multiply points correctly", async function() {
+        const resultA = toPoint_ZpStruct(await pointZp.multiply(toBigNumber(await bigNumbers.init(6, false)),a ));
+        const resultB = toPoint_ZpStruct(await pointZp.multiply(toBigNumber(await bigNumbers.three()), b));
+        expect(await pointZp.compare(resultA, resultB)).to.equal(true);
+    })
 });

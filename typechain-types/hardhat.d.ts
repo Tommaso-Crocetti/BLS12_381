@@ -14,10 +14,6 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
-      name: "BigNumbers",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.BigNumbers__factory>;
-    getContractFactory(
       name: "Curve",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Curve__factory>;
@@ -59,11 +55,6 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.PointZp__factory>;
 
     getContractAt(
-      name: "BigNumbers",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.BigNumbers>;
-    getContractAt(
       name: "Curve",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -115,10 +106,6 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.PointZp>;
 
     deployContract(
-      name: "BigNumbers",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.BigNumbers>;
-    deployContract(
       name: "Curve",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.Curve>;
@@ -159,11 +146,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.PointZp>;
 
-    deployContract(
-      name: "BigNumbers",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.BigNumbers>;
     deployContract(
       name: "Curve",
       args: any[],

@@ -28,7 +28,7 @@ contract Curve {
 
     BigNumber private order =
         BigNumbers.init__(
-            hex"73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001",            false
+            hex"73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001", false
         );
     BigFiniteField private fField = new BigFiniteField(prime);
     QuadraticExtension private qField = new QuadraticExtension(fField);
@@ -153,7 +153,7 @@ contract Curve {
     /// @param point Il punto da verificare
     /// @return True se il punto appartiene al sottogruppo, False altrimenti
     function Subgroup_0Check(Point_Zp memory point) public view returns (bool) {
-        return pZp.multiply(order, point).pointType == PointType.Affine;
+        return pZp.multiply(order, point).pointType == PointType.PointAtInfinity;
     }
 
     /// @notice Controlla se un punto su Zp_2 appartiene al sottogruppo con l'ordine specificato
@@ -162,7 +162,7 @@ contract Curve {
     function Subgroup_1Check(
         Point_Zp_2 memory point
     ) public view returns (bool) {
-        return pZp_2.multiply(order, point).pointType == PointType_2.Affine;
+        return pZp_2.multiply(order, point).pointType == PointType_2.PointAtInfinity;
     }
 
     /// @notice Converte un punto twist su Zp_2 in un punto corrispondente su Zp_12
@@ -197,10 +197,10 @@ contract Curve {
             );
     }
 
-    /// @notice Calcola le rette l_r,r e v_2r necessarie per il miller loop
+    /// @notice Calcola la tangente l_r,r e la retta v_2r necessarie per il miller loop
     /// @param r Il punto twist nel campo Zp_2
-    /// @param p Il punto di partenza su Zp
-    /// @return Il valore della valutazione double in Zp_12
+    /// @param p Il punto di applicazione delle rette su Zp
+    /// @return Il rapporto tra la tangente e la retta applicato a p come elemento di Zp_12
     function doubleEval(
         Point_Zp_2 memory r,
         Point_Zp memory p
@@ -216,17 +216,17 @@ contract Curve {
         return tField.sub(tField.sub(t0, t1), v);
     }
 
-    /// @notice Calcola le rette l_r,p e v_r+p necessarie per il miller loop
+    /// @notice Calcola le rette l_r,q e v_r+q necessarie per il miller loop
     /// @param r Il primo punto twist su Zp_2
     /// @param q Il secondo punto twist su Zp_2
-    /// @param p Il punto di partenza su Zp
-    /// @return Il valore della valutazione add in Zp_12
+    /// @param p Il punto di applicazione delle rette su Zp
+    /// @return Il rapporto tra le rette applicato a p come elemento di Zp_12
     function addEval(
         Point_Zp_2 memory r,
         Point_Zp_2 memory q,
         Point_Zp memory p
     ) public view returns (Zp_12 memory) {
-        require(!qField.equals(r.x, q.x) && !qField.equals(r.y, q.y));
+        require(!(qField.equals(r.x, q.x) && qField.equals(r.y, q.y)));
         Point_Zp_12 memory r_twist = untwist(r);
         Point_Zp_12 memory q_twist = untwist(q);
         if (
@@ -239,11 +239,11 @@ contract Curve {
         }
     }
 
-    /// @notice Funzione helper per calcolare le rette l_r,p e v_r+p
+    /// @notice Funzione helper per calcolare le rette l_r,q e v_r+q
     /// @param r Il primo punto twist in Zp_12
     /// @param q Il secondo punto twist in Zp_12
-    /// @param p Il punto di partenza in Zp
-    /// @return Il valore della valutazione add tra r e q
+    /// @param p Il punto di applicazione delle rette in Zp
+    /// @return Il rapporto tra le rette applicato a p come elemento di Zp_12
     function _addEval(
         Point_Zp_12 memory r,
         Point_Zp_12 memory q,
@@ -262,10 +262,10 @@ contract Curve {
         return tField.sub(tField.sub(t0, t1), v);
     }
 
-    /// @notice Esegue l'algoritmo di Miller per calcolare il pairing
+    /// @notice Esegue l'algoritmo di Miller necessario per il pairing
     /// @param p Il punto su Zp
     /// @param q Il punto twist su Zp_2
-    /// @return Il risultato del pairing in Zp_12
+    /// @return Il risultato del Miller loop in Zp_12
     function miller(
         Point_Zp memory p,
         Point_Zp_2 memory q
@@ -283,8 +283,8 @@ contract Curve {
     /// @param p Il punto su Zp
     /// @param q Punto twist su Zp_2
     /// @param r Punto twist iniziale
-    /// @param bits Array di bit per l'iterazione
-    /// @return Il risultato dell'iterazione dell'algoritmo di Miller in Zp_12
+    /// @param bits Array di bit del parametro X della curva
+    /// @return Il risultato del Miller loop in Zp_12
     function miller_iterate(
         Point_Zp memory p,
         Point_Zp_2 memory q,
@@ -293,25 +293,15 @@ contract Curve {
     ) public view returns (Zp_12 memory) {
         Zp_12 memory acc = tField.one();
         for (uint256 i = 0; i < bits.length; i++) {
-            tField.mul(acc, acc);
-            tField.mul(acc, doubleEval(r, p));
+            acc = tField.mul(acc, acc);
+            acc = tField.mul(acc, doubleEval(r, p));
             r = pZp_2.double(r);
             if (bits[i]) {
-                tField.mul(acc, addEval(r, q, p));
+                acc = tField.mul(acc, addEval(r, q, p));
                 r = pZp_2.add(r, q);
             }
         }
         return acc;
-    }
-
-    function try_pairing(Zp_12 memory value) public view returns (Zp_12 memory) {
-        BigNumber memory e0 = BigNumbers.add(BigNumbers.pow(prime, 2), BigNumbers.one());
-        BigNumber memory e1 = BigNumbers.sub(BigNumbers.pow(prime, 6), BigNumbers.one());
-        BigNumber memory e2 = BigNumbers.init__(hex"000f686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79", false);
-        Zp_12 memory t0 = tField.exp(value, e0);
-        Zp_12 memory t1 = tField.exp(value, e1);
-        Zp_12 memory t2 = tField.exp(value, e2);
-        return tField.mul(tField.mul(t0, t1), t2);
     }
 
     /// @notice Esegue un pairing tra i punti p e q
@@ -327,9 +317,9 @@ contract Curve {
             q.pointType == PointType_2.PointAtInfinity
         ) return tField.zero();
         require (isOnCurve(p) && isOnCurveTwist(q));
-        Zp_12 memory result = miller(p,q);
-        BigNumber memory e0 = BigNumbers.add(BigNumbers.pow(prime, 2), BigNumbers.one());
-        BigNumber memory e1 = BigNumbers.sub(BigNumbers.pow(prime, 6), BigNumbers.one());
+        Zp_12 memory result = miller(p, q);
+        BigNumber memory e0 = BigNumbers.init__(hex"02a437a4b8c35fc74bd278eaa22f25e9e2dc90e50e7046b466e59e49349e8bd050a62cfd16ddca6ef53149330978ef011d68619c86185c7b292e85a87091a04966bf91ed3e71b743162c338362113cfd7ced6b1d76382eab26aa00001c718e3a", false);
+        BigNumber memory e1 = BigNumbers.init__(hex"126e3a9ce609a1f49cc5d7911d10f22d47e8f4c8a61d4bf5d877014b55f605ec38b8f441e075c538a5d6456a69c7b7a84c946d480f7d91568530d98be187dcd0112c1716c29c69f8d8d26942fd6e5df34f80b646e303f8495f8c07454bb88cefbbcb4b30a9edccf5dcd2baf7616d1d8e1e24340abd7a0b065ad579101c2383ae97d6e42a21de3a393c71fbaa2a96fe7ecc060dc041645a04d8b589e2ee0ae8ef66f64fc39e38ce491e59479f2f064a169ed7be126453c60ea9e7da88f87a48cffe36be19d62ceb29abcf639327368d0e2ff6757720d8753cc53bc216c89d1104ac1a5e1d016ea912bfab48acaa3112c3fafee728bc65bc6e626bf75d31b1e2224a8eb96aa99bd7b3ab5b8c6b95843e289a0f3f4bf2dec6c98463c0705d68", false);
         BigNumber memory e2 = BigNumbers.init__(hex"000f686b3d807d01c0bd38c3195c899ed3cde88eeb996ca394506632528d6a9a2f230063cf081517f68f7764c28b6f8ae5a72bce8d63cb9f827eca0ba621315b2076995003fc77a17988f8761bdc51dc2378b9039096d1b767f17fcbde783765915c97f36c6f18212ed0b283ed237db421d160aeb6a1e79983774940996754c8c71a2629b0dea236905ce937335d5b68fa9912aae208ccf1e516c3f438e3ba79", false);
         Zp_12 memory t0 = tField.exp(result, e0);
         Zp_12 memory t1 = tField.exp(result, e1);
